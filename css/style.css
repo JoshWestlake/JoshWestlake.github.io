@@ -188,7 +188,7 @@ section {
     
   }
   .about_text{
-    margin-top: 5rem;
+    margin-top: 1rem;
     text-align:center;
     justify-content: center;
   }
@@ -204,9 +204,12 @@ section {
   }
   .about_bold
   {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-weight: 900;
     font-size: 2rem;
     color: rgb(42,113,234);    
+    text-align: center;
   }
   
 /*Projects*/
@@ -467,8 +470,9 @@ section {
   /*RobotArm*/
   #RobotArm{
     display: flex;
-  margin-top: 10rem;
-  flex-direction: column;
+    margin-top: 15rem;
+    flex-direction: column;
+    z-index: 10000;
   }
 
 /*BlueLight*/
