@@ -342,7 +342,7 @@ section {
 
 #LifeBot{
   display: flex;
-  margin-top: 12rem;
+  margin-top: 30rem;
   flex-direction: column;
   
 }
@@ -352,7 +352,7 @@ section {
   font-size: 4rem;
   text-align: center;
   color:  rgb(42,113,234);
- 
+  
   margin-bottom: 3rem;
 }
 
@@ -434,7 +434,7 @@ section {
   /*chassis*/
   #Chassis{
   display: flex;
-  margin-top: 8rem;
+  margin-top: 15rem;
   flex-direction: column;
   
   }
