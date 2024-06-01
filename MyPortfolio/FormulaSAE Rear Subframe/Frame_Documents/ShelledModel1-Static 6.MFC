@@ -1,0 +1,16 @@
+[StartTime]
+ShelledModel1-Static 6.MFC=2s
+[SolverState]
+ShelledModel1-Static 6.MFC=2
+[MainFrame]
+ShelledModel1-Static 6.MFC=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPBKCAAAAAHHBAAAAAJAEAAAAAKECAAAAA
+[ShowMin]
+ShelledModel1-Static 6.MFC=No
+[SolverType]
+ShelledModel1-Static 6.MFC=Linear Analysis
+[StudyType]
+ShelledModel1-Static 6.MFC=0
+[StudyName]
+ShelledModel1-Static 6.MFC=Static 6
+[Solver]
+ShelledModel1-Static 6.MFC=Iterative

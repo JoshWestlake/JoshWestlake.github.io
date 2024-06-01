@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PortfoliMyo</title>
+    <link rel = "stylesheet" href = "/css/style.css"/>
+    <link rel = "stylesheet" href = "mediaqueries.css"/>
+ </head>
+  <!-----MENU SECTION------>
+  <body>
+    <nav id="desktop-nav">
+        <img src ="./MyPortfolio/Logo (1).png"
+        alt="Home"
+        class="static_icon"
+        onClick="location.href='#desktop-nav'"
+        />
+        <div>
+            <!-- This creates the links for each of the pages, orange #is actual link while the white text is visually shown -->
+            <ul class="nav-links">
+              
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav> 
+    <section id="profile">
+
+      <div class="section__text">
+          <h1 class = "title">Josh Westlake</h1>
+          <p class="Subheading">Mechatronics and Robotics Engineering Student</p>
+          <p class="SubText">Queen's University</p> 
+          <!-- produces a button which when clicked opens the attatched file (resume) -->
+          <div class="btn-container">
+              <button class="btn btn-color" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+              <button class="btn btn-color" onclick="location.href='.#contact'">Contact Info</button>
+          </div>
+          <!-- This is the links to linkedIn and Github -->
+          <div id="socials-container">
+            <img src="./MyPortfolio/LinkedIn-Icon.png"
+              alt="My LinkedIn Profile"
+              class="icon"
+              onClick="location.href='https://www.linkedin.com/in/josh-westlake-063859279/'"
+              />
+            <img src="./MyPortfolio/GitHub-Icon.png"
+              alt="My github Profile"
+              class="icon"
+              onClick="location.href='https://github.com/JoshWestlake'"
+              />
+          </div>
+      </div>
+       <!-- This is the section for the name and position -->
+       <div class="section__pic-container">
+          <img src="./MyPortfolio/HeadShot.png" 
+          alt="Josh Westlake Profile picture" >
+      </div>
+  </section>
+  <section id="about">
+      <p class="about_subheading">Get to Know More About Me</p>
+      <h1 class="title">About Me</h1>
+    <p class="about_text">
+      <span class="about_bold"> Welcome to my portfolio!</span>
+      <span class="about_mainText"> I'm</span>
+      <span class="about_bold"> Josh Westlake, </span>
+      <span class="about_mainText"> a 3rd year Mechatronics and Robotics Engineering at Queen's University. As a student, I am driven by a relentless curiosity to explore the boundless possibilities within this field. Through hands-on experiences and academic pursuits, I'm dedicated to shaping the future of robotics technology, particularly in areas where </span>
+      <span class="about_bold"> mechanical and control systems converge </span>
+      </p>
+  </p>
+    <p class="about_text">
+      <span class="about_mainText">This portfolio is designed to showcase a glimpse into my journey, showcasing </span>
+      <span class="about_bold"> projects, experiences, and aspirations </span>
+      <span class="about_mainText"> as I navigate the exciting world of robotics. Whether you're curious about opportunities, or just want to chat about robotics, don't hesitate to reach out!</span>
+    </p> 
+
+    </section>
+    <section id="projects">
+      <h1 class="title">Projects</h1>
+      <div class="robotics_btn_container"> 
+        <button class="projects_btn">Robotics</button>
+      
+        <div class="robotics_links">
+
+          <div class = "gallery">
+            <div class ="gallery-items">          
+              <a href="#LifeBot">
+                <img src="MyPortfolio/LifeBot/LifeBot.png"
+                class = "gallery-image"></a>
+              <p> <a href="#LifeBot">LifeBot</a></p>  
+            </div>
+            <div class ="gallery-items">          
+              <a href="#RobotArm">
+                <img src="MyPortfolio/RoboticArm/RoboticArmV2/RobotMedia/HighExtension HD.png"
+                class = "gallery-image"></a>
+                <p> <a href="#RobotArm">3-Axis Robot Arm</a></p>
+            </div>
+            <div class ="gallery-items">          
+              <a href="#MiniBot">
+                <img src="MyPortfolio/MiniBot/MiniBot-profile.png"
+                class = "gallery-image"></a>
+                <p> <a href="#MiniBot">Autonomous Mining Loader</a></p>
+            </div>
+           </div>
+        </div>
+      </div>
+      <div class="mechanical_btn_container"> 
+      <button class="projects_btn">Mechanical Design</button>
+        <div class="mechanical_links">
+         <div class = "gallery">
+          <div class ="gallery-items">          
+            <a href="#Chassis">
+              <img src="MyPortfolio/LifeBot/Picture1.png"
+              class = "gallery-image"></a>
+            <p> <a href="#Chassis">LifeBot Chassis</a></p>  
+          </div>
+          <div class ="gallery-items">          
+            <a href="#Subframe">
+              <img src="MyPortfolio/FormulaSAE Rear Subframe/SAE Subframe.png"
+              class = "gallery-image"></a>
+              <p> <a href="#Subframe">Formula SAE Rear Subframe</a></p>
+          </div>
+          <div class ="gallery-items">          
+            <a href="#BlueLight">
+              <img src="MyPortfolio/BlueLight.png"
+              class = "gallery-image"></a>
+              <p> <a href="#BlueLight">SAE Blue Light Mount</a></p>
+          </div>
+         </div>
+        </div>
+      </div>
+  
+ 
+
+    </section>
+    <section id="LifeBot">
+      
+    <h1 class ="heading">LifeBot</h1>
+     <div class="flex">
+      <div class ="image-container">
+        <img src="MyPortfolio/LifeBot/LynxMotion.png"
+        class ="image-format">
+        <img src="MyPortfolio/LifeBot/Mapping (1).png"
+        class ="image-format">
+        <div class="Links">
+        <img src="./MyPortfolio/GitHub-Icon.png"
+              alt="My github Profile"
+              class="projects_icon"
+              onClick="location.href='https://github.com/JoshWestlake'">
+              <div class="project-btn-container">
+                <button class="btn project-btn-color" onclick="window.open('https://youtu.be/1wbDD_aVC8c')">Demo</button>
+                <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/Documentation.pdf')">Documentation</button>
+              </div>
+          </div>
+        </div>
+        <div class="text-container">
+        <h2 class="projects_subheading">What is LifeBot?</h2>
+        <p class = "projects_mainText">The LifeBot project aimed to revolutionize emergency response capabilities, particularly in scenarios such as cardiac arrests, by providing swift access to life-saving equipment in indoor environments where traditional response times may be compromised, specifically in indoor settings where defibrillators are often scattered and difficult-to-locate.</p>
+        <h2 class="projects_subheading">How was this accomplished?</h2>
+        <p class = "projects_mainText"> This project required seamlss integration of cutting-edge components like Raspberry Pi, Arduino UNO WiFi Rev 2 boards, and ROS2 packages, ensuring robust autonomous operation and efficient communication.</p>  
+        <p class= "projects_mainText">Manipulation of complex Control Systems, including precise PID controllers and implemented real-time monitoring via Arduino IDE for accurate motor control and swift adjustments, enhancing maneuverability and response effectiveness.
+        </p>
+        <p class= "projects_mainText">
+          The Autonomous Navigation leveraged ROS2 navigation packages and sophisticated SLAM mapping algorithms, enabling the LifeBot to autonomously navigate indoor environments, swiftly reaching predetermined destinations for timely assistance.
+          </p>
+        <h2 class="projects_subheading">What was the result?
+        </h2>
+        <p class= "projects_mainText">Successfully developed a prototype of LifeBot capable of autonomously navigating indoor environments to deliver AEDs promptly in response to emergencies. Further development on the prototypes is required but holds the promise of significantly reducing emergency response times, potentially improving survival rates for individuals facing cardiac arrests indoors.
+        </p>
+      </div>
+     </div>
+    </section>
+    <section id="Chassis">
+      
+      <h1 class ="heading">LifeBot Chassis</h1>
+       <div class="flex">
+        
+          <div class="text2-container">
+          <h2 class="projects_subheading">What is the Chassis?</h2>
+          <p class = "projects_mainText">TEXT.</p>
+          <h2 class="projects_subheading">How was this accomplished?</h2>
+          <p class = "projects_mainText"> TEXT</p>  
+          <p class= "projects_mainText">Manipulation of complex Control Systems, including precise PID controllers and implemented real-time monitoring via Arduino IDE for accurate motor control and swift adjustments, enhancing maneuverability and response effectiveness.
+          </p>
+          <p class= "projects_mainText">
+            The Autonomous Navigation leveraged ROS2 navigation packages and sophisticated SLAM mapping algorithms, enabling the LifeBot to autonomously navigate indoor environments, swiftly reaching predetermined destinations for timely assistance.
+            </p>
+          <h2 class="projects_subheading">What was the result?
+          </h2>
+          <p class= "projects_mainText">TEXT
+        </p>
+        </div>
+        <div class ="image-container">
+          <img src="MyPortfolio/LifeBot/ChassisIRL.png"
+          class ="image-format">
+          <img src="MyPortfolio/LifeBot/TechDrawing.png"
+          class ="image-format">
+          <div class="project2-btn-container">
+            <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/LifeBot/TechDrawing.png')">Technical Drawing</button>
+          </div>
+        </div>
+
+       </div>
+       </section>
+       <section id="RobotArm">
+      
+        <h1 class ="heading">3 Axis Robot Arm</h1>
+         <div class="flex">
+          <div class ="image-container">
+            <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg"
+            class ="image-format">
+            <img src="MyPortfolio/RoboticArm/RobotArmV1/Base.jpg"
+            class ="image-format">
+            <div class="Links">
+                  <div class="project-btn-container">
+                    <button class="btn project-btn-color" onclick="window.open('https://youtube.com/shorts/0Cv19AXklW4?feature=share')">Demo</button>
+                    <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/RoboticArm/RobotArmV1/Documentation.pdf')">Documentation</button>
+                  </div>
+              </div>
+            </div>
+            <div class="text-container">
+            <h2 class="projects_subheading">What is the Purpose?</h2>
+            <p class = "projects_mainText">The project aimed to address the loss of grip strength in individuals with conditions like strokes, multiple sclerosis, and Parkinson’s disease by designing a robotic arm to assist them in holding and manipulating objects, particularly mobile phones, thereby enhancing their independence and quality of life.
+            </p>
+            <h2 class="projects_subheading">How was this accomplished?</h2>
+            <p class = "projects_mainText"> Utilized SolidWorks for mechanical design, incorporating components such as a compound gearbox for vertical motion and a base plate with ball bearings for horizontal movement.
+            </p>  
+            <p class= "projects_mainText">Reinforced the arm with triangle trusses to minimize deflection and ensure structural stability.
+              Designed gripper subsystem with a stepper motor-powered gearbox for controlled gripping, integrating gear motion controlled by rack gear.
+              
+            </p>
+            
+            <h2 class="projects_subheading">What was the result?
+            </h2>
+            <p class= "projects_mainText">While individual subsystems showed success, the overall prototype failed to meet project requirements.
+              This was due to the inconsistent gearbox performance, slow gripper motion, and structural limitations of  the popsicle stick truss. 
+            </p>
+            <p class= "projects_mainText">Future iterations of the robot have commenced with a focus on strengthening connections, optimizing motor speed, and reducing friction in the gripper system for increased efficiency and functionality.
+            </p>
+          </div>
+         </div>
+        </section>
+        <section id="BlueLight">
+      
+          <h1 class ="heading">Blue Light Mount</h1>
+           <div class="flex">
+            
+              <div class="text2-container">
+              <h2 class="projects_subheading">What is the Blue Light Mount?</h2>
+              <p class = "projects_mainText">TEXT.</p>
+              <h2 class="projects_subheading">How was this accomplished?</h2>
+              <p class = "projects_mainText"> TEXT</p>  
+              <p class= "projects_mainText">Manipulation of complex Control Systems, including precise PID controllers and implemented real-time monitoring via Arduino IDE for accurate motor control and swift adjustments, enhancing maneuverability and response effectiveness.
+              </p>
+              <p class= "projects_mainText">
+                The Autonomous Navigation leveraged ROS2 navigation packages and sophisticated SLAM mapping algorithms, enabling the LifeBot to autonomously navigate indoor environments, swiftly reaching predetermined destinations for timely assistance.
+                </p>
+              <h2 class="projects_subheading">What was the result?
+              </h2>
+              <p class= "projects_mainText">TEXT
+            </p>
+            </div>
+            <div class ="image-container">
+              <img src="MyPortfolio/Mount1.png"
+              class ="image-format">
+              <img src="MyPortfolio/Mount2.png"
+              class ="image-format">
+              <div class="project2-btn-container">
+                <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/BLTechDrawing.png')">Technical Drawings</button>
+              </div>
+            </div>
+    
+           </div>
+           </section>
+           <section id="MiniBot">
+      
+            <h1 class ="heading">Autonomous Mining Loader</h1>
+             <div class="flex">
+              <div class ="image-container">
+                <img src="MyPortfolio/MiniBot/MiniBot.png"
+                class ="image-format">
+                
+                <div class="Links">
+                <img src="./MyPortfolio/GitHub-Icon.png"
+                      alt="My github Profile"
+                      class="projects_icon"
+                      onClick="location.href='https://github.com/JoshWestlake'">
+                      <div class="project-btn-container">
+                        <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
+                        <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
+                      </div>
+                  </div>
+                </div>
+                <div class="text-container">
+                <h2 class="projects_subheading">What is the Autonomous Mining Loader?</h2>
+                <p class = "projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks which are used in modern day mining operations. The primary goal of this project was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments, potentially reshaping industry practices.
+                </p>
+                <h2 class="projects_subheading">How was this accomplished?</h2>
+                <p class = "projects_mainText">Developed a line-following navigation algorithm manipulating a PID controller for precise line-following capabilities, allowing the mobile robot to navigate predefined paths accurately. This required the implementation of the Ziegler-Nichols method for tuning the PID controller.
+                </p>  
+                <p class= "projects_mainText">Implemented an open-loop control for handling intersections of the line
+                </p>
+                <p class= "projects_mainText">Created a hardware setup comprising an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, infrared distance sensor, and servo motors. Facilitating autonomous navigation and task execution by providing real-time sensor data to the control algorithms.
+                </p>
+                <h2 class="projects_subheading">What was the result?
+                </h2>
+                <p class= "projects_mainText">The final prototype was able to achieve an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications. This success underscores the MiniBot's capability to navigate predefined paths and execute tasks autonomously.
+
+                </p>
+              </div>
+             </div>
+            </section>
+            <section id="Subframe">
+      
+              <h1 class ="heading">Formula SAE Rear Subframe</h1>
+               <div class="flex">
+                
+                  <div class="text2-container">
+                  <h2 class="projects_subheading">What is the Blue Light Mount?</h2>
+                  <p class = "projects_mainText">TEXT.</p>
+                  <h2 class="projects_subheading">How was this accomplished?</h2>
+                  <p class = "projects_mainText"> TEXT</p>  
+                  <p class= "projects_mainText">Manipulation of complex Control Systems, including precise PID controllers and implemented real-time monitoring via Arduino IDE for accurate motor control and swift adjustments, enhancing maneuverability and response effectiveness.
+                  </p>
+                  <p class= "projects_mainText">
+                    The Autonomous Navigation leveraged ROS2 navigation packages and sophisticated SLAM mapping algorithms, enabling the LifeBot to autonomously navigate indoor environments, swiftly reaching predetermined destinations for timely assistance.
+                    </p>
+                  <h2 class="projects_subheading">What was the result?
+                  </h2>
+                  <p class= "projects_mainText">TEXT
+                </p>
+                </div>
+                <div class ="image-container">
+                  <img src="MyPortfolio/FormulaSAE Rear Subframe/SAE Subframe.png"
+                  class ="image-format">
+                  <img src="MyPortfolio/FormulaSAE Rear Subframe/Subframe.png"
+                  class ="image-format">
+                  <div class="project2-btn-container">
+                    <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/TechDrawing.png')">Technical Drawings</button>
+                    <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/Documentation.pdf')">Documentation</button>
+                  </div>
+                </div>
+        
+               </div>
+               </section>
+  
+  </body>
+

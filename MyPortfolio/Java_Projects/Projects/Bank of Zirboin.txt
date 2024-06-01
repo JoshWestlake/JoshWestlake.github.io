@@ -1,0 +1,18 @@
+Get the number of Vrobits from: Via Text Field(.getText)
+Calculate the number of Drobzit that can be used: Factor = (Total/100000) -> Rounded down(.floor)
+Subtract the amount that will be taken from the total: (Total - factor*100000)
+Output the number(factor) of Drobzit coins
+Calculate the number of Clickwick that can be used: Factor = (Total/50000) -> Rounded down(.floor)
+Subtract the amount that will be taken from the total: (Total - factor*50000)
+Output the number(factor) of Clickwick coins
+Calculate the number of Gazoontight that can be used: Factor = (Total/10000) -> Rounded down(.floor)
+Subtract the amount that will be taken from the total: (Total - factor*10000)
+Output the number(factor) of gazoontight coins
+Calculate the number of Frazoint that can be used: Factor = (Total/1000) -> Rounded down(.floor)
+Subtract the amount that will be taken from the total: (Total - factor*1000)
+Output the number(factor) of frazoint coins
+Calculate the number of blointoint that can be used: Factor = (Total/500) -> Rounded down(.floor)
+Subtract the amount that will be taken from the total: (Total - factor*500)
+Output the number(factor) of blointoint coins
+Calculate the remanding vribots
+Output the number(factor) of vribots coins
