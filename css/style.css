@@ -377,6 +377,10 @@ section {
   
   
 }
+.image-container-mobile{
+  display:none;
+}
+
 .image-format{
   width: 400px;
   display: block;

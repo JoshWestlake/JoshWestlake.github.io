@@ -28,7 +28,7 @@
     
     <section id="profile">
       <div class="section__pic-containermobile">
-        <img src="./MyPortfolio/HeadShot-Mobile.png" 
+        <img src="./MyPortfolio/HeadShot.png" 
         alt="Josh Westlake Profile picture" >
       </div>
       <div class="section__text">
@@ -141,7 +141,7 @@
       
     <h1 class ="heading">LifeBot</h1>
      <div class="flex">
-      <div class ="image-container">
+      <div class ="image-container-mobile">
         <img src="MyPortfolio/LifeBot/LynxMotion.png"
         class ="image-format">
         <img src="MyPortfolio/LifeBot/Mapping (1).png"
@@ -157,6 +157,7 @@
               </div>
           </div>
         </div>
+        
         <div class="desktop">
         <div class="text-container">
         <h2 class="projects_subheading">What is LifeBot?</h2>
@@ -184,9 +185,18 @@
     </section>
     <section id="Chassis">
       
+      
       <h1 class ="heading">LifeBot Chassis</h1>
        <div class="flex">
-        
+        <div class ="image-container-mobile">
+          <img src="MyPortfolio/LifeBot/ChassisIRL.png"
+          class ="image-format">
+          <img src="MyPortfolio/LifeBot/TechDrawing.png"
+          class ="image-format">
+          <div class="project2-btn-container">
+            <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/LifeBot/TechDrawing.png')">Technical Drawing</button>
+          </div>
+        </div>
         
         <div class="desktop">
           <div class="text2-container">
@@ -200,6 +210,7 @@
             
           </div>
         </div>
+        <div class="mobile">
         <div class="text2-container">
           <h2 class="projects_subheading">What is the Chassis?</h2>
           <p class = "projects_mainText">The project aimed to design and implement a mounting solution for an Automated External Defibrillator (AED) device, ensuring its secure and accessible placement on a robotic platform for swift delivery during cardiac arrest emergencies. <a href class="read-more-link">Click here to read more</a></p>  
@@ -228,7 +239,7 @@
       
         <h1 class ="heading">3 Axis Robot Arm</h1>
          <div class="flex">
-          <div class ="image-container">
+          <div class ="image-container-mobile">
             <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg"
             class ="image-format">
             <img src="MyPortfolio/RoboticArm/RobotArmV1/Base.jpg"
@@ -239,28 +250,44 @@
                     <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/RoboticArm/RobotArmV1/Documentation.pdf')">Documentation</button>
                   </div>
               </div>
+              <div class="desktop">
+                <div class="text-container">
+                  <h2 class="projects_subheading">What is the Purpose?</h2>
+                  <p class = "projects_mainText">The purpose of the project was to engineer a robotic arm attachment for wheelchairs, specifically designed to empower individuals with limited grip strength in manipulating objects with ease and precision. This solution aims to enhance autonomy and quality of life by enabling users to perform daily tasks, such as handling mobile phones, independently.
+                  </p>
+                  <h2 class="projects_subheading">How was this accomplished?</h2>
+                  <p class = "projects_mainText"> The project required meticulous selection and integration of various components into the arm's design, including craft sticks for structural support, wire connectors for electrical connections, and an Arduino Uno as the central control unit. These components were strategically chosen to ensure optimal performance and reliability, meeting the specific requirements of the arm's functionality.
+                  </p>  
+                  <p class= "projects_mainText">Integral to the arm's operation is the gearbox mechanism, comprising gears, rods, and motors. The gearbox transmits rotational motion and torque from the DC motors to facilitate smooth and efficient movement of the arm's gripper mechanism. Additionally, the incorporation of a stepper motor enables precise control and manipulation of objects, enhancing the arm's functionality and usability. Through iterative design iterations and rigorous testing, the project successfully developed a practical and efficient solution. CAD software was utilized to refine and optimize the arm's geometry, ensuring structural integrity and mechanical robustness. Furthermore, simulation techniques, such as stress analysis and displacement analysis, were employed to validate the arm's performance under operational loads, confirming its reliability and effectiveness in assisting individuals with grip strength limitations.
+                  </p>
+                  <p class= "projects_mainText">The Arduino Uno was chosen to interface with sensors, motors, and other electronic components, enabling seamless communication and coordination within the robotic arm system. Its ability to process input signals and execute predefined instructions allows for intuitive user control, enhancing the arm's usability and accessibility.
+                  </p>
+                  </div>
+               </div>
+               <div class="mobile">
+               <div class="text-container">
+                  <h2 class="projects_subheading">What is the Purpose?</h2>
+                  <p class = "projects_mainText">The purpose of the project was to engineer a robotic arm attachment for wheelchairs, specifically designed to empower individuals with limited grip strength in manipulating objects with ease and precision. This solution aims to enhance autonomy and quality of life by enabling users to perform daily tasks, such as handling mobile phones, independently.<a href class="read-more-link">Click here to read more</a></p>  
+               <div class="additional-text">
+           <h2 class="projects_subheading">How was this accomplished?</h2>
+                  <p class = "projects_mainText"> The project required meticulous selection and integration of various components into the arm's design, including craft sticks for structural support, wire connectors for electrical connections, and an Arduino Uno as the central control unit. These components were strategically chosen to ensure optimal performance and reliability, meeting the specific requirements of the arm's functionality.
+                  </p>  
+                  <p class= "projects_mainText">Integral to the arm's operation is the gearbox mechanism, comprising gears, rods, and motors. The gearbox transmits rotational motion and torque from the DC motors to facilitate smooth and efficient movement of the arm's gripper mechanism. Additionally, the incorporation of a stepper motor enables precise control and manipulation of objects, enhancing the arm's functionality and usability. Through iterative design iterations and rigorous testing, the project successfully developed a practical and efficient solution. CAD software was utilized to refine and optimize the arm's geometry, ensuring structural integrity and mechanical robustness. Furthermore, simulation techniques, such as stress analysis and displacement analysis, were employed to validate the arm's performance under operational loads, confirming its reliability and effectiveness in assisting individuals with grip strength limitations.
+                  </p>
+                  <p class= "projects_mainText">The Arduino Uno was chosen to interface with sensors, motors, and other electronic components, enabling seamless communication and coordination within the robotic arm system. Its ability to process input signals and execute predefined instructions allows for intuitive user control, enhancing the arm's usability and accessibility.
+                  </p>
+                  
+                  <h2 class="projects_subheading">What was the result?
+                  </h2>
+                  <p class= "projects_mainText">While individual subsystems showed success, the overall prototype failed to meet project requirements.
+                    This was due to the inconsistent gearbox performance, slow gripper motion, and structural limitations of  the popsicle stick truss. 
+                  </p>
+                  <p class= "projects_mainText">Future iterations of the robot have commenced with a focus on strengthening connections, optimizing motor speed, and reducing friction in the gripper system for increased efficiency and functionality.
+                  </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="text-container">
-            <h2 class="projects_subheading">What is the Purpose?</h2>
-            <p class = "projects_mainText">The purpose of the project was to engineer a robotic arm attachment for wheelchairs, specifically designed to empower individuals with limited grip strength in manipulating objects with ease and precision. This solution aims to enhance autonomy and quality of life by enabling users to perform daily tasks, such as handling mobile phones, independently.
-            </p>
-            <h2 class="projects_subheading">How was this accomplished?</h2>
-            <p class = "projects_mainText"> The project required meticulous selection and integration of various components into the arm's design, including craft sticks for structural support, wire connectors for electrical connections, and an Arduino Uno as the central control unit. These components were strategically chosen to ensure optimal performance and reliability, meeting the specific requirements of the arm's functionality.
-            </p>  
-            <p class= "projects_mainText">Integral to the arm's operation is the gearbox mechanism, comprising gears, rods, and motors. The gearbox transmits rotational motion and torque from the DC motors to facilitate smooth and efficient movement of the arm's gripper mechanism. Additionally, the incorporation of a stepper motor enables precise control and manipulation of objects, enhancing the arm's functionality and usability. Through iterative design iterations and rigorous testing, the project successfully developed a practical and efficient solution. CAD software was utilized to refine and optimize the arm's geometry, ensuring structural integrity and mechanical robustness. Furthermore, simulation techniques, such as stress analysis and displacement analysis, were employed to validate the arm's performance under operational loads, confirming its reliability and effectiveness in assisting individuals with grip strength limitations.
-            </p>
-            <p class= "projects_mainText">The Arduino Uno was chosen to interface with sensors, motors, and other electronic components, enabling seamless communication and coordination within the robotic arm system. Its ability to process input signals and execute predefined instructions allows for intuitive user control, enhancing the arm's usability and accessibility.
-            </p>
-            
-            <h2 class="projects_subheading">What was the result?
-            </h2>
-            <p class= "projects_mainText">While individual subsystems showed success, the overall prototype failed to meet project requirements.
-              This was due to the inconsistent gearbox performance, slow gripper motion, and structural limitations of  the popsicle stick truss. 
-            </p>
-            <p class= "projects_mainText">Future iterations of the robot have commenced with a focus on strengthening connections, optimizing motor speed, and reducing friction in the gripper system for increased efficiency and functionality.
-            </p>
-          </div>
-         </div>
         </section>
         <section id="Subframe">
       
@@ -279,17 +306,23 @@
               <p class= "projects_mainText">The final design achieved a significant weight reduction, bringing the subframe's weight down from 29.6 kg to 7.7 kg, thus enhancing the vehicle's acceleration and control. The use of 4130 steel tubing provided the necessary strength to withstand the forces encountered during racing. The simplified design, free from cross-bracing, was not only lighter but also easier and more cost-effective to manufacture. Finite Element Analysis (FEA) simulations confirmed that the subframe could handle the required forces, ensuring it met all safety and performance criteria. The detachable subframe design successfully balanced weight reduction, durability, and manufacturability, aligning with the project's goals and constraints.
             </p>
             </div>
-            <div class ="image-container">
+            <div class ="image-container-mobile">
               <img src="MyPortfolio/FormulaSAE Rear Subframe/Subframe.png"
               class ="image-format">
               <img src="MyPortfolio/FormulaSAE Rear Subframe/plugs.png"
               class ="image-format">
+              <div class ="image-container-desktop">
+                <img src="MyPortfolio/FormulaSAE Rear Subframe/Subframe.png"
+                class ="image-format">
+                <img src="MyPortfolio/FormulaSAE Rear Subframe/plugs.png"
+                class ="image-format">
               <div class="project2-btn-container">
                 <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/TechDrawing.png')">Technical Drawings</button>
                 <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/Documentation.pdf')">Documentation</button>
               </div>
             </div>
     
+           </div>
            </div>
            </section>
            <section id="MiniBot">
@@ -362,16 +395,18 @@
                  </section>
                  <script>
                   document.addEventListener("DOMContentLoaded", function() {
-                  var readMoreLink = document.querySelector('.read-more-link');
-                  var additionalContent = document.querySelector('.additional-text');
+        var readMoreLinks = document.querySelectorAll('.read-more-link');
 
-                  readMoreLink.addEventListener('click', function(event) {
-                  event.preventDefault(); // Prevent the default behavior of the link
+        readMoreLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default behavior of the link
 
-                  // Toggle the display of the additional content
-                  additionalContent.style.display = (additionalContent.style.display === 'none') ? 'block' : 'none';
+                var additionalContent = link.closest('.mobile').querySelector('.additional-text');
+                // Toggle the display of the additional content
+                additionalContent.style.display = (additionalContent.style.display === 'none' || additionalContent.style.display === '') ? 'block' : 'none';
+            });
+        });
     });
-});
               </script>
   
   </body>
