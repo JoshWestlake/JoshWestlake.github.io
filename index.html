@@ -157,13 +157,27 @@
               </div>
           </div>
         </div>
+        <div class="desktop">
         <div class="text-container">
         <h2 class="projects_subheading">What is LifeBot?</h2>
-        <p class = "projects_mainText">The LifeBot project aimed to revolutionize emergency response capabilities, particularly in scenarios such as cardiac arrests, by providing swift access to life-saving equipment in indoor environments where traditional response times may be compromised, specifically in indoor settings where defibrillators are often scattered and difficult-to-locate.</p>
+        <p class = "projects_mainText">The LifeBot project aimed to revolutionize emergency response capabilities, particularly in scenarios such as cardiac arrests, by providing swift access to life-saving equipment in indoor environments where traditional response times may be compromised, specifically in indoor settings where defibrillators are often scattered and difficult-to-locate.
         <h2 class="projects_subheading">How was this accomplished?</h2>
         <p class = "projects_mainText"> The software development involved several key components, starting with the controller. A PI (Proportional-Integral) controller was implemented to dynamically adjust motor PWM (Pulse Width Modulation) commands, allowing the robot to respond proportionally to differences between desired and actual wheel speeds. The main control loop calculated wheel angular rates from encoder data and adjusted PWM signals to match the vehicle's speed with the target speed. Real-time monitoring was facilitated through the Arduino IDE's serial monitor and plotter, providing insights into wheel velocities. To address discrepancies in wheel speeds due to motor deficiencies, an additional PI system was implemented to minimize errors between the left and right wheel speeds, ensuring accurate trajectory control.</p>  
         <p class= "projects_mainText">For navigation, the LifeBot utilized ROS2 (Robot Operating System 2) packages. The SLAM (Simultaneous Localization and Mapping) package built a 2D map and determined the robot's position using a laser scanner (RPLIDAR) and an odometry system. The NAV2 package created a cost map, calculated the lowest cost path to the target location, and sent navigation instructions to ROS2 Control. ROS2 Control integrated a differential drive controller, standardizing control and state information and enabling fast data transmission. Communication between the Arduino and Raspberry Pi was managed via ROS2, with internet communications handled by SSH (Secure Shell Protocol) to offload computationally intensive tasks to a base station. Serial communications connected the Arduino to motors, encoders, and sensors, facilitating real-time data exchange and control commands.
         </p>
+        </div>
+      </div>
+        <div class="mobile">
+        <div class="text-container">
+        <h2 class="projects_subheading">What is LifeBot?</h2>
+        <p class = "projects_mainText">The LifeBot project aimed to revolutionize emergency response capabilities, particularly in scenarios such as cardiac arrests, by providing swift access to life-saving equipment in indoor environments where traditional response times may be compromised, specifically in indoor settings where defibrillators are often scattered and difficult-to-locate.<a href class="read-more-link">Click here to read more</a></p>
+      <div class="additional-text">
+        <h2 class="projects_subheading">How was this accomplished?</h2>
+        <p class = "projects_mainText"> The software development involved several key components, starting with the controller. A PI (Proportional-Integral) controller was implemented to dynamically adjust motor PWM (Pulse Width Modulation) commands, allowing the robot to respond proportionally to differences between desired and actual wheel speeds. The main control loop calculated wheel angular rates from encoder data and adjusted PWM signals to match the vehicle's speed with the target speed. Real-time monitoring was facilitated through the Arduino IDE's serial monitor and plotter, providing insights into wheel velocities. To address discrepancies in wheel speeds due to motor deficiencies, an additional PI system was implemented to minimize errors between the left and right wheel speeds, ensuring accurate trajectory control.</p>  
+        <p class= "projects_mainText">For navigation, the LifeBot utilized ROS2 (Robot Operating System 2) packages. The SLAM (Simultaneous Localization and Mapping) package built a 2D map and determined the robot's position using a laser scanner (RPLIDAR) and an odometry system. The NAV2 package created a cost map, calculated the lowest cost path to the target location, and sent navigation instructions to ROS2 Control. ROS2 Control integrated a differential drive controller, standardizing control and state information and enabling fast data transmission. Communication between the Arduino and Raspberry Pi was managed via ROS2, with internet communications handled by SSH (Secure Shell Protocol) to offload computationally intensive tasks to a base station. Serial communications connected the Arduino to motors, encoders, and sensors, facilitating real-time data exchange and control commands.
+        </p>
+        </div>
+      </div>
         
       </div>
      </div>
@@ -173,15 +187,30 @@
       <h1 class ="heading">LifeBot Chassis</h1>
        <div class="flex">
         
+        
+        <div class="desktop">
           <div class="text2-container">
+            <h2 class="projects_subheading">What is the Chassis?</h2>
+            <p class = "projects_mainText">The project aimed to design and implement a mounting solution for an Automated External Defibrillator (AED) device, ensuring its secure and accessible placement on a robotic platform for swift delivery during cardiac arrest emergencies. </p>
+            <h2 class="projects_subheading">How was this accomplished?</h2>
+            <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.</p>  
+            <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
+            </p>
+            <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
+            
+          </div>
+        </div>
+        <div class="text2-container">
           <h2 class="projects_subheading">What is the Chassis?</h2>
-          <p class = "projects_mainText">The project aimed to design and implement a mounting solution for an Automated External Defibrillator (AED) device, ensuring its secure and accessible placement on a robotic platform for swift delivery during cardiac arrest emergencies. </p>
+          <p class = "projects_mainText">The project aimed to design and implement a mounting solution for an Automated External Defibrillator (AED) device, ensuring its secure and accessible placement on a robotic platform for swift delivery during cardiac arrest emergencies. <a href class="read-more-link">Click here to read more</a></p>  
+          <div class="additional-text">
           <h2 class="projects_subheading">How was this accomplished?</h2>
-          <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.</p>  
+          <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.
           <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
           </p>
           <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
-          
+          </div>
+        </div>
         </div>
         <div class ="image-container">
           <img src="MyPortfolio/LifeBot/ChassisIRL.png"
@@ -331,5 +360,18 @@
           
                  </div>
                  </section>
+                 <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                  var readMoreLink = document.querySelector('.read-more-link');
+                  var additionalContent = document.querySelector('.additional-text');
+
+                  readMoreLink.addEventListener('click', function(event) {
+                  event.preventDefault(); // Prevent the default behavior of the link
+
+                  // Toggle the display of the additional content
+                  additionalContent.style.display = (additionalContent.style.display === 'none') ? 'block' : 'none';
+    });
+});
+              </script>
   
   </body>

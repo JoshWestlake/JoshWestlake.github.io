@@ -397,6 +397,9 @@ section {
 .flex{
   display: flex;
 }
+.mobile{
+  display:none;
+}
 .projects_subheading{
   margin-top: 1.4rem;
   color: rgb(42,113,234);
