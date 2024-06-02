@@ -71,7 +71,7 @@ a:hover {
 
 section {
     padding-top: 4vh;
-    height: 96vh;
+    
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -95,6 +95,13 @@ section {
     width: 600px;
     margin: auto 0;
   }
+  .section__pic-containermobile {
+    display: none;
+    height: 600px;
+    width: 600px;
+    margin: auto 0;
+    
+}
   
   .section__text {
     align-self: center;
@@ -344,9 +351,11 @@ section {
 /* LIFEBOT */
 
 #LifeBot{
-  display: flex;
-  margin-top: 30rem;
+  display:flex;
+  margin-top: 4rem;
   flex-direction: column;
+  margin-bottom: 8rem;
+
   
 }
 .heading{
@@ -382,18 +391,20 @@ section {
 .text-container{
   flex:l;
   padding-left: 60px;
+  
+  
 }
 .flex{
   display: flex;
 }
 .projects_subheading{
-  margin-top: 3rem;
+  margin-top: 1.4rem;
   color: rgb(42,113,234);
   font-weight: 900;
   font-size: 2rem;
 }
 .projects_mainText{
-  margin-top: 1.4rem;
+  margin-top: 0.5rem;
   color: white;
   font-weight: 600;
   line-height: 2rem;
@@ -436,15 +447,16 @@ section {
 
   /*chassis*/
   #Chassis{
-  display: flex;
-  margin-top: 15rem;
+  display:flex;
+  margin-top: 2rem;
   flex-direction: column;
   
   }
   .text2-container{
     z-index: 10;
     flex:l;
-    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 2rem;
   }
   .project2-btn-container{
     margin-left:auto;
@@ -478,7 +490,7 @@ section {
 /*BlueLight*/
 #BlueLight{
   display: flex;
-  margin-top: 25rem;
+  margin-top: 0rem;
   flex-direction: column;
   
 }
@@ -486,13 +498,13 @@ section {
 /*MiniBot*/
 #MiniBot{
   display: flex;
-  margin-top: 20rem;
+  margin-top: 0rem;
   flex-direction: column;
   
 }
 /*subframe*/
 #Subframe{
   display: flex;
-  margin-top: 20rem;
+  margin-top: 0rem;
   flex-direction: column;
 }
