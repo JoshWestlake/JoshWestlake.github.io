@@ -36,7 +36,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
-    width:auto;
+    width:100vw;
     
 }
 
@@ -107,7 +107,7 @@ section {
 }
 .section__pic-containermobile {
     display: flex;
-    height: 600px;
+    height: 70vw;
     margin: auto;
     
 }
