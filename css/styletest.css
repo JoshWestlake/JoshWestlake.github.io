@@ -36,7 +36,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
-    width:100vw;
+    width:70vw;
+    margin: 0 auto;
     
 }
 
@@ -108,7 +109,7 @@ section {
 .section__pic-containermobile {
     display: flex;
     height: 70vw;
-    margin: auto;
+    margin: 0 auto;
     
 }
 
