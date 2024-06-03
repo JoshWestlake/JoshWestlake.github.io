@@ -109,7 +109,10 @@ section {
 }
 .section__pic-containermobile {
    display: flex;
-    height: 90vw;
+   width: 90vw;
+   height: 90vw;
+
+    
     margin: 0 auto;
     
 }
