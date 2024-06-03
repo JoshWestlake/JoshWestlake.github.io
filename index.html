@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Josh Westake Portfolio</title>
     <link rel = "stylesheet" href = "/css/style.css"/>
-    <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1080px)"/> 
+    <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1200px)"/> 
  </head>
   <!-----MENU SECTION------>
   <body>
     <nav id="desktop-nav">
-        <img src ="./MyPortfolio/Logo (1).png"
+      <img src ="./MyPortfolio/Logo (1).png"
         alt="Home"
         class="static_icon"
         onClick="location.href='#desktop-nav'"
-        />
-        <div>
-            <!-- This creates the links for each of the pages, orange #is actual link while the white text is visually shown -->
-            <ul class="nav-links">
-              
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+      />
+      <div>
+      <!-- This creates the links for each of the pages, orange #is actual link while the white text is visually shown -->
+        <ul class="nav-links">  
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
     </nav> 
     
     <section id="profile">
+      
       <div class="section__pic-containermobile">
         <img src="./MyPortfolio/HeadShot.png" 
         alt="Josh Westlake Profile picture" >
@@ -65,18 +65,15 @@
       <p class="about_subheading">Get to Know More About Me</p>
       <h1 class="title">About Me</h1>
       <p class="about_bold"> Welcome to my portfolio!</p>
-    <p class="about_text">
-      
-      <span class="about_mainText"> I'm Josh Westlake, 
-      a 3rd year Mechatronics and Robotics Engineering Student at Queen's University. As a student, I am driven by a relentless curiosity to explore the boundless possibilities within this field. Through hands-on experiences and academic pursuits, I'm dedicated to shaping the future of robotics technology, particularly in areas where
-      mechanical and control systems converge </span>
+      <p class="about_text">
+        <span class="about_mainText"> I'm Josh Westlake, 
+        a 3rd year Mechatronics and Robotics Engineering Student at Queen's University. As a student, I am driven by a relentless curiosity to explore the boundless possibilities within this field. Through hands-on experiences and academic pursuits, I'm dedicated to shaping the future of robotics technology, particularly in areas where
+        mechanical and control systems converge </span>
       </p>
-  </p>
-    <p class="about_text">
-      <span class="about_mainText">This portfolio is designed to showcase a glimpse into my journey, highlighting </span>
-      <span class="about_mainText"> projects, experiences, and aspirations </span>
-      <span class="about_mainText"> as I navigate the exciting world of robotics. Whether you're curious about opportunities, or just want to chat about robotics, don't hesitate to reach out!</span>
-    </p> 
+      </p>
+      <p class="about_text">
+        <span class="about_mainText">This portfolio is designed to showcase a glimpse into my journey, highlighting projects, experiences, and aspirations as I navigate the exciting world of robotics. Whether you're curious about opportunities, or just want to chat about robotics, don't hesitate to reach out!</span>
+      </p> 
 
   </section>
   <section id="projects">
@@ -91,7 +88,7 @@
               <a href="#LifeBot">
                 <img src="MyPortfolio/LifeBot/LifeBot.png"
                 class = "gallery-image"></a>
-              <p> <a href="#LifeBot">LifeBot</a></p>  
+                <p> <a href="#LifeBot">LifeBot</a></p>  
             </div>
             <div class ="gallery-items">          
               <a href="#RobotArm">
@@ -105,7 +102,7 @@
                 class = "gallery-image"></a>
                 <p> <a href="#MiniBot">Autonomous Mining Loader</a></p>
             </div>
-           </div>
+          </div>
         </div>
       </div>
       <div class="mechanical_btn_container"> 
@@ -133,21 +130,17 @@
          </div>
         </div>
       </div>
-  
- 
-
     </section>
     <section id="LifeBot">
-      
-    <h1 class ="heading">LifeBot</h1>
-     <div class="flex">
-      <div class ="image-container-mobile">
-        <img src="MyPortfolio/LifeBot/LynxMotion.png"
-        class ="image-format">
-        <img src="MyPortfolio/LifeBot/Mapping (1).png"
-        class ="image-format">
-        <div class="Links">
-        <img src="./MyPortfolio/GitHub-Icon.png"
+      <h1 class ="heading">LifeBot</h1>
+      <div class="flex">
+        <div class ="image-container">
+          <img src="MyPortfolio/LifeBot/LynxMotion.png"
+          class ="image-format">
+          <img src="MyPortfolio/LifeBot/Mapping (1).png"
+          class ="image-format">
+            <div class="Links">
+              <img src="./MyPortfolio/GitHub-Icon.png"
               alt="My github Profile"
               class="projects_icon"
               onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/LifeBot'">
@@ -155,48 +148,63 @@
                 <button class="btn project-btn-color" onclick="window.open('https://youtu.be/1wbDD_aVC8c')">Demo</button>
                 <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/Documentation.pdf')">Documentation</button>
               </div>
+            </div>
+        </div>
+      <div class ="image-container-mobile">
+        <img src="MyPortfolio/LifeBot/LynxMotion.png"
+        class ="image-format">
+        <img src="MyPortfolio/LifeBot/Mapping (1).png"
+        class ="image-format">
+        <div class="Links">
+          <img src="./MyPortfolio/GitHub-Icon.png"
+          alt="My github Profile"
+          class="projects_icon"
+          onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/LifeBot'">
+          <div class="project-btn-container">
+            <button class="btn project-btn-color" onclick="window.open('https://youtu.be/1wbDD_aVC8c')">Demo</button>
+            <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/Documentation.pdf')">Documentation</button>
           </div>
         </div>
+      </div>
         
-        <div class="desktop">
+      <div class="desktop">
         <div class="text-container">
-        <h2 class="projects_subheading">What is LifeBot?</h2>
-        <p class = "projects_mainText">The LifeBot project aimed to revolutionize emergency response capabilities, particularly in scenarios such as cardiac arrests, by providing swift access to life-saving equipment in indoor environments where traditional response times may be compromised, specifically in indoor settings where defibrillators are often scattered and difficult-to-locate.
-        <h2 class="projects_subheading">How was this accomplished?</h2>
-        <p class = "projects_mainText"> The software development involved several key components, starting with the controller. A PI (Proportional-Integral) controller was implemented to dynamically adjust motor PWM (Pulse Width Modulation) commands, allowing the robot to respond proportionally to differences between desired and actual wheel speeds. The main control loop calculated wheel angular rates from encoder data and adjusted PWM signals to match the vehicle's speed with the target speed. Real-time monitoring was facilitated through the Arduino IDE's serial monitor and plotter, providing insights into wheel velocities. To address discrepancies in wheel speeds due to motor deficiencies, an additional PI system was implemented to minimize errors between the left and right wheel speeds, ensuring accurate trajectory control.</p>  
-        <p class= "projects_mainText">For navigation, the LifeBot utilized ROS2 (Robot Operating System 2) packages. The SLAM (Simultaneous Localization and Mapping) package built a 2D map and determined the robot's position using a laser scanner (RPLIDAR) and an odometry system. The NAV2 package created a cost map, calculated the lowest cost path to the target location, and sent navigation instructions to ROS2 Control. ROS2 Control integrated a differential drive controller, standardizing control and state information and enabling fast data transmission. Communication between the Arduino and Raspberry Pi was managed via ROS2, with internet communications handled by SSH (Secure Shell Protocol) to offload computationally intensive tasks to a base station. Serial communications connected the Arduino to motors, encoders, and sensors, facilitating real-time data exchange and control commands.
-        </p>
+          <h2 class="projects_subheading">What is LifeBot?</h2>
+          <p class = "projects_mainText">The LifeBot project aimed to revolutionize emergency response capabilities, particularly in scenarios such as cardiac arrests, by providing swift access to life-saving equipment in indoor environments where traditional response times may be compromised, specifically in indoor settings where defibrillators are often scattered and difficult-to-locate.
+          <h2 class="projects_subheading">How was this accomplished?</h2>
+          <p class = "projects_mainText"> The software development involved several key components, starting with the controller. A PI (Proportional-Integral) controller was implemented to dynamically adjust motor PWM (Pulse Width Modulation) commands, allowing the robot to respond proportionally to differences between desired and actual wheel speeds. The main control loop calculated wheel angular rates from encoder data and adjusted PWM signals to match the vehicle's speed with the target speed. Real-time monitoring was facilitated through the Arduino IDE's serial monitor and plotter, providing insights into wheel velocities. To address discrepancies in wheel speeds due to motor deficiencies, an additional PI system was implemented to minimize errors between the left and right wheel speeds, ensuring accurate trajectory control.</p>  
+          <p class= "projects_mainText">For navigation, the LifeBot utilized ROS2 (Robot Operating System 2) packages. The SLAM (Simultaneous Localization and Mapping) package built a 2D map and determined the robot's position using a laser scanner (RPLIDAR) and an odometry system. The NAV2 package created a cost map, calculated the lowest cost path to the target location, and sent navigation instructions to ROS2 Control. ROS2 Control integrated a differential drive controller, standardizing control and state information and enabling fast data transmission. Communication between the Arduino and Raspberry Pi was managed via ROS2, with internet communications handled by SSH (Secure Shell Protocol) to offload computationally intensive tasks to a base station. Serial communications connected the Arduino to motors, encoders, and sensors, facilitating real-time data exchange and control commands.
+          </p>
         </div>
       </div>
         <div class="mobile">
-        <div class="text-container">
-        <h2 class="projects_subheading">What is LifeBot?</h2>
-        <p class = "projects_mainText">The LifeBot project aimed to revolutionize emergency response capabilities, particularly in scenarios such as cardiac arrests, by providing swift access to life-saving equipment in indoor environments where traditional response times may be compromised, specifically in indoor settings where defibrillators are often scattered and difficult-to-locate.<a href class="read-more-link">Click here to read more</a></p>
-      <div class="additional-text">
-        <h2 class="projects_subheading">How was this accomplished?</h2>
-        <p class = "projects_mainText"> The software development involved several key components, starting with the controller. A PI (Proportional-Integral) controller was implemented to dynamically adjust motor PWM (Pulse Width Modulation) commands, allowing the robot to respond proportionally to differences between desired and actual wheel speeds. The main control loop calculated wheel angular rates from encoder data and adjusted PWM signals to match the vehicle's speed with the target speed. Real-time monitoring was facilitated through the Arduino IDE's serial monitor and plotter, providing insights into wheel velocities. To address discrepancies in wheel speeds due to motor deficiencies, an additional PI system was implemented to minimize errors between the left and right wheel speeds, ensuring accurate trajectory control.</p>  
-        <p class= "projects_mainText">For navigation, the LifeBot utilized ROS2 (Robot Operating System 2) packages. The SLAM (Simultaneous Localization and Mapping) package built a 2D map and determined the robot's position using a laser scanner (RPLIDAR) and an odometry system. The NAV2 package created a cost map, calculated the lowest cost path to the target location, and sent navigation instructions to ROS2 Control. ROS2 Control integrated a differential drive controller, standardizing control and state information and enabling fast data transmission. Communication between the Arduino and Raspberry Pi was managed via ROS2, with internet communications handled by SSH (Secure Shell Protocol) to offload computationally intensive tasks to a base station. Serial communications connected the Arduino to motors, encoders, and sensors, facilitating real-time data exchange and control commands.
-        </p>
+          <div class="text-container">
+            <h2 class="projects_subheading">What is LifeBot?</h2>
+            <p class = "projects_mainText">The LifeBot project aimed to revolutionize emergency response capabilities, particularly in scenarios such as cardiac arrests, by providing swift access to life-saving equipment in indoor environments where traditional response times may be compromised, specifically in indoor settings where defibrillators are often scattered and difficult-to-locate.<a href class="read-more-link">Click here to read more</a></p>
+            <div class="additional-text">
+              <h2 class="projects_subheading">How was this accomplished?</h2>
+              <p class = "projects_mainText"> The software development involved several key components, starting with the controller. A PI (Proportional-Integral) controller was implemented to dynamically adjust motor PWM (Pulse Width Modulation) commands, allowing the robot to respond proportionally to differences between desired and actual wheel speeds. The main control loop calculated wheel angular rates from encoder data and adjusted PWM signals to match the vehicle's speed with the target speed. Real-time monitoring was facilitated through the Arduino IDE's serial monitor and plotter, providing insights into wheel velocities. To address discrepancies in wheel speeds due to motor deficiencies, an additional PI system was implemented to minimize errors between the left and right wheel speeds, ensuring accurate trajectory control.</p>  
+              <p class= "projects_mainText">For navigation, the LifeBot utilized ROS2 (Robot Operating System 2) packages. The SLAM (Simultaneous Localization and Mapping) package built a 2D map and determined the robot's position using a laser scanner (RPLIDAR) and an odometry system. The NAV2 package created a cost map, calculated the lowest cost path to the target location, and sent navigation instructions to ROS2 Control. ROS2 Control integrated a differential drive controller, standardizing control and state information and enabling fast data transmission. Communication between the Arduino and Raspberry Pi was managed via ROS2, with internet communications handled by SSH (Secure Shell Protocol) to offload computationally intensive tasks to a base station. Serial communications connected the Arduino to motors, encoders, and sensors, facilitating real-time data exchange and control commands.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-        
-      </div>
      </div>
     </section>
     <section id="Chassis">
-      
-      
-      <h1 class ="heading">LifeBot Chassis</h1>
+       <h1 class ="heading">LifeBot Chassis</h1>
        <div class="flex">
-        <div class ="image-container-mobile">
-          <img src="MyPortfolio/LifeBot/ChassisIRL.png"
-          class ="image-format">
-          <img src="MyPortfolio/LifeBot/TechDrawing.png"
-          class ="image-format">
-          <div class="project2-btn-container">
-            <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/LifeBot/TechDrawing.png')">Technical Drawing</button>
+          <div class ="image-container-mobile">
+            <img src="MyPortfolio/LifeBot/ChassisIRL.png"
+            class ="image-format">
+            <img src="MyPortfolio/LifeBot/TechDrawing.png"
+            class ="image-format">
+            <div class="Links">
+              <div class="project-btn-container">
+                <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/TechDrawing.png')">Technical Drawing</button>
+              </div>
+            </div>
           </div>
-        </div>
         
         <div class="desktop">
           <div class="text2-container">
@@ -207,158 +215,230 @@
             <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
             </p>
             <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
-            
           </div>
         </div>
         <div class="mobile">
-        <div class="text2-container">
-          <h2 class="projects_subheading">What is the Chassis?</h2>
-          <p class = "projects_mainText">The project aimed to design and implement a mounting solution for an Automated External Defibrillator (AED) device, ensuring its secure and accessible placement on a robotic platform for swift delivery during cardiac arrest emergencies. <a href class="read-more-link">Click here to read more</a></p>  
-          <div class="additional-text">
-          <h2 class="projects_subheading">How was this accomplished?</h2>
-          <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.
-          <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
-          </p>
-          <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
+          <div class="text2-container">
+            <h2 class="projects_subheading">What is the Chassis?</h2>
+            <p class = "projects_mainText">The project aimed to design and implement a mounting solution for LifeBot, ensuring a secure and accessible placement of an AED device on a robotic platform for swift delivery during cardiac arrest emergencies. <a href class="read-more-link">Click here to read more</a></p>  
+            <div class="additional-text">
+              <h2 class="projects_subheading">How was this accomplished?</h2>
+              <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.
+              <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
+              </p>
+              <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
+            </div>
           </div>
         </div>
-        </div>
-        <div class ="image-container">
-          <img src="MyPortfolio/LifeBot/ChassisIRL.png"
-          class ="image-format">
-          <img src="MyPortfolio/LifeBot/TechDrawing.png"
-          class ="image-format">
-          <div class="project2-btn-container">
-            <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/LifeBot/TechDrawing.png')">Technical Drawing</button>
+        <div class="Links">
+          <div class ="image-container">
+            <img src="MyPortfolio/LifeBot/ChassisIRL.png"
+            class ="image-format">
+            <img src="MyPortfolio/LifeBot/TechDrawing.png"
+            class ="image-format">
+            <div class="project-btn-container">
+              <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/TechDrawing.png')">Technical Drawing</button>
+            </div>
           </div>
         </div>
 
        </div>
-       </section>
-       <section id="RobotArm">
+    </section>
+    <section id="RobotArm">
       
         <h1 class ="heading">3 Axis Robot Arm</h1>
-         <div class="flex">
+        <div class="flex">
           <div class ="image-container-mobile">
             <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg"
             class ="image-format">
             <img src="MyPortfolio/RoboticArm/RobotArmV1/Base.jpg"
             class ="image-format">
             <div class="Links">
-                  <div class="project-btn-container">
+                <div class="project-btn-container">
                     <button class="btn project-btn-color" onclick="window.open('https://youtube.com/shorts/0Cv19AXklW4?feature=share')">Demo</button>
                     <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/RoboticArm/RobotArmV1/Documentation.pdf')">Documentation</button>
-                  </div>
-              </div>
-              <div class="desktop">
-                <div class="text-container">
-                  <h2 class="projects_subheading">What is the Purpose?</h2>
-                  <p class = "projects_mainText">The purpose of the project was to engineer a robotic arm attachment for wheelchairs, specifically designed to empower individuals with limited grip strength in manipulating objects with ease and precision. This solution aims to enhance autonomy and quality of life by enabling users to perform daily tasks, such as handling mobile phones, independently.
-                  </p>
-                  <h2 class="projects_subheading">How was this accomplished?</h2>
-                  <p class = "projects_mainText"> The project required meticulous selection and integration of various components into the arm's design, including craft sticks for structural support, wire connectors for electrical connections, and an Arduino Uno as the central control unit. These components were strategically chosen to ensure optimal performance and reliability, meeting the specific requirements of the arm's functionality.
-                  </p>  
-                  <p class= "projects_mainText">Integral to the arm's operation is the gearbox mechanism, comprising gears, rods, and motors. The gearbox transmits rotational motion and torque from the DC motors to facilitate smooth and efficient movement of the arm's gripper mechanism. Additionally, the incorporation of a stepper motor enables precise control and manipulation of objects, enhancing the arm's functionality and usability. Through iterative design iterations and rigorous testing, the project successfully developed a practical and efficient solution. CAD software was utilized to refine and optimize the arm's geometry, ensuring structural integrity and mechanical robustness. Furthermore, simulation techniques, such as stress analysis and displacement analysis, were employed to validate the arm's performance under operational loads, confirming its reliability and effectiveness in assisting individuals with grip strength limitations.
-                  </p>
-                  <p class= "projects_mainText">The Arduino Uno was chosen to interface with sensors, motors, and other electronic components, enabling seamless communication and coordination within the robotic arm system. Its ability to process input signals and execute predefined instructions allows for intuitive user control, enhancing the arm's usability and accessibility.
-                  </p>
-                  </div>
-               </div>
-               <div class="mobile">
-               <div class="text-container">
-                  <h2 class="projects_subheading">What is the Purpose?</h2>
-                  <p class = "projects_mainText">The purpose of the project was to engineer a robotic arm attachment for wheelchairs, specifically designed to empower individuals with limited grip strength in manipulating objects with ease and precision. This solution aims to enhance autonomy and quality of life by enabling users to perform daily tasks, such as handling mobile phones, independently.<a href class="read-more-link">Click here to read more</a></p>  
-               <div class="additional-text">
-           <h2 class="projects_subheading">How was this accomplished?</h2>
-                  <p class = "projects_mainText"> The project required meticulous selection and integration of various components into the arm's design, including craft sticks for structural support, wire connectors for electrical connections, and an Arduino Uno as the central control unit. These components were strategically chosen to ensure optimal performance and reliability, meeting the specific requirements of the arm's functionality.
-                  </p>  
-                  <p class= "projects_mainText">Integral to the arm's operation is the gearbox mechanism, comprising gears, rods, and motors. The gearbox transmits rotational motion and torque from the DC motors to facilitate smooth and efficient movement of the arm's gripper mechanism. Additionally, the incorporation of a stepper motor enables precise control and manipulation of objects, enhancing the arm's functionality and usability. Through iterative design iterations and rigorous testing, the project successfully developed a practical and efficient solution. CAD software was utilized to refine and optimize the arm's geometry, ensuring structural integrity and mechanical robustness. Furthermore, simulation techniques, such as stress analysis and displacement analysis, were employed to validate the arm's performance under operational loads, confirming its reliability and effectiveness in assisting individuals with grip strength limitations.
-                  </p>
-                  <p class= "projects_mainText">The Arduino Uno was chosen to interface with sensors, motors, and other electronic components, enabling seamless communication and coordination within the robotic arm system. Its ability to process input signals and execute predefined instructions allows for intuitive user control, enhancing the arm's usability and accessibility.
-                  </p>
-                  
-                  <h2 class="projects_subheading">What was the result?
-                  </h2>
-                  <p class= "projects_mainText">While individual subsystems showed success, the overall prototype failed to meet project requirements.
-                    This was due to the inconsistent gearbox performance, slow gripper motion, and structural limitations of  the popsicle stick truss. 
-                  </p>
-                  <p class= "projects_mainText">Future iterations of the robot have commenced with a focus on strengthening connections, optimizing motor speed, and reducing friction in the gripper system for increased efficiency and functionality.
-                  </p>
-                  </div>
                 </div>
+            </div>
+          </div>
+          <div class ="image-container">
+          <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg"
+            class ="image-format">
+            <img src="MyPortfolio/RoboticArm/RobotArmV1/Base.jpg"
+            class ="image-format">
+            <div class="Links">
+              <div class="project-btn-container">
+                <button class="btn project-btn-color" onclick="window.open('https://youtube.com/shorts/0Cv19AXklW4?feature=share')">Demo</button>
+                <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/RoboticArm/RobotArmV1/Documentation.pdf')">Documentation</button>
               </div>
             </div>
+          </div>
+          <div class="desktop">
+            <div class="text-container">
+              <h2 class="projects_subheading">What is the Purpose?</h2>
+              <p class = "projects_mainText">The purpose of the project was to engineer a robotic arm attachment for wheelchairs, specifically designed to empower individuals with limited grip strength in manipulating objects with ease and precision. This solution aims to enhance autonomy and quality of life by enabling users to perform daily tasks, such as handling mobile phones, independently.
+              </p>
+              <h2 class="projects_subheading">How was this accomplished?</h2>
+              <p class = "projects_mainText"> The project required meticulous selection and integration of various components into the arm's design, including craft sticks for structural support, wire connectors for electrical connections, and an Arduino Uno as the central control unit. These components were strategically chosen to ensure optimal performance and reliability, meeting the specific requirements of the arm's functionality.
+              </p>  
+              <p class= "projects_mainText">Integral to the arm's operation is the gearbox mechanism, comprising gears, rods, and motors. The gearbox transmits rotational motion and torque from the DC motors to facilitate smooth and efficient movement of the arm's gripper mechanism. Additionally, the incorporation of a stepper motor enables precise control and manipulation of objects, enhancing the arm's functionality and usability. Through iterative design iterations and rigorous testing, the project successfully developed a practical and efficient solution. CAD software was utilized to refine and optimize the arm's geometry, ensuring structural integrity and mechanical robustness. Furthermore, simulation techniques, such as stress analysis and displacement analysis, were employed to validate the arm's performance under operational loads, confirming its reliability and effectiveness in assisting individuals with grip strength limitations.
+              </p>
+              <p class= "projects_mainText">The Arduino Uno was chosen to interface with sensors, motors, and other electronic components, enabling seamless communication and coordination within the robotic arm system. Its ability to process input signals and execute predefined instructions allows for intuitive user control, enhancing the arm's usability and accessibility.
+              </p>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="text-container">
+              <h2 class="projects_subheading">What is the Purpose?</h2>
+              <p class = "projects_mainText">The purpose of the project was to engineer a robotic arm attachment for wheelchairs, specifically designed to empower individuals with limited grip strength in manipulating objects with ease and precision. This solution aims to enhance autonomy and quality of life by enabling users to perform daily tasks, such as handling mobile phones, independently.<a href class="read-more-link">Click here to read more</a></p>  
+              <div class="additional-text">
+                <h2 class="projects_subheading">How was this accomplished?</h2>
+                <p class = "projects_mainText"> The project required meticulous selection and integration of various components into the arm's design, including craft sticks for structural support, wire connectors for electrical connections, and an Arduino Uno as the central control unit. These components were strategically chosen to ensure optimal performance and reliability, meeting the specific requirements of the arm's functionality.
+                </p>  
+                <p class= "projects_mainText">Integral to the arm's operation is the gearbox mechanism, comprising gears, rods, and motors. The gearbox transmits rotational motion and torque from the DC motors to facilitate smooth and efficient movement of the arm's gripper mechanism. Additionally, the incorporation of a stepper motor enables precise control and manipulation of objects, enhancing the arm's functionality and usability. Through iterative design iterations and rigorous testing, the project successfully developed a practical and efficient solution. CAD software was utilized to refine and optimize the arm's geometry, ensuring structural integrity and mechanical robustness. Furthermore, simulation techniques, such as stress analysis and displacement analysis, were employed to validate the arm's performance under operational loads, confirming its reliability and effectiveness in assisting individuals with grip strength limitations.
+                </p>
+                <p class= "projects_mainText">The Arduino Uno was chosen to interface with sensors, motors, and other electronic components, enabling seamless communication and coordination within the robotic arm system. Its ability to process input signals and execute predefined instructions allows for intuitive user control, enhancing the arm's usability and accessibility.
+                </p>
+                <h2 class="projects_subheading">What was the result?
+                </h2>
+                <p class= "projects_mainText">While individual subsystems showed success, the overall prototype failed to meet project requirements.
+                This was due to the inconsistent gearbox performance, slow gripper motion, and structural limitations of  the popsicle stick truss. 
+                </p>
+                <p class= "projects_mainText">Future iterations of the robot have commenced with a focus on strengthening connections, optimizing motor speed, and reducing friction in the gripper system for increased efficiency and functionality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         </section>
         <section id="Subframe">
-      
           <h1 class ="heading">Formula SAE Rear Subframe</h1>
-           <div class="flex">
-            
-              <div class="text2-container">
-              <h2 class="projects_subheading">What is the Subframe?</h2>
-              <p class = "projects_mainText">The Queens Racing Team's goal was to design a lighter, detachable rear subframe for their Formula SAE car to enhance acceleration and control. This new subframe needed to reduce weight while still providing necessary mounting points for the powertrain, rear suspension, and rear wing.</p>
-              <h2 class="projects_subheading">How was this accomplished?</h2>
-              <p class = "projects_mainText"> The final design developed for the detachable subframe for the Queens Racing Team's open-wheel car consists of a trapezoidal prism with two slanted sides and no cross-bracing. This design choice focused on reducing material usage and overall weight while maintaining structural integrity. The subframe is constructed entirely from 4130 steel tubing, chosen for its lightweight yet durable properties. The wide top and narrow base of the trapezoidal shape distribute forces evenly, reducing stress on any single point. The absence of cross-bracing simplifies the design and reduces weight further, making the subframe easier to manufacture while still providing sufficient support for the car’s components.</p>  
-              <p class= "projects_mainText">To ensure durability and performance, the subframe’s mounting points for the rear suspension, powertrain, and rear wing are carefully positioned. The mounting points for the rear suspension are retained in their original locations to ensure compatibility and ease of integration. The connection points to the car’s main frame utilize removable frame bungs, inspired by a design from California Polytechnic State University, which allow for easy detachment and reattachment, facilitating maintenance and repairs.
-              </p>
-              <h2 class="projects_subheading">What was the result?
-              </h2>
-              <p class= "projects_mainText">The final design achieved a significant weight reduction, bringing the subframe's weight down from 29.6 kg to 7.7 kg, thus enhancing the vehicle's acceleration and control. The use of 4130 steel tubing provided the necessary strength to withstand the forces encountered during racing. The simplified design, free from cross-bracing, was not only lighter but also easier and more cost-effective to manufacture. Finite Element Analysis (FEA) simulations confirmed that the subframe could handle the required forces, ensuring it met all safety and performance criteria. The detachable subframe design successfully balanced weight reduction, durability, and manufacturability, aligning with the project's goals and constraints.
-            </p>
-            </div>
+          <div class="flex">
             <div class ="image-container-mobile">
               <img src="MyPortfolio/FormulaSAE Rear Subframe/Subframe.png"
               class ="image-format">
               <img src="MyPortfolio/FormulaSAE Rear Subframe/plugs.png"
               class ="image-format">
-              <div class ="image-container-desktop">
-                <img src="MyPortfolio/FormulaSAE Rear Subframe/Subframe.png"
-                class ="image-format">
-                <img src="MyPortfolio/FormulaSAE Rear Subframe/plugs.png"
-                class ="image-format">
-              <div class="project2-btn-container">
-                <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/TechDrawing.png')">Technical Drawings</button>
-                <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/Documentation.pdf')">Documentation</button>
+              <div class="Links">
+                <div class="project-btn-container">
+                  <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/TechDrawing.png')">Technical Drawings</button>
+                  <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/Documentation.pdf')">Documentation</button>
+                </div>
               </div>
             </div>
-    
-           </div>
-           </div>
-           </section>
-           <section id="MiniBot">
-      
-            <h1 class ="heading">Autonomous Mining Loader</h1>
-             <div class="flex">
-              <div class ="image-container">
-                <img src="MyPortfolio/MiniBot/MiniBot.png"
-                class ="image-format">
-                
-                <div class="Links">
-                <img src="./MyPortfolio/GitHub-Icon.png"
-                      alt="My github Profile"
-                      class="projects_icon"
-                      onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/MiniBot'">
-                      <div class="project-btn-container">
-                        <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
-                        <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
-                      </div>
-                  </div>
+            <div class="mobile">
+              <div class="text2-container">
+                <h2 class="projects_subheading">What is the Subframe?</h2>
+                <p class = "projects_mainText">The Queens Racing Team's goal was to design a lighter, detachable rear subframe for their Formula SAE car to enhance acceleration and control. This new subframe needed to reduce weight while still providing necessary mounting points for the powertrain, rear suspension, and rear wing.<a href class="read-more-link">Click here to read more</a></p>
+                <div class="additional-text">
+                  <h2 class="projects_subheading">How was this accomplished?</h2>
+                  <p class = "projects_mainText"> The final design developed for the detachable subframe for the Queens Racing Team's open-wheel car consists of a trapezoidal prism with two slanted sides and no cross-bracing. This design choice focused on reducing material usage and overall weight while maintaining structural integrity. The subframe is constructed entirely from 4130 steel tubing, chosen for its lightweight yet durable properties. The wide top and narrow base of the trapezoidal shape distribute forces evenly, reducing stress on any single point. The absence of cross-bracing simplifies the design and reduces weight further, making the subframe easier to manufacture while still providing sufficient support for the car’s components.</p>  
+                  <p class= "projects_mainText">To ensure durability and performance, the subframe’s mounting points for the rear suspension, powertrain, and rear wing are carefully positioned. The mounting points for the rear suspension are retained in their original locations to ensure compatibility and ease of integration. The connection points to the car’s main frame utilize removable frame bungs, inspired by a design from California Polytechnic State University, which allow for easy detachment and reattachment, facilitating maintenance and repairs.
+                  </p>
+                  <h2 class="projects_subheading">What was the result?
+                  </h2>
+                  <p class= "projects_mainText">The final design achieved a significant weight reduction, bringing the subframe's weight down from 29.6 kg to 7.7 kg, thus enhancing the vehicle's acceleration and control. The use of 4130 steel tubing provided the necessary strength to withstand the forces encountered during racing. The simplified design, free from cross-bracing, was not only lighter but also easier and more cost-effective to manufacture. Finite Element Analysis (FEA) simulations confirmed that the subframe could handle the required forces, ensuring it met all safety and performance criteria. The detachable subframe design successfully balanced weight reduction, durability, and manufacturability, aligning with the project's goals and constraints.
+                  </p>
                 </div>
-                <div class="text-container">
-                <h2 class="projects_subheading">What is the Autonomous Mining Loader?</h2>
-                <p class = "projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks which are used in modern day mining operations. The primary goal of this project was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments.
-                </p>
+              </div>
+            </div>
+            <div class="desktop">
+              <div class="text2-container">
+                <h2 class="projects_subheading">What is the Subframe?</h2>
+                <p class = "projects_mainText">The Queens Racing Team's goal was to design a lighter, detachable rear subframe for their Formula SAE car to enhance acceleration and control. This new subframe needed to reduce weight while still providing necessary mounting points for the powertrain, rear suspension, and rear wing.</p>
                 <h2 class="projects_subheading">How was this accomplished?</h2>
-                <p class = "projects_mainText">To accomplish this, a line-following navigation algorithm utilizing a PID controller for precise line-following capabilities was developed. By implementing the Ziegler-Nichols method for tuning the PID controller, the robot was able to navigate predefined paths with high accuracy. An open-loop control was also implemented to handle intersections of the line, ensuring that the robot could continue its path seamlessly even at complex junctures.
-                </p>  
-                <p class= "projects_mainText">The hardware setup played a crucial role in the robot's functionality. The configuration included an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, an infrared distance sensor, and servo motors. This hardware facilitated autonomous navigation and task execution by providing real-time sensor data to the control algorithms. The integration of these components allowed MiniBot to perform its tasks efficiently, demonstrating the importance of a well-coordinated hardware-software system in achieving autonomous operation.
+                <p class = "projects_mainText"> The final design developed for the detachable subframe for the Queens Racing Team's open-wheel car consists of a trapezoidal prism with two slanted sides and no cross-bracing. This design choice focused on reducing material usage and overall weight while maintaining structural integrity. The subframe is constructed entirely from 4130 steel tubing, chosen for its lightweight yet durable properties. The wide top and narrow base of the trapezoidal shape distribute forces evenly, reducing stress on any single point. The absence of cross-bracing simplifies the design and reduces weight further, making the subframe easier to manufacture while still providing sufficient support for the car’s components.</p>  
+                <p class= "projects_mainText">To ensure durability and performance, the subframe’s mounting points for the rear suspension, powertrain, and rear wing are carefully positioned. The mounting points for the rear suspension are retained in their original locations to ensure compatibility and ease of integration. The connection points to the car’s main frame utilize removable frame bungs, inspired by a design from California Polytechnic State University, which allow for easy detachment and reattachment, facilitating maintenance and repairs.
                 </p>
                 <h2 class="projects_subheading">What was the result?
                 </h2>
-                <p class= "projects_mainText">The final prototype was able to achieve an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications.
-
+                <p class= "projects_mainText">The final design achieved a significant weight reduction, bringing the subframe's weight down from 29.6 kg to 7.7 kg, thus enhancing the vehicle's acceleration and control. The use of 4130 steel tubing provided the necessary strength to withstand the forces encountered during racing. The simplified design, free from cross-bracing, was not only lighter but also easier and more cost-effective to manufacture. Finite Element Analysis (FEA) simulations confirmed that the subframe could handle the required forces, ensuring it met all safety and performance criteria. The detachable subframe design successfully balanced weight reduction, durability, and manufacturability, aligning with the project's goals and constraints.
                 </p>
               </div>
+            </div>
+              
+          
+            <div class ="image-container">
+              <img src="MyPortfolio/FormulaSAE Rear Subframe/Subframe.png"
+              class ="image-format">
+              <img src="MyPortfolio/FormulaSAE Rear Subframe/plugs.png"
+              class ="image-format">
+              <div class = "Links">
+                <div class="project-btn-container">
+                  <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/TechDrawing.png')">Technical Drawings</button>
+                  <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/FormulaSAE Rear Subframe/Documentation.pdf')">Documentation</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </section>
+          <section id="MiniBot">
+             <h1 class ="heading">Autonomous Mining Loader</h1>
+             <div class="flex">
+                <div class ="image-container">
+                  <img src="MyPortfolio/MiniBot/MiniBot.png"
+                  class ="image-format">             
+                    <div class="Links">
+                      <img src="./MyPortfolio/GitHub-Icon.png"
+                      alt="My github Profile"
+                      class="projects_icon"
+                      onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/MiniBot'">
+                        <div class = "Links">
+                          <div class="project-btn-container">
+                            <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
+                            <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class ="image-container-mobile">
+                  <img src="MyPortfolio/MiniBot/MiniBot.png"
+                  class ="image-format">             
+                    <div class="Links">
+                      <img src="./MyPortfolio/GitHub-Icon.png"
+                      alt="My github Profile"
+                      class="projects_icon"
+                      onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/MiniBot'">
+                        <div class = "Links">
+                          <div class="project-btn-container">
+                            <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
+                            <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "mobile">
+                  <div class="text-container">
+                    <h2 class="projects_subheading">What is the Autonomous Mining Loader?</h2>
+                    <p class = "projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks which are used in modern day mining operations. The primary goal of this project was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments.<a href class="read-more-link">Click here to read more</a></p>
+                    <div class = "additional-text">
+                      <h2 class="projects_subheading">How was this accomplished?</h2>
+                      <p class = "projects_mainText">To accomplish this, a line-following navigation algorithm utilizing a PID controller for precise line-following capabilities was developed. By implementing the Ziegler-Nichols method for tuning the PID controller, the robot was able to navigate predefined paths with high accuracy. An open-loop control was also implemented to handle intersections of the line, ensuring that the robot could continue its path seamlessly even at complex junctures.
+                      </p>  
+                      <p class= "projects_mainText">The hardware setup played a crucial role in the robot's functionality. The configuration included an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, an infrared distance sensor, and servo motors. This hardware facilitated autonomous navigation and task execution by providing real-time sensor data to the control algorithms. The integration of these components allowed MiniBot to perform its tasks efficiently, demonstrating the importance of a well-coordinated hardware-software system in achieving autonomous operation.
+                      </p>
+                      <h2 class="projects_subheading">What was the result?
+                      </h2>
+                      <p class= "projects_mainText">The final prototype was able to achieve an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class = "desktop">
+                  <div class="text-container">
+                    <h2 class="projects_subheading">What is the Autonomous Mining Loader?</h2>
+                    <p class = "projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks which are used in modern day mining operations. The primary goal of this project was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments.
+                    </p>
+                    <h2 class="projects_subheading">How was this accomplished?</h2>
+                    <p class = "projects_mainText">To accomplish this, a line-following navigation algorithm utilizing a PID controller for precise line-following capabilities was developed. By implementing the Ziegler-Nichols method for tuning the PID controller, the robot was able to navigate predefined paths with high accuracy. An open-loop control was also implemented to handle intersections of the line, ensuring that the robot could continue its path seamlessly even at complex junctures.
+                    </p>  
+                    <p class= "projects_mainText">The hardware setup played a crucial role in the robot's functionality. The configuration included an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, an infrared distance sensor, and servo motors. This hardware facilitated autonomous navigation and task execution by providing real-time sensor data to the control algorithms. The integration of these components allowed MiniBot to perform its tasks efficiently, demonstrating the importance of a well-coordinated hardware-software system in achieving autonomous operation.
+                    </p>
+                    <h2 class="projects_subheading">What was the result?
+                    </h2>
+                    <p class= "projects_mainText">The final prototype was able to achieve an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications.
+                    </p>
+                  </div>
+                </div>
              </div>
             </section>
             <section id="BlueLight">
@@ -367,20 +447,20 @@
                  <div class="flex">
                   
                     <div class="text2-container">
-                    <h2 class="projects_subheading">What is the Blue Light Mount?</h2>
-                    <p class = "projects_mainText">TEXT.</p>
-                    <h2 class="projects_subheading">How was this accomplished?</h2>
-                    <p class = "projects_mainText"> TEXT</p>  
-                    <p class= "projects_mainText">Manipulation of complex Control Systems, including precise PID controllers and implemented real-time monitoring via Arduino IDE for accurate motor control and swift adjustments, enhancing maneuverability and response effectiveness.
-                    </p>
-                    <p class= "projects_mainText">
+                      <h2 class="projects_subheading">What is the Blue Light Mount?</h2>
+                      <p class = "projects_mainText">TEXT.</p>
+                      <h2 class="projects_subheading">How was this accomplished?</h2>
+                      <p class = "projects_mainText"> TEXT</p>  
+                      <p class= "projects_mainText">Manipulation of complex Control Systems, including precise PID controllers and implemented real-time monitoring via Arduino IDE for accurate motor control and swift adjustments, enhancing maneuverability and response effectiveness.
+                      </p>
+                      <p class= "projects_mainText">
                       The Autonomous Navigation leveraged ROS2 navigation packages and sophisticated SLAM mapping algorithms, enabling the LifeBot to autonomously navigate indoor environments, swiftly reaching predetermined destinations for timely assistance.
                       </p>
-                    <h2 class="projects_subheading">What was the result?
-                    </h2>
-                    <p class= "projects_mainText">TEXT
-                  </p>
-                  </div>
+                      <h2 class="projects_subheading">What was the result?
+                      </h2>
+                      <p class= "projects_mainText">TEXT
+                      </p>
+                    </div>
                   <div class ="image-container">
                     <img src="MyPortfolio/Mount1.png"
                     class ="image-format">
@@ -390,9 +470,8 @@
                       <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/BLTechDrawing.png')">Technical Drawings</button>
                     </div>
                   </div>
-          
-                 </div>
-                 </section>
+                </div>
+                </section>
                  <script>
                   document.addEventListener("DOMContentLoaded", function() {
         var readMoreLinks = document.querySelectorAll('.read-more-link');

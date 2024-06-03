@@ -85,15 +85,15 @@ section {
 #profile {
     display: flex;
     justify-content: center;
-    gap: 5rem;
-    height: 50vh;
+    gap: 8rem;
+    height: 60vh;
   }
   
   .section__pic-container {
     display: flex;
-    height: 600px;
-    width: 600px;
+    width: 400px;
     margin: auto 0;
+    
   }
   .section__pic-containermobile {
     display: none;
@@ -106,7 +106,7 @@ section {
   .section__text {
     align-self: center;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 10rem;
   }
   
   .section__text p {
@@ -203,7 +203,7 @@ section {
   .about_mainText
   {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: vw;
     color:white;
     
 
@@ -382,7 +382,7 @@ section {
 }
 
 .image-format{
-  width: 400px;
+  width: 23vw;
   display: block;
   border: 2px solid  rgb(42,113,234);
   margin-top: 2rem;
@@ -408,13 +408,15 @@ section {
   margin-top: 1.4rem;
   color: rgb(42,113,234);
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 2vw;
 }
 .projects_mainText{
   margin-top: 0.5rem;
   color: white;
   font-weight: 600;
   line-height: 2rem;
+  padding-right: 1rem;
+  font-size: 0.9vw
 }
   .projects_icon {
     cursor: pointer;
@@ -427,14 +429,16 @@ section {
     margin-right: auto;
     z-index: 10;
     
+    
   }
   .project-btn-color {
     border:  rgb(0, 116, 218) 0.1rem solid;
     background: black;
     color: white;
     cursor: pointer;
+    font-size: 0.7vw;
     
-    /* margin-left: 0.4rem; */
+    
   }
   
   .project-btn-color:hover {
@@ -460,14 +464,10 @@ section {
   
   }
   .text2-container{
-    z-index: 10;
-    flex:l;
-    padding-right: 60px;
-    margin-bottom: 2rem;
+  padding-left: 60px;
   }
   .project2-btn-container{
-    margin-left:auto;
-    margin-right: auto;
+    margin-top: 0;
     z-index: 10;
    
   }
@@ -477,10 +477,11 @@ section {
     background: black;
     color: white;
     cursor: pointer;
+    font-size: 0.7vw;
     
     margin-top: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     
     
     z-index: 10;
@@ -489,7 +490,7 @@ section {
   /*RobotArm*/
   #RobotArm{
     display: flex;
-    margin-top: 15rem;
+    margin-top: rem;
     flex-direction: column;
     z-index: 10000;
   }

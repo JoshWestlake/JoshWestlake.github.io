@@ -92,7 +92,7 @@ section {
 
 #profile {
     display:contents;
-    justify-content: center;
+    justify-content: cente;
     gap: 0rem;   
    
 }
@@ -104,12 +104,12 @@ section {
     display: none;
     height: 600px;
     width: 600px;
-    margin: auto 0;
+    margin-right: 50vw;
     
 }
 .section__pic-containermobile {
-    display: flex;
-    height: 70vw;
+   display: flex;
+    height: 90vw;
     margin: 0 auto;
     
 }
@@ -139,7 +139,7 @@ section {
 }
 
 .title {
-    font-size: 12vw;
+    font-size: 6vw;
     text-align: center;
     color:  rgb(42,113,234);
     
@@ -199,7 +199,6 @@ section {
 #about {
     
     justify-content: center;
-    
     gap: 4rem;  
     display:inline;
 }
@@ -218,9 +217,9 @@ section {
 }
 .about_mainText {
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 2vw;
     color: white;
-    padding-left: 10px;
+   
 }
 .about_bold {
     margin-top: 2rem;
@@ -382,7 +381,7 @@ section {
   .heading{
     
     align-items: center;
-    font-size: 4rem;
+    font-size: 6vw;
     text-align: center;
     color:  rgb(42,113,234);
     
@@ -441,6 +440,7 @@ section {
     color: white;
     font-weight: 600;
     line-height: 2rem;
+    font-size: 2vw;
   }
     .projects_icon {
       cursor: pointer;
@@ -453,12 +453,14 @@ section {
       margin-right: auto;
       z-index: 10;
       
+      
     }
     .project-btn-color {
       border:  rgb(0, 116, 218) 0.1rem solid;
       background: black;
       color: white;
       cursor: pointer;
+      font-size: 2vw;
       
       /* margin-left: 0.4rem; */
     }
@@ -473,7 +475,7 @@ section {
       display: flex;
       justify-content: center;
       align-items: center; /* Center items vertically */
-      margin-top: 2rem;
+      margin-top: 1rem;
       margin-right: auto;
       margin-left:auto;
     }
@@ -506,6 +508,7 @@ section {
       margin-left:auto;
       margin-right: auto;
       z-index: 10;
+      align-self: center;
       
      
     }
@@ -516,12 +519,10 @@ section {
       color: white;
       cursor: pointer;
       
-      margin-top: 1.5rem;
-      padding-left: 3rem;
-      padding-right: 3rem;
-      
+     
       
       z-index: 10;
+      font-size: 2vw;
       
     }
     /*RobotArm*/
@@ -544,16 +545,16 @@ section {
   
   /*MiniBot*/
   #MiniBot{
-    display: flex;
+    display: inline;
     margin-top: 0rem;
-    flex-direction: column;
-    display:none;
+    justify-content: center;
+    
     
   }
   /*subframe*/
   #Subframe{
-    display: flex;
-    margin-top: 0rem;
-    flex-direction: column;
-    display:none;
+    display: inline;
+    gap:2rem;
+    justify-content: center;
+    
   }
