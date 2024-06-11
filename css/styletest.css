@@ -71,7 +71,7 @@ a:hover {
 }
 .icon {
     cursor: pointer;
-    height: 6vh;
+    width: 6vw;
 }
 
 /* SECTIONS */
@@ -131,7 +131,7 @@ section {
 
 .SubText {
     text-align: center;
-    font-size: 2.2vh;
+    font-size: 2.2vw;
 }
 
 .Subheading {
@@ -220,7 +220,7 @@ section {
 }
 .about_mainText {
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 2.8vw;
     color: white;
    
 }
@@ -443,7 +443,7 @@ section {
     color: white;
     font-weight: 600;
     line-height: 2rem;
-    font-size: 2vw;
+    font-size: 2.8vw;
   }
     .projects_icon {
       cursor: pointer;
