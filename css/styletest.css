@@ -72,6 +72,7 @@ a:hover {
 .icon {
     cursor: pointer;
     width: 6vw;
+    height: 6vw;
 }
 
 /* SECTIONS */
