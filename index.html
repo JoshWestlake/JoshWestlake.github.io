@@ -39,7 +39,7 @@
           <!-- produces a button which when clicked opens the attatched file (resume) -->
           <div class="btn-container">
               <button class="btn btn-color" onclick="window.open('./MyPortfolio/Josh Westlake Official CV.pdf')">Download CV</button>
-              <button class="btn btn-color" onclick="location.href='.#contact'">Contact Info</button>
+              <button class="btn btn-color" onclick="sendemail()">Contact Me</button>
           </div>
           <!-- This is the links to linkedIn and Github -->
           <div id="socials-container">
@@ -441,87 +441,24 @@
                 </div>
              </div>
             </section>
-            <section id="BlueLight">
-      
-                <h1 class ="heading">Blue Light Mount</h1>
-                 <div class="flex">
-                  
-                    <div class="text2-container">
-                      <h2 class="projects_subheading">What is the Blue Light Mount?</h2>
-                      <p class = "projects_mainText">TEXT.</p>
-                      <h2 class="projects_subheading">How was this accomplished?</h2>
-                      <p class = "projects_mainText"> TEXT</p>  
-                      <p class= "projects_mainText">Manipulation of complex Control Systems, including precise PID controllers and implemented real-time monitoring via Arduino IDE for accurate motor control and swift adjustments, enhancing maneuverability and response effectiveness.
-                      </p>
-                      <p class= "projects_mainText">
-                      The Autonomous Navigation leveraged ROS2 navigation packages and sophisticated SLAM mapping algorithms, enabling the LifeBot to autonomously navigate indoor environments, swiftly reaching predetermined destinations for timely assistance.
-                      </p>
-                      <h2 class="projects_subheading">What was the result?
-                      </h2>
-                      <p class= "projects_mainText">TEXT
-                      </p>
-                    </div>
-                  <div class ="image-container">
-                    <img src="MyPortfolio/Mount1.png"
-                    class ="image-format">
-                    <img src="MyPortfolio/Mount2.png"
-                    class ="image-format">
-                    <div class="project2-btn-container">
-                      <button class="btn project2-btn-color" onclick="window.open('./MyPortfolio/BLTechDrawing.png')">Technical Drawings</button>
-                    </div>
-                  </div>
-                </div>
-                </section>
-                <section id="profile">
-      
-                  <div class="section__pic-containermobile">
-                    <img src="./MyPortfolio/HeadShot.png" 
-                    alt="Josh Westlake Profile picture" >
-                  </div>
-                  <div class="section__text">
-                  
-                      <h1 class = "title">Contact Me</h1>
-                      
-                      <p class="SubText">Queen's University</p> 
-                      <!-- produces a button which when clicked opens the attatched file (resume) -->
-                      <div class="btn-container">
-                          <button class="btn btn-color" onclick="window.open('./MyPortfolio/Josh Westlake Official CV.pdf')">Download CV</button>
-                          <button class="btn btn-color" onclick="location.href='.#contact'">Contact Info</button>
-                      </div>
-                      <!-- This is the links to linkedIn and Github -->
-                      <div id="socials-container">
-                        <img src="./MyPortfolio/LinkedIn-Icon.png"
-                          alt="My LinkedIn Profile"
-                          class="icon"
-                          onClick="location.href='https://www.linkedin.com/in/josh-westlake-063859279/'"
-                          />
-                        <img src="./MyPortfolio/GitHub-Icon.png"
-                          alt="My github Profile"
-                          class="icon"
-                          onClick="location.href='https://github.com/JoshWestlake/Projects'"
-                          />
-                      </div>
-                  </div>
-                   <!-- This is the section for the name and position -->
-                   <div class="contact__pic-container">
-                      <img src="./MyPortfolio/HeadShot.png" 
-                      alt="Josh Westlake Profile picture" >
-                  </div>
-              </section>
-                 <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-        var readMoreLinks = document.querySelectorAll('.read-more-link');
+            
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                var readMoreLinks = document.querySelectorAll('.read-more-link');
 
-        readMoreLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default behavior of the link
+                readMoreLinks.forEach(function(link) {
+                  link.addEventListener('click', function(event) {
+                  event.preventDefault(); // Prevent the default behavior of the link
 
-                var additionalContent = link.closest('.mobile').querySelector('.additional-text');
-                // Toggle the display of the additional content
-                additionalContent.style.display = (additionalContent.style.display === 'none' || additionalContent.style.display === '') ? 'block' : 'none';
-            });
-        });
-    });
-              </script>
+                  var additionalContent = link.closest('.mobile').querySelector('.additional-text');
+                  // Toggle the display of the additional content
+                  additionalContent.style.display = (additionalContent.style.display === 'none' || additionalContent.style.display === '') ? 'block' : 'none';
+                  });
+                });
+              });
+              function sendemail(){
+                window.location.href = "mailto:jl_westlake@outlook.com";
+              }
+            </script>
   
   </body>
