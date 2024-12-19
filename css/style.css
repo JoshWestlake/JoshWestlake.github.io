@@ -345,8 +345,8 @@ section {
 
 }
 .gallery-image{
-  width: 325px;
-  height: 275px;
+  width: 23vw;
+  height: 42vh;
   border: 2px solid  rgb(42,113,234);
   
 }
