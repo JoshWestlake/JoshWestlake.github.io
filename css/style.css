@@ -241,6 +241,7 @@ section {
   background: black;
   color: white;
   z-index: 10;
+  display: none;
 }
 
 .robotics_btn_container:hover .projects_btn {
@@ -258,7 +259,7 @@ section {
   display: none;
 }
 .robotics_links {
-  display: none;
+  display: block;
   position:relative;
   z-index: 10;
   
@@ -347,7 +348,7 @@ section {
 .gallery-image{
   width: 23vw;
   height: 42vh;
-  border: 2px solid  rgb(42,113,234);
+  border: 4px solid  rgb(42,113,234);
   
 }
 /* LIFEBOT */

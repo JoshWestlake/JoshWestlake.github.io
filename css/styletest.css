@@ -37,8 +37,8 @@ nav {
     align-items: center;
     height: 17vh;
     width:70vw;
-    margin: 0 auto;
-    display:none;
+    margin: 8vw;
+    display:block;
     
 }
 
@@ -260,6 +260,7 @@ section {
     background: black;
     color: white;
     z-index: 10;
+    display: none;
 }
 
 .robotics_btn_container:hover .projects_btn {
@@ -276,7 +277,7 @@ section {
 }
 
 .robotics_links {
-    display: none;
+    display: block;
     position: relative;
     z-index: 10;
 }
