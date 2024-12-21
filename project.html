@@ -20,7 +20,7 @@
         <ul class="nav-links">  
               <li><a href="index.html">Profile</a></li>
               <li><a href="project.html">Projects</a></li>
-              <li><a href="Experience.html">Experience</a></li>
+              
         </ul>
         </div>
     </nav> 
@@ -52,10 +52,10 @@
               <p> <a href="#MiniBot">Autonomous Mining Loader</a></p>
           </div>
           <div class ="gallery-items">          
-            <a href="#Chassis">
-              <img src="MyPortfolio/LifeBot/Picture1.png"
+            <a href="#SensorSuite">
+              <img src="MyPortfolio/SensorSuite/SensorSuite1.png"
               class = "gallery-image"></a>
-            <p> <a href="#Chassis">LifeBot Chassis</a></p>  
+            <p> <a href="#SensorSuite">Autonomous Vehicle Sensor Suite</a></p>  
           </div>
           <div class ="gallery-items">          
             <a href="#Subframe">
@@ -82,6 +82,8 @@
         class ="image-format">
         <img src="MyPortfolio/LifeBot/Mapping (1).png"
         class ="image-format">
+        <img src="MyPortfolio/LifeBot/ChassisIRL.png"
+          class ="image-format">
           <div class="Links">
             <img src="./MyPortfolio/GitHub-Icon.png"
             alt="My github Profile"
@@ -106,6 +108,7 @@
         <div class="project-btn-container">
           <button class="btn project-btn-color" onclick="window.open('https://youtu.be/1wbDD_aVC8c')">Demo</button>
           <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/Documentation.pdf')">Documentation</button>
+         
         </div>
       </div>
     </div>
@@ -118,6 +121,10 @@
         <p class = "projects_mainText"> The software development involved several key components, starting with the controller. A PI (Proportional-Integral) controller was implemented to dynamically adjust motor PWM (Pulse Width Modulation) commands, allowing the robot to respond proportionally to differences between desired and actual wheel speeds. The main control loop calculated wheel angular rates from encoder data and adjusted PWM signals to match the vehicle's speed with the target speed. Real-time monitoring was facilitated through the Arduino IDE's serial monitor and plotter, providing insights into wheel velocities. To address discrepancies in wheel speeds due to motor deficiencies, an additional PI system was implemented to minimize errors between the left and right wheel speeds, ensuring accurate trajectory control.</p>  
         <p class= "projects_mainText">For navigation, the LifeBot utilized ROS2 (Robot Operating System 2) packages. The SLAM (Simultaneous Localization and Mapping) package built a 2D map and determined the robot's position using a laser scanner (RPLIDAR) and an odometry system. The NAV2 package created a cost map, calculated the lowest cost path to the target location, and sent navigation instructions to ROS2 Control. ROS2 Control integrated a differential drive controller, standardizing control and state information and enabling fast data transmission. Communication between the Arduino and Raspberry Pi was managed via ROS2, with internet communications handled by SSH (Secure Shell Protocol) to offload computationally intensive tasks to a base station. Serial communications connected the Arduino to motors, encoders, and sensors, facilitating real-time data exchange and control commands.
         </p>
+        <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.</p>  
+          <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
+          </p>
+          <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
       </div>
     </div>
       <div class="mobile">
@@ -129,18 +136,25 @@
             <p class = "projects_mainText"> The software development involved several key components, starting with the controller. A PI (Proportional-Integral) controller was implemented to dynamically adjust motor PWM (Pulse Width Modulation) commands, allowing the robot to respond proportionally to differences between desired and actual wheel speeds. The main control loop calculated wheel angular rates from encoder data and adjusted PWM signals to match the vehicle's speed with the target speed. Real-time monitoring was facilitated through the Arduino IDE's serial monitor and plotter, providing insights into wheel velocities. To address discrepancies in wheel speeds due to motor deficiencies, an additional PI system was implemented to minimize errors between the left and right wheel speeds, ensuring accurate trajectory control.</p>  
             <p class= "projects_mainText">For navigation, the LifeBot utilized ROS2 (Robot Operating System 2) packages. The SLAM (Simultaneous Localization and Mapping) package built a 2D map and determined the robot's position using a laser scanner (RPLIDAR) and an odometry system. The NAV2 package created a cost map, calculated the lowest cost path to the target location, and sent navigation instructions to ROS2 Control. ROS2 Control integrated a differential drive controller, standardizing control and state information and enabling fast data transmission. Communication between the Arduino and Raspberry Pi was managed via ROS2, with internet communications handled by SSH (Secure Shell Protocol) to offload computationally intensive tasks to a base station. Serial communications connected the Arduino to motors, encoders, and sensors, facilitating real-time data exchange and control commands.
             </p>
+            <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.
+              <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
+              </p>
+              <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
           </div>
         </div>
       </div>
    </div>
+   
+   
+
+      
+      
   </section>
-  <section id="Chassis">
-     <h1 class ="heading">LifeBot Chassis</h1>
+  <section id="SensorSuite">
+    <h1 class ="heading">Autonomous Vehicle Sensor Suite</h1>
      <div class="flex">
         <div class ="image-container-mobile">
-          <img src="MyPortfolio/LifeBot/ChassisIRL.png"
-          class ="image-format">
-          <img src="MyPortfolio/LifeBot/TechDrawing.png"
+          <img src="MyPortfolio/SensorSuite/Screenshot 2024-12-21 123546.png"
           class ="image-format">
           <div class="Links">
             <div class="project-btn-container">
@@ -150,46 +164,34 @@
         </div>
       
       <div class="desktop">
-        <div class="text2-container">
-          <h2 class="projects_subheading">What is the Chassis?</h2>
-          <p class = "projects_mainText">The project aimed to design and implement a mounting solution for an Automated External Defibrillator (AED) device, ensuring its secure and accessible placement on a robotic platform for swift delivery during cardiac arrest emergencies. </p>
-          <h2 class="projects_subheading">How was this accomplished?</h2>
-          <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.</p>  
-          <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
-          </p>
-          <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
+        <div class="text-container">
+          <h2 class="projects_subheading">What is the sensor suite?</h2>
+          <p class = "projects_mainText">The Sensor Suite V3 project focuses on redesigning and fabricating a modular, compact sensor mounting solution optimized for autonomous vehicle applications. This redesign aims to enhance functionality by incorporating accurate sensor positioning, integrated waterproofing (meeting at least an IPX4 rating), and a localized power delivery system to reduce cabling complexity. The suite is designed to house a range of sensors, including multiple LiDARs with vibration-dampening mounts, short- and long-range cameras, and mounting points for GNSS and scoring antennas.</p>
+          <p class = "projects_mainText">This project is still in progress.. </p>
         </div>
       </div>
+      
       <div class="mobile">
-        <div class="text2-container">
-          <h2 class="projects_subheading">What is the Chassis?</h2>
-          <p class = "projects_mainText">The project aimed to design and implement a mounting solution for LifeBot, ensuring a secure and accessible placement of an AED device on a robotic platform for swift delivery during cardiac arrest emergencies. <a href class="read-more-link">Click here to read more</a></p>  
+        <div class="text-container">
+          <h2 class="projects_subheading">Queen's Autodrive Sensor Suite</h2>
+          <p class = "projects_mainText">The Sensor Suite V3 project focuses on redesigning and fabricating a modular, compact sensor mounting solution optimized for autonomous vehicle applications. <a href class="read-more-link">Click here to read more</a></p>  
           <div class="additional-text">
-            <h2 class="projects_subheading">How was this accomplished?</h2>
-            <p class = "projects_mainText"> The proposed solution features a lightweight chassis with a mechanically optimized hinge mechanism. This chassis is mounted on an existing frame using nut and bolt fasteners, allowing for easy installation and removal. PLA plastic was chosen as the material for its cost-effectiveness and structural integrity, while the hinge mechanism ensures easy access to the AED device in emergencies.
-            <p class= "projects_mainText">The chassis underwent an iterative design process using SolidWorks for Computer-Aided Design (CAD), which was crucial in refining and optimizing the design. Initial sketches and models were created to conceptualize the mounting solution. These preliminary designs were evaluated and modified to address potential issues such as weight distribution, ease of access, and structural integrity. Each iteration involved adjustments to the geometry and material properties to enhance the overall performance and functionality of the chassis.
+            <p class= "projects_mainText">This redesign aims to enhance functionality by incorporating accurate sensor positioning, integrated waterproofing (meeting at least an IPX4 rating), and a localized power delivery system to reduce cabling complexity. The suite is designed to house a range of sensors, including multiple LiDARs with vibration-dampening mounts, short- and long-range cameras, and mounting points for GNSS and scoring antennas.
             </p>
-            <p class= "projects_mainText">The chassis underwent rigorous testing through Finite Element Analysis (FEA) to confirm its ability to withstand expected mechanical stresses. SolidWorks built-in simulation tools were employed to conduct various simulations, including stress analysis using Von Mises criteria, displacement analysis, and strain analysis. The results demonstrated the chassis's robustness and reliability: the Von Mises stress ranged from 9.644e+01 to 6.376e+06 N/m², the maximum displacement was 2.530 mm, and the equivalent strain ranged from 3.77e-08 to 2.125e-03. These findings confirmed the chassis’s ability to endure operational mechanical loads while maintaining the AED device securely in place and ready for immediate deployment.
           </div>
         </div>
       </div>
       <div class="Links">
         <div class ="image-container">
-          <img src="MyPortfolio/LifeBot/ChassisIRL.png"
+          <img src="MyPortfolio/SensorSuite/Screenshot 2024-12-21 123546.png"
           class ="image-format">
-          <img src="MyPortfolio/LifeBot/TechDrawing.png"
-          class ="image-format">
+          
           <div class="project-btn-container">
             <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/TechDrawing.png')">Technical Drawing</button>
           </div>
         </div>
       </div>
-      <div class ="image-container-mobile">
-        <img src="MyPortfolio/LifeBot/LynxMotion.png"
-        class ="image-format">
-        <img src="MyPortfolio/LifeBot/Mapping (1).png"
-        class ="image-format">
-     </div>
+     
   </section>
   <section id="PetFeeder">
     <h1 class ="heading">Automatic Squirrel Feeder</h1>
@@ -215,7 +217,7 @@
        <div class ="image-container-mobile">
          <img src="MyPortfolio/SquirrelFeeder/IMG_4213.jpg"
          class ="image-format"> 
-         <img src="MyPortfolio/SquirrelFeeder/Squirrel.png"
+         <img src="MyPortfolio/SquirrelFeeder/SquirrelFeeder.png"
           class ="image-format">              
            <div class="Links">
              <img src="./MyPortfolio/GitHub-Icon.png"
@@ -283,18 +285,7 @@
               </div>
           </div>
         </div>
-        <div class ="image-container">
-        <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg"
-          class ="image-format">
-          <img src="MyPortfolio/RoboticArm/RobotArmV1/Base.jpg"
-          class ="image-format">
-          <div class="Links">
-            <div class="project-btn-container">
-              <button class="btn project-btn-color" onclick="window.open('https://youtube.com/shorts/0Cv19AXklW4?feature=share')">Demo</button>
-              <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/RoboticArm/RobotArmV1/Documentation.pdf')">Documentation</button>
-            </div>
-          </div>
-        </div>
+        
         <div class="desktop">
           <div class="text-container">
             <h2 class="projects_subheading">What is the Purpose?</h2>
@@ -331,8 +322,93 @@
             </div>
           </div>
         </div>
+        
+        <div class ="image-container">
+        <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg"
+          class ="image-format">
+          <img src="MyPortfolio/RoboticArm/RobotArmV1/Base.jpg"
+          class ="image-format">
+          <div class="Links">
+            <div class="project-btn-container">
+              <button class="btn project-btn-color" onclick="window.open('https://youtube.com/shorts/0Cv19AXklW4?feature=share')">Demo</button>
+              <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/RoboticArm/RobotArmV1/Documentation.pdf')">Documentation</button>
+            </div>
+          </div>
+        </div>
       </div>
       </section>
+      <section id="MiniBot">
+        <h1 class ="heading">Autonomous Mining Loader</h1>
+        <div class="flex">
+           <div class ="image-container">
+            <img src="MyPortfolio/MiniBot/Minibot2.png"
+            class ="image-format">
+             <img src="MyPortfolio/MiniBot/MiniBot.png"
+             class ="image-format">             
+               <div class="Links">
+                 <img src="./MyPortfolio/GitHub-Icon.png"
+                 alt="My github Profile"
+                 class="projects_icon"
+                 onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/MiniBot'">
+                   <div class = "Links">
+                     <div class="project-btn-container">
+                       <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
+                       <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
+                     </div>
+                   </div>
+               </div>
+           </div>
+           <div class ="image-container-mobile">
+             <img src="MyPortfolio/MiniBot/MiniBot.png"
+             class ="image-format">             
+               <div class="Links">
+                 <img src="./MyPortfolio/GitHub-Icon.png"
+                 alt="My github Profile"
+                 class="projects_icon"
+                 onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/MiniBot'">
+                   <div class = "Links">
+                     <div class="project-btn-container">
+                       <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
+                       <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
+                     </div>
+                   </div>
+               </div>
+           </div>
+           <div class = "mobile">
+             <div class="text-container">
+               <h2 class="projects_subheading">What is the Autonomous Mining Loader?</h2>
+               <p class = "projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks which are used in modern day mining operations. The primary goal of this project was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments.<a href class="read-more-link">Click here to read more</a></p>
+               <div class = "additional-text">
+                 <h2 class="projects_subheading">How was this accomplished?</h2>
+                 <p class = "projects_mainText">To accomplish this, a line-following navigation algorithm utilizing a PID controller for precise line-following capabilities was developed. By implementing the Ziegler-Nichols method for tuning the PID controller, the robot was able to navigate predefined paths with high accuracy. An open-loop control was also implemented to handle intersections of the line, ensuring that the robot could continue its path seamlessly even at complex junctures.
+                 </p>  
+                 <p class= "projects_mainText">The hardware setup played a crucial role in the robot's functionality. The configuration included an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, an infrared distance sensor, and servo motors. This hardware facilitated autonomous navigation and task execution by providing real-time sensor data to the control algorithms. The integration of these components allowed MiniBot to perform its tasks efficiently, demonstrating the importance of a well-coordinated hardware-software system in achieving autonomous operation.
+                 </p>
+                 <h2 class="projects_subheading">What was the result?
+                 </h2>
+                 <p class= "projects_mainText">The final prototype was able to achieve an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications.
+                 </p>
+               </div>
+             </div>
+           </div>
+           <div class = "desktop">
+             <div class="text-container">
+               <h2 class="projects_subheading">What is the Autonomous Mining Loader?</h2>
+               <p class = "projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks which are used in modern day mining operations. The primary goal of this project was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments.
+               </p>
+               <h2 class="projects_subheading">How was this accomplished?</h2>
+               <p class = "projects_mainText">To accomplish this, a line-following navigation algorithm utilizing a PID controller for precise line-following capabilities was developed. By implementing the Ziegler-Nichols method for tuning the PID controller, the robot was able to navigate predefined paths with high accuracy. An open-loop control was also implemented to handle intersections of the line, ensuring that the robot could continue its path seamlessly even at complex junctures.
+               </p>  
+               <p class= "projects_mainText">The hardware setup played a crucial role in the robot's functionality. The configuration included an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, an infrared distance sensor, and servo motors. This hardware facilitated autonomous navigation and task execution by providing real-time sensor data to the control algorithms. The integration of these components allowed MiniBot to perform its tasks efficiently, demonstrating the importance of a well-coordinated hardware-software system in achieving autonomous operation.
+               </p>
+               <h2 class="projects_subheading">What was the result?
+               </h2>
+               <p class= "projects_mainText">The final prototype was able to achieve an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications.
+               </p>
+             </div>
+           </div>
+        </div>
+       </section>
       <section id="Subframe">
         <h1 class ="heading">Formula SAE Rear Subframe</h1>
         <div class="flex">
@@ -378,7 +454,6 @@
               </p>
             </div>
           </div>
-            
         
           <div class ="image-container">
             <img src="MyPortfolio/FormulaSAE Rear Subframe/Subframe.png"
@@ -394,76 +469,6 @@
           </div>
         </div>
         </section>
-        <section id="MiniBot">
-           <h1 class ="heading">Autonomous Mining Loader</h1>
-           <div class="flex">
-              <div class ="image-container">
-                <img src="MyPortfolio/MiniBot/MiniBot.png"
-                class ="image-format">             
-                  <div class="Links">
-                    <img src="./MyPortfolio/GitHub-Icon.png"
-                    alt="My github Profile"
-                    class="projects_icon"
-                    onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/MiniBot'">
-                      <div class = "Links">
-                        <div class="project-btn-container">
-                          <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
-                          <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-              <div class ="image-container-mobile">
-                <img src="MyPortfolio/MiniBot/MiniBot.png"
-                class ="image-format">             
-                  <div class="Links">
-                    <img src="./MyPortfolio/GitHub-Icon.png"
-                    alt="My github Profile"
-                    class="projects_icon"
-                    onClick="location.href='https://github.com/JoshWestlake/Projects/tree/main/MiniBot'">
-                      <div class = "Links">
-                        <div class="project-btn-container">
-                          <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
-                          <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-              <div class = "mobile">
-                <div class="text-container">
-                  <h2 class="projects_subheading">What is the Autonomous Mining Loader?</h2>
-                  <p class = "projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks which are used in modern day mining operations. The primary goal of this project was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments.<a href class="read-more-link">Click here to read more</a></p>
-                  <div class = "additional-text">
-                    <h2 class="projects_subheading">How was this accomplished?</h2>
-                    <p class = "projects_mainText">To accomplish this, a line-following navigation algorithm utilizing a PID controller for precise line-following capabilities was developed. By implementing the Ziegler-Nichols method for tuning the PID controller, the robot was able to navigate predefined paths with high accuracy. An open-loop control was also implemented to handle intersections of the line, ensuring that the robot could continue its path seamlessly even at complex junctures.
-                    </p>  
-                    <p class= "projects_mainText">The hardware setup played a crucial role in the robot's functionality. The configuration included an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, an infrared distance sensor, and servo motors. This hardware facilitated autonomous navigation and task execution by providing real-time sensor data to the control algorithms. The integration of these components allowed MiniBot to perform its tasks efficiently, demonstrating the importance of a well-coordinated hardware-software system in achieving autonomous operation.
-                    </p>
-                    <h2 class="projects_subheading">What was the result?
-                    </h2>
-                    <p class= "projects_mainText">The final prototype was able to achieve an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class = "desktop">
-                <div class="text-container">
-                  <h2 class="projects_subheading">What is the Autonomous Mining Loader?</h2>
-                  <p class = "projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks which are used in modern day mining operations. The primary goal of this project was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments.
-                  </p>
-                  <h2 class="projects_subheading">How was this accomplished?</h2>
-                  <p class = "projects_mainText">To accomplish this, a line-following navigation algorithm utilizing a PID controller for precise line-following capabilities was developed. By implementing the Ziegler-Nichols method for tuning the PID controller, the robot was able to navigate predefined paths with high accuracy. An open-loop control was also implemented to handle intersections of the line, ensuring that the robot could continue its path seamlessly even at complex junctures.
-                  </p>  
-                  <p class= "projects_mainText">The hardware setup played a crucial role in the robot's functionality. The configuration included an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, an infrared distance sensor, and servo motors. This hardware facilitated autonomous navigation and task execution by providing real-time sensor data to the control algorithms. The integration of these components allowed MiniBot to perform its tasks efficiently, demonstrating the importance of a well-coordinated hardware-software system in achieving autonomous operation.
-                  </p>
-                  <h2 class="projects_subheading">What was the result?
-                  </h2>
-                  <p class= "projects_mainText">The final prototype was able to achieve an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications.
-                  </p>
-                </div>
-              </div>
-           </div>
-          </section>
         </section>
             
         <script>

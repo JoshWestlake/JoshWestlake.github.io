@@ -29,24 +29,25 @@ a,
 /* DESKTOP NAV */
 
 nav,.nav-links {
-    display: flex;
+    display:flex;
 }
 
 nav {
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
+    justify-content: right;
+    align-items:center;
+    height: 12vh;
     width:70vw;
-    margin: 8vw;
-    display:block;
+  
+    display:flex;
     
 }
 
 .nav-links {
-    gap: 10vw;
+    gap: 5vw;
     list-style: none ;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 900;
+    justify-content: center;
 }
 
 a {
@@ -221,7 +222,7 @@ section {
 }
 .about_mainText {
     font-weight: 600;
-    font-size: 2.8vw;
+    font-size: 2.2vw;
     color: white;
    
 }
@@ -253,7 +254,7 @@ section {
     font-size: 3vw;
     transition: all 300ms ease;
     gap: 5rem;
-    padding: 1rem;
+    padding: 2rem;
     width: 50vh;
     border-radius: 4rem;
     border:  rgb(0, 116, 218) 3px solid;
@@ -277,14 +278,14 @@ section {
 }
 
 .robotics_links {
-    display: block;
+    display: flex;
     position: relative;
     z-index: 10;
 }
 
 .robotics_links a {
     display: block;
-    padding: 10px;
+    justify-items:center;
     text-align: center;
     font-size: 1.6rem;
     color: white;
@@ -359,6 +360,7 @@ section {
 
 .gallery {
     display: content;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100vw;
     
@@ -370,14 +372,26 @@ section {
 }
 
 .gallery-image {
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
     border: 2px solid  rgb(42,113,234);
 }
 /*
 /* LIFEBOT */
 
 #LifeBot{
+    
+    justify-content: center;
+    gap: 4rem;  
+    display:inline;
+}
+#SensorSuite{
+    
+    justify-content: center;
+    gap: 4rem;  
+    display:inline;
+}
+#PetFeeder{
     
     justify-content: center;
     gap: 4rem;  
