@@ -570,8 +570,8 @@ section {
     
     
   }
-  /*subframe*/
-  #Subframe{
+  /*CSRobot*/
+  #CSRobot{
     display: inline;
     gap:2rem;
     justify-content: center;
