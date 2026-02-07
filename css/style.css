@@ -1,45 +1,51 @@
 /* Consistent sizing for project carousel cards and images on mobile */
 @media (max-width: 900px) {
   .project-carousel-card {
-    min-width: 220px;
-    max-width: 220px;
-    width: 220px;
-    height: 320px;
-    margin: 0 8px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4.5rem 0 0.5rem 0;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
     align-items: center;
     justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
     box-sizing: border-box;
-  }
-  .project-carousel-image {
-    width: 200px !important;
-    height: 180px !important;
-    object-fit: contain !important;
-    margin-bottom: 8px;
-    border-radius: 12px;
+    overflow: hidden;
     display: block;
   }
-  .project-carousel-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 0;
-    width: 100%;
-    color: #fff;
-    background: none;
-  }
-  /* Dynamic text sizing for project cards on mobile */
-  .project-card-description, .projects_mainText, .projects_subheading, .project-card-title {
-    font-size: clamp(0.9rem, 2vw, 1.1rem) !important;
+    width: 60vw;
+    max-width: 700px;
+    min-width: 180px;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 2vw;
+    box-shadow: 0 8px 32px rgba(42,113,234,0.18), 0 0 0 8px rgba(42,113,234,0.18);
+    border: 4px solid #0074DA;
+    background: #111;
+    z-index: 2;
+    transition: width 0.3s, height 0.3s, box-shadow 0.3s, border 0.3s;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     word-break: break-word !important;
     overflow-wrap: break-word !important;
-    white-space: normal !important;
-    line-height: 1.25 !important;
-    max-width: 100% !important;
-    padding: 0.5rem !important;
-    box-sizing: border-box !important;
+    .aboutme-carousel-img-main {
+      width: 90vw;
+      min-width: 60px;
+      max-width: 98vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   .project-card-summary span {
     font-size: clamp(0.8rem, 1.5vw, 1rem) !important;
