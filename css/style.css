@@ -552,11 +552,16 @@ section {
   display: flex;
   justify-content: center;
   margin: 4.5rem 0 0.5rem 0;
+  width: 100vw;
+  overflow: hidden;
 }
 .aboutme-carousel {
   display: flex;
+  flex-direction: row;
   gap: 3vw;
   align-items: center;
+  width: 100vw;
+  overflow: hidden;
 }
 .aboutme-carousel-img-main {
   width: 70vw;
