@@ -1,0 +1,848 @@
+        <!-- Removed duplicate/empty AutonomousRobot section -->
+</section>
+<script>
+  // Popup modal for Squirrel Feeder Demo video
+  document.addEventListener('DOMContentLoaded', function() {
+    const squirrelDemoBtn = document.getElementById('squirrel-demo-btn');
+    const squirrelDemoModal = document.getElementById('squirrel-demo-modal');
+    const closeSquirrelDemo = document.getElementById('close-squirrel-demo');
+    if (squirrelDemoBtn && squirrelDemoModal && closeSquirrelDemo) {
+      squirrelDemoBtn.onclick = function() {
+        squirrelDemoModal.style.display = 'flex';
+      };
+      closeSquirrelDemo.onclick = function() {
+        squirrelDemoModal.style.display = 'none';
+      };
+      window.onclick = function(event) {
+        if (event.target === squirrelDemoModal) {
+          squirrelDemoModal.style.display = 'none';
+        }
+      };
+    }
+  });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Josh Westake Portfolio</title>
+    <link rel = "stylesheet" href = "/css/style.css"/>
+    <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1200px)"/> 
+    <link rel="stylesheet" href="/css/carousel.css"/>
+ </head>
+  <!-----MENU SECTION------>
+  <body>
+    <nav id="desktop-nav">
+      <img src ="./MyPortfolio/Logo (1).png"
+        alt="Home"
+        class="static_icon"
+        onClick="location.href='#desktop-nav'"
+      />
+      <div>
+      <!-- This creates the links for each of the pages, orange #is actual link while the white text is visually shown -->
+        <ul class="nav-links">  
+              <li><a href="index.html">Profile</a></li>
+              <li><a href="project.html">Projects</a></li>
+              <li><a href="Experience.html">Experience</a></li>
+        </ul>
+        </div>
+    </nav> 
+</section>
+<section id="projects">
+    <h1 class="title">Projects</h1>
+    <!-- Single Smooth Continuous Project Carousel -->
+    <hr style="border: none; border-top: 4px solid #2196f3; margin: 0 0 18px 0; width: 100%;" />
+    <div class="project-carousel-container">
+      <div class="project-carousel" id="projectCarousel">
+        <div class="project-carousel-card" style="background:#000;" data-target="AutonomousRobot" tabindex="0">
+          <img src="MyPortfolio/Autonomous Robot/Robot.png" class="project-carousel-image" alt="Autonomous Mobile Robot" />
+          <div class="project-carousel-title">Autonomous Mobile Robot</div>
+        </div>
+        <div class="project-carousel-card" style="background:#000;" data-target="CSRobot" tabindex="0">
+          <img src="MyPortfolio/MREN303/303-di.png" class="project-carousel-image" alt="Crank Slider Mobile Robot" />
+          <div class="project-carousel-title">Crank Slider Mobile Robot</div>
+        </div>
+        <div class="project-carousel-card" style="background:#000;" data-target="MiniBot" tabindex="0">
+          <img src="MyPortfolio/MiniBot/MiniBot-profile.png" class="project-carousel-image" alt="Autonomous Mining Loader" />
+          <div class="project-carousel-title">Autonomous Mining Loader</div>
+        </div>
+        <div class="project-carousel-card" style="background:#000;" data-target="SensorSuite" tabindex="0">
+          <img src="MyPortfolio/SensorSuite/SuiteOnCar.PNG" class="project-carousel-image" alt="Autonomous Vehicle Sensor Suite" />
+          <div class="project-carousel-title">Autonomous Vehicle Sensor Suite</div>
+        </div>
+        <div class="project-carousel-card" style="background:#000;" data-target="RobotArm" tabindex="0">
+          <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg" class="project-carousel-image" alt="3-Axis Robot Arm" />
+          <div class="project-carousel-title">3-Axis Robot Arm</div>
+        </div>
+        <div class="project-carousel-card" style="background:#000;" data-target="PetFeeder" tabindex="0">
+          <img src="MyPortfolio/SquirrelFeeder/SquirrelFeeder2.png" class="project-carousel-image" alt="Automatic Squirrel Feeder" />
+          <div class="project-carousel-title">Automatic Squirrel Feeder</div>
+        </div>
+        <div class="project-carousel-card" style="background:#000;" data-target="Gearbox" tabindex="0">
+          <img src="MyPortfolio/Gearbox/Gearbox_photo.png" class="project-carousel-image" alt="Modular Cycloidal Gearbox" />
+          <div class="project-carousel-title">Modular Cycloidal Gearbox</div>
+        </div>
+      </div>
+    </div>
+    <hr style="border: none; border-top: 4px solid #2196f3; margin: 18px 0 0 0; width: 100%;" />
+    <script>
+      // Single smooth continuous carousel
+      const carousel = document.getElementById('projectCarousel');
+      carousel.innerHTML += carousel.innerHTML; // duplicate for seamless loop
+      let scroll = 0;
+      function animateCarousel() {
+          scroll -= 2.0; // Faster scroll speed
+        if (scroll <= 0) scroll = carousel.scrollWidth / 2;
+        carousel.scrollLeft = scroll;
+        requestAnimationFrame(animateCarousel);
+      }
+      animateCarousel();
+
+      // Smooth scroll for carousel links
+      document.querySelectorAll('.project-carousel-card[data-target]').forEach(card => {
+        card.addEventListener('click', function(e) {
+          const targetId = card.getAttribute('data-target');
+          const target = document.getElementById(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+            history.replaceState(null, '', '#' + targetId);
+          }
+        });
+      });
+    </script>
+    <!-- ...existing code... -->
+    <div class="robotics_btn_container"> 
+      <button class="projects_btn">Robotics</button>
+    
+      <div class="robotics_links">
+
+        <!--
+        <div class = "gallery">
+            <div class ="gallery-items">          
+              <a href="#HMIMount">
+                <img src="MyPortfolio/HMI Mount/Mount-Cad.png"
+                class = "gallery-image"></a>
+                <p> <a href="#HMIMount">HMI Mount</a></p>  
+            </div>
+          <div class ="gallery-items">          
+            <a href="#LifeBot">
+              <img src="MyPortfolio/LifeBot/LifeBot.png"
+              class = "gallery-image"></a>
+              <p> <a href="#LifeBot">LifeBot</a></p>  
+          </div>
+          <div class ="gallery-items">          
+            <a href="#CSRobot">
+              <img src="MyPortfolio/MREN303/303-di.png"
+              class = "gallery-image"></a>
+              <p> <a href="#CSRobot">Crank Slider Mobile Robot</a></p>
+          </div>
+          <div class ="gallery-items">          
+            <a href="#MiniBot">
+              <img src="MyPortfolio/MiniBot/MiniBot-profile.png"
+              class = "gallery-image"></a>
+              <p> <a href="#MiniBot">Autonomous Mining Loader</a></p>
+          </div>
+          <div class ="gallery-items">          
+            <a href="#SensorSuite">
+              <img src="MyPortfolio/SensorSuite/SensorSuite1.png"
+              class = "gallery-image"></a>
+            <p> <a href="#SensorSuite">Autonomous Vehicle Sensor Suite</a></p>  
+          </div>
+          <div class ="gallery-items">          
+            <a href="#RobotArm">
+              <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg"
+              class = "gallery-image"></a>
+              <p> <a href="#RobotArm">3-Axis Robot Arm</a></p>
+          </div>
+          <div class ="gallery-items">          
+            <a href="#PetFeeder">
+              <img src="MyPortfolio/SquirrelFeeder/SquirrelFeeder2.png"
+              class = "gallery-image"></a>
+              <p> <a href="#PetFeeder">Automatic Squirrel Feeder</a></p>
+          </div>
+          <div class ="gallery-items">          
+            <a href="#Gearbox">
+              <img src="MyPortfolio/CycloidalGearbox/gearbox.png"
+              class = "gallery-image"></a>
+              <p> <a href="#Gearbox">Modular Cycloidal Gearbox</a></p>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+   
+  </section>
+  
+  <section id="SensorSuite">
+    <div class="project-card-redesign mobile" id="SensorSuiteCard">
+      <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <img src="MyPortfolio/SensorSuite/SensorSuite.png" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+        <img src="MyPortfolio/SensorSuite/OnCar.png" class="project-card-main-image project-card-main-image-large sensorsuite-desktop-only" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: none; margin-left: auto; margin-right: auto;">
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            var desktopImgs = document.querySelectorAll('.sensorsuite-desktop-only');
+            function updateSensorSuiteImages() {
+              if (window.innerWidth > 900) {
+                desktopImgs.forEach(function(img) { img.style.display = 'block'; });
+              } else {
+                desktopImgs.forEach(function(img) { img.style.display = 'none'; });
+              }
+            }
+            window.addEventListener('resize', updateSensorSuiteImages);
+            updateSensorSuiteImages();
+          });
+        </script>
+        <div class="project-card-links" style="margin-top:1.5rem;">
+                    <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/HMI Mount/TechnicalDrawing.png')">Technical Drawing</button>
+          <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/SensorSuite/TechnicalDrawing.png')">Technical Drawing</button>
+        </div>
+      </div>
+      <div class="project-card-content-col">
+        <h1 class="project-card-title" style="text-align:center; width:100%;">Autonomous Vehicle Sensor Suite</h1>
+        <div class="project-card-summary" style="justify-content: center; text-align: center; width: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="project-card-skill">SolidWorks</span>
+          <span class="project-card-skill">CAD</span>
+          <span class="project-card-skill">Waterproofing</span>
+          <span class="project-card-skill">DFM</span>
+          <span class="project-card-skill">FEA</span>
+          <span class="project-card-skill">Sensor Integration</span>
+          <span class="project-card-skill">Testing</span>
+        </div>
+        <div class="project-card-description">
+          <h2 class="projects_subheading">Project Overview</h2>
+          <p class="projects_mainText">Sensor Suite V3 is a modular, compact sensor mounting solution optimized for autonomous vehicle applications. The redesign focused on accurate sensor positioning, integrated waterproofing, and a localized power delivery system to reduce cabling complexity.</p>
+          <div class="additional-text" style="display:none;">
+            <h2 class="projects_subheading">Mechanical Design & Manufacturing</h2>
+            <p class="projects_mainText">The project began with a full mechanical redesign focused on modularity and compactness, using CAD tools to ensure precise sensor alignment and ease of assembly. Each sensor was carefully positioned to maximize field of view and minimize blind spots, with vibration-dampening mounts implemented for the LiDAR units to improve data fidelity. Waterproofing was achieved through gasketed enclosures, sealed connectors, and the use of corrosion-resistant materials. A localized power delivery system was integrated directly into the suite to simplify the wiring architecture and reduce the number of long cables routed throughout the vehicle.</p>
+            <h2 class="projects_subheading">Performance & Results</h2>
+            <p class="projects_mainText">The final Sensor Suite V3 significantly improved robustness, ease of installation, and system reliability. The integrated waterproofing successfully protected electronics during outdoor testing in wet conditions. The localized power system reduced cable length by over 50%, minimizing signal noise and easing maintenance. The modular design allowed for quick sensor swaps and streamlined debugging, which accelerated development cycles. Overall, the redesign enhanced the vehicle’s sensing capabilities while making the suite more maintainable, scalable, and competition-ready.</p>
+          </div>
+          <button class="read-more-link sensor-suite-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read More</button>
+        </div>
+      </div>
+    </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var readMoreBtn = document.querySelector('.sensor-suite-readmore');
+    var additionalContent = readMoreBtn ? readMoreBtn.previousElementSibling : null;
+
+    function updateSensorSuiteResponsive() {
+      if (window.innerWidth > 900) {
+        // Desktop: show all text, hide button
+        if (additionalContent && additionalContent.classList.contains('additional-text')) {
+          additionalContent.style.display = 'block';
+        }
+        if (readMoreBtn) {
+          readMoreBtn.style.display = 'none';
+        }
+      } else {
+        // Mobile: hide extra text, show button
+        if (additionalContent && additionalContent.classList.contains('additional-text')) {
+          additionalContent.style.display = 'none';
+        }
+        if (readMoreBtn) {
+          readMoreBtn.style.display = '';
+          readMoreBtn.textContent = 'Read More';
+        }
+      }
+    }
+
+    if (readMoreBtn) {
+      readMoreBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
+          additionalContent.style.display = 'block';
+          readMoreBtn.textContent = 'Read Less';
+        } else {
+          additionalContent.style.display = 'none';
+          readMoreBtn.textContent = 'Read More';
+        }
+      });
+    }
+
+    window.addEventListener('resize', updateSensorSuiteResponsive);
+    updateSensorSuiteResponsive();
+  });
+  </script>
+  </section>
+  <section id="CSRobot">
+    <div class="project-card-redesign mobile" id="CSRobotCard">
+      <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <video controls autoplay loop muted playsinline class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+          <source src="MyPortfolio/MREN303/MREN303Assembly.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="MyPortfolio/MREN303/IMG_5192.jpg" class="project-card-main-image project-card-main-image-large csrobot-desktop-only" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: none; margin-left: auto; margin-right: auto;">
+        <div class="project-card-links" style="margin-top:1.5rem;">
+          <button class="btn project-btn-color" id="crank-slider-demo-btn">Demo</button>
+          <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MREN303/dim_drawing.png')">Technical Drawings</button>
+          <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MREN303/Report.pdf')">Documentation</button>
+        </div>
+        <!-- Modal for Crank Slider Demo Video -->
+        <div id="crank-slider-demo-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+          <div style="position:relative; width:80vw; max-width:900px; height:70vh; display:flex; flex-direction:column; align-items:center;">
+            <button style="position:absolute; top:10px; right:10px; font-size:2rem; background:none; border:none; color:white; cursor:pointer;" id="close-crank-slider-demo">&times;</button>
+            <video controls autoplay loop style="width:100%; height:100%; background:black;">
+                <source src="MyPortfolio/MREN303/demo-short.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <script>
+          // Popup modal for Demo video
+          document.addEventListener('DOMContentLoaded', function() {
+            const demoBtn = document.getElementById('crank-slider-demo-btn');
+            const demoModal = document.getElementById('crank-slider-demo-modal');
+            const closeDemo = document.getElementById('close-crank-slider-demo');
+            if (demoBtn && demoModal && closeDemo) {
+              demoBtn.onclick = function() {
+                demoModal.style.display = 'flex';
+                var video = demoModal.querySelector('video');
+                if (video) video.play();
+              };
+              closeDemo.onclick = function() {
+                demoModal.style.display = 'none';
+                var video = demoModal.querySelector('video');
+                if (video) {
+                  video.pause();
+                  video.currentTime = 0;
+                }
+              };
+              demoModal.addEventListener('click', function(e) {
+                if (e.target === demoModal) {
+                  demoModal.style.display = 'none';
+                  var video = demoModal.querySelector('video');
+                  if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                  }
+                }
+              });
+            }
+          });
+        </script>
+      </div>
+      <div class="project-card-content-col">
+        <h1 class="project-card-title" style="text-align:center; width:100%; margin-top:0.2rem; margin-bottom:0.2rem;">Crank Slider Mobile Robot</h1>
+        <div class="project-card-summary" style="justify-content: center; text-align: center; width: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="project-card-skill">SolidWorks</span>
+          <span class="project-card-skill">Linkage Kinematics</span>
+          <span class="project-card-skill">Motion Studies</span>
+          <span class="project-card-skill">3D Printing</span>
+          <span class="project-card-skill">Laser Cutting</span>
+          <span class="project-card-skill">PID Control</span>
+          <span class="project-card-skill">Odometry</span>
+        </div>
+        <div class="project-card-description">
+          <h2 class="projects_subheading">Project Overview</h2>
+          <p class="projects_mainText">Design and fabricate a two-wheeled differential-drive robot capable of autonomous navigation and precise object manipulation using a custom crank-slider arm mechanism. The project balanced mechanical design, fabrication constraints, and control systems integration.</p>
+          <div class="additional-text" style="display:none;">
+            <h2 class="projects_subheading">Mechanical Design & Fabrication</h2>
+            <p class="projects_mainText">All mechanical components were designed in SolidWorks, with linkage kinematics validated through motion studies before fabrication. The differential drive base, custom crank-slider arm, and all structural components were fabricated via 3D printing and laser cutting, enabling rapid iteration. This design-to-fabrication pipeline proved critical for achieving tight mechanical tolerances and optimizing the arm's reach and torque characteristics.</p>
+            <p class="projects_mainText">Motion studies in SolidWorks validated linkage kinematics and actuation profiles before fabrication. Clearances and component fit were verified through 3D printing prototypes. The integrated encoder-based odometry and PID motor control on a Raspberry Pi Pico W enabled coordinated motion between drive and manipulation systems. Functional testing under load conditions drove iterative mechanical refinements and control parameter tuning.</p>
+            <h2 class="projects_subheading">Integration & Results</h2>
+            <p class="projects_mainText">Integrated encoder-based odometry and PID motor control enabled coordinated motion between drive and manipulation systems. Functional testing under load conditions drove iterative refinements to both mechanical design and control parameters. The final system achieved top 10 competition placement in a class of 80+ students, validating the design approach of rigorous mechanical engineering combined with disciplined control system development.</p>
+            <h2 class="projects_subheading">Competition Results</h2>
+            <p class="projects_mainText">The robot successfully demonstrated autonomous navigation and reliable object manipulation during final competition, resulting in a top 10 finish in a class of 80+ students. The robust mechanical design and consistent autonomous performance exemplifies how solid mechanical fundamentals—precise fabrication, iterative validation, and thoughtful integration—form the foundation for successful autonomous systems.</p>
+          </div>
+          <button class="read-more-link csrobot-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read Less</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="PetFeeder">
+    <div class="project-card-redesign mobile" id="PetFeederCard">
+      <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <img src="MyPortfolio/SquirrelFeeder/Feeder_Mechanism.png" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+          <img src="MyPortfolio/SquirrelFeeder/SquirrelFeeder.png" class="project-card-main-image project-card-main-image-large squirrelfeeder-desktop-only" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: none; margin-left: auto; margin-right: auto;">
+        <div class="project-card-links" style="margin-top:1.5rem;">
+          <button class="btn project-btn-color" onclick="window.open('MyPortfolio/SquirrelFeeder/Mechanism_Demo.MP4')">Demo</button>
+          <button class="btn project-btn-color" onclick="window.open('MyPortfolio/SquirrelFeeder/MREN%20318%20Design%20Report%20Shortened.pdf')">Documentation</button>
+        </div>
+      </div>
+      <div class="project-card-content-col">
+        <h1 class="project-card-title" style="text-align:center; width:100%; margin-top:0.2rem; margin-bottom:0.2rem;">Automatic Squirrel Feeder</h1>
+        <div class="project-card-summary" style="justify-content: center; text-align: center; width: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="project-card-skill">SolidWorks</span>
+          <span class="project-card-skill">Stepper Motor</span>
+          <span class="project-card-skill">Archimedes Screw</span>
+          <span class="project-card-skill">Vision System</span>
+          <span class="project-card-skill">YOLO ML</span>
+          <span class="project-card-skill">Force Sensor</span>
+          <span class="project-card-skill">DFM</span>
+        </div>
+        <div class="project-card-description">
+          <h2 class="projects_subheading">Project Overview</h2>
+          <p class="projects_mainText">The Automated Squirrel Feeder is a precision dispensing system designed for backyard wildlife management, combining mechanical innovation and intelligent control. The project features a stepper-driven Archimedes screw for accurate portion control, a vision-assisted system using YOLO ML for animal identification, and a force-sensitive resistor for closed-loop feedback. The enclosure was engineered to prevent jamming and accommodate pellet variability, with iterative prototyping and testing to optimize reliability and precision.</p>
+          <div class="additional-text" style="display:none;">
+            <h2 class="projects_subheading">Mechanical & Electrical Design</h2>
+            <p class="projects_mainText">The feeder mechanism was developed through CAD modeling and simulation, focusing on minimizing friction and ensuring robust operation. The system integrates a stepper motor, force sensor, and vision system, all coordinated by a microcontroller. The electronics were selected for durability and ease of integration, with waterproofing and weatherproofing measures implemented for outdoor use. The design report details the engineering process, including material selection, stress analysis, and iterative testing to validate performance under real-world conditions.</p>
+            <h2 class="projects_subheading">Results & Achievements</h2>
+            <p class="projects_mainText">The final system demonstrated reliable portion dispensing, effective animal identification, and robust operation in outdoor environments. The project finished 1st overall in a competitive design course, validating both the mechanical design and system integration. The design report highlights the importance of iterative prototyping, simulation, and real-world testing in achieving a successful engineering solution for wildlife management.</p>
+          </div>
+          <button class="read-more-link squirrelfeeder-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read More</button>
+        </div>
+      </div>
+    </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var readMoreBtn = document.querySelector('.squirrelfeeder-readmore');
+    var additionalContent = readMoreBtn ? readMoreBtn.previousElementSibling : null;
+    var desktopImg = document.querySelector('.squirrelfeeder-desktop-only');
+
+    function updateSquirrelFeederResponsive() {
+      if (window.innerWidth > 900) {
+        // Desktop: show all text, hide button, show second image
+        if (additionalContent && additionalContent.classList.contains('additional-text')) {
+          additionalContent.style.display = 'block';
+        }
+        if (readMoreBtn) {
+          readMoreBtn.style.display = 'none';
+        }
+        if (desktopImg) {
+          desktopImg.style.display = 'block';
+        }
+      } else {
+        // Mobile: hide extra text, show button, hide second image
+        if (additionalContent && additionalContent.classList.contains('additional-text')) {
+          additionalContent.style.display = 'none';
+        }
+        if (readMoreBtn) {
+          readMoreBtn.style.display = '';
+          readMoreBtn.textContent = 'Read More';
+        }
+        if (desktopImg) {
+          desktopImg.style.display = 'none';
+        }
+      }
+    }
+
+    if (readMoreBtn) {
+      readMoreBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
+          additionalContent.style.display = 'block';
+          readMoreBtn.textContent = 'Read Less';
+        } else {
+          additionalContent.style.display = 'none';
+          readMoreBtn.textContent = 'Read More';
+        }
+      });
+    }
+
+    window.addEventListener('resize', updateSquirrelFeederResponsive);
+    updateSquirrelFeederResponsive();
+  });
+  </script>
+  </section>
+  <!-- CYCLOIDAL GEARBOX PROJECT -->
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Responsive image handling for desktop-only images (add MiniBot and RobotArm)
+          function updateDesktopImages() {
+            var desktopImgs = document.querySelectorAll('.lifebot-desktop-only, .hmi-desktop-only, .squirrelfeeder-desktop-only, .csrobot-desktop-only, .minibot-desktop-only, .robotarm-desktop-only');
+            if (window.innerWidth > 900) {
+              desktopImgs.forEach(function(img) { img.style.display = 'block'; });
+            } else {
+              desktopImgs.forEach(function(img) { img.style.display = 'none'; });
+            }
+          }
+          window.addEventListener('resize', updateDesktopImages);
+          updateDesktopImages();
+
+          // Read More button functionality for all sections (add MiniBot and RobotArm)
+          var readMoreButtons = document.querySelectorAll('.read-more-link');
+          readMoreButtons.forEach(function(btn) {
+            var descriptionContainer = btn.closest('.project-card-description');
+            var additionalContent = descriptionContainer ? descriptionContainer.querySelector('.additional-text') : null;
+            function updateResponsive() {
+              var desktopImg = null;
+              if (btn.classList.contains('life-bot-readmore')) {
+                desktopImg = document.querySelector('.lifebot-desktop-only');
+              } else if (btn.classList.contains('hmi-mount-readmore')) {
+                desktopImg = document.querySelector('.hmi-desktop-only');
+              } else if (btn.classList.contains('squirrelfeeder-readmore')) {
+                desktopImg = document.querySelector('.squirrelfeeder-desktop-only');
+              } else if (btn.classList.contains('csrobot-readmore')) {
+                desktopImg = document.querySelectorAll('.csrobot-desktop-only');
+              } else if (btn.classList.contains('minibot-readmore')) {
+                desktopImg = document.querySelector('.minibot-desktop-only');
+              } else if (btn.classList.contains('robotarm-readmore')) {
+                desktopImg = document.querySelector('.robotarm-desktop-only');
+              }
+              if (window.innerWidth > 900) {
+                if (additionalContent && additionalContent.classList.contains('additional-text')) {
+                  additionalContent.style.display = 'block';
+                }
+                btn.style.display = 'none';
+                if (desktopImg) {
+                  if (desktopImg instanceof NodeList || Array.isArray(desktopImg)) {
+                    desktopImg.forEach(function(img) { img.style.display = 'block'; });
+                  } else {
+                    desktopImg.style.display = 'block';
+                  }
+                }
+              } else {
+                if (additionalContent && additionalContent.classList.contains('additional-text')) {
+                  additionalContent.style.display = 'none';
+                }
+                btn.style.display = '';
+                btn.textContent = 'Read More';
+                if (desktopImg) {
+                  if (desktopImg instanceof NodeList || Array.isArray(desktopImg)) {
+                    desktopImg.forEach(function(img) { img.style.display = 'none'; });
+                  } else {
+                    desktopImg.style.display = 'none';
+                  }
+                }
+              }
+            }
+            btn.addEventListener('click', function(event) {
+              event.preventDefault();
+              if (additionalContent && (additionalContent.style.display === 'none' || additionalContent.style.display === '')) {
+                additionalContent.style.display = 'block';
+                btn.textContent = 'Read Less';
+              } else if (additionalContent) {
+                additionalContent.style.display = 'none';
+                btn.textContent = 'Read More';
+              }
+            });
+            window.addEventListener('resize', updateResponsive);
+            updateResponsive();
+          });
+        });
+        </script>
+        <section id="Gearbox">
+          <div class="project-card-redesign mobile" id="GearboxCard">
+            <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+              <video controls autoplay loop muted playsinline class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+                <source src="MyPortfolio/Gearbox/Gearbox Explded.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <img src="MyPortfolio/Gearbox/Gearbox_photo.png" class="project-card-main-image project-card-main-image-large gearbox-desktop-only" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: none; margin-left: auto; margin-right: auto;">
+              <div class="project-card-links" style="margin-top:1.5rem;">
+                <button class="btn project-btn-color" id="gearbox-demo-btn" style="display:inline-block;">Demo</button>
+                <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/Gearbox/TechDrawing.png')">Technical Drawing</button>
+                <div id="gearbox-demo-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+                  <div style="position:relative; width:80vw; max-width:900px; height:70vh; display:flex; flex-direction:column; align-items:center;">
+                    <button style="position:absolute; top:10px; right:10px; font-size:2rem; background:none; border:none; color:white; cursor:pointer;" id="close-gearbox-demo">&times;</button>
+                    <video controls autoplay loop style="width:100%; height:100%; background:black;">
+                      <source src="MyPortfolio/Gearbox/Physical Model.MOV" type="video/mp4">
+                      Your browser does not support the video tag;
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content-col">
+              <h1 class="project-card-title" style="text-align:center; width:100%; margin-top:0.2rem; margin-bottom:0.2rem;">Modular Cycloidal Gearbox</h1>
+              <div class="project-card-summary" style="justify-content: center; text-align: center; width: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="project-card-skill">SolidWorks</span>
+                <span class="project-card-skill">Cycloidal Drive</span>
+                <span class="project-card-skill">3D Printing</span>
+                <span class="project-card-skill">CAD</span>
+                <span class="project-card-skill">FEA</span>
+                <span class="project-card-skill">DFM</span>
+              </div>
+              <div class="project-card-description">
+                <h2 class="projects_subheading">Project Overview</h2>
+                <p class="projects_mainText">Designed and 3D printed a compact 20:1 cycloidal reduction gearbox as a modular actuator component, optimizing for high torque amplification with minimal backlash for precision robotic applications. The exploded view video demonstrates the internal mechanism and assembly process. Technical documentation and demo video are available for further details.</p>
+                <div class="additional-text" style="display:none;">
+                  <h2 class="projects_subheading">Design & Optimization</h2>
+                  <p class="projects_mainText">The design focused on critical cycloidal mechanism parameters: eccentric offset geometry, pin profile tolerancing, and disc geometry optimization to achieve the target 20:1 reduction ratio while balancing torque capacity and efficiency. Modeled all contacts, clearances, and bearing interfaces in SolidWorks to ensure proper fit and function.</p>
+                  <h2 class="projects_subheading">Testing & Application</h2>
+                  <p class="projects_mainText">Conducted iterative physical testing to evaluate torque efficiency, backlash performance, wear patterns, and failure modes. Used test results to refine disc geometry, pin tolerances, and material selection. This hands-on validation approach ensured the gearbox would perform reliably when integrated into a custom robotic arm system. The gearbox is being developed as a modular actuator component for future integration into a robotic arm, demonstrating the importance of precision mechanical design and rigorous testing in motion control applications.</p>
+                </div>
+                <button class="read-more-link gearbox-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read More</button>
+              </div>
+            </div>
+          </div>
+        </section>
+          <section id="AutonomousRobot">
+            <div class="project-card-redesign mobile" id="AutonomousRobotCard">
+              <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                <video controls autoplay loop muted playsinline class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+                  <source src="MyPortfolio/Autonomous Robot/Assembly_Video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <img src="MyPortfolio/Autonomous Robot/Robot.png" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+                <div class="project-card-links" style="margin-top:1.5rem;">
+                  <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/Autonomous Robot/Assembly_Video.mp4')">Demo</button>
+                  <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/Documentation.pdf')">Documentation</button>
+                </div>
+              </div>
+              <div class="project-card-content-col">
+                <h1 class="project-card-title" style="text-align:center; width:100%; margin-top:0.2rem; margin-bottom:0.2rem;">Autonomous Mobile Robot</h1>
+                <div class="project-card-summary" style="justify-content: center; text-align: center; width: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                  <span class="project-card-skill">SolidWorks</span>
+                  <span class="project-card-skill">ROS2</span>
+                  <span class="project-card-skill">SLAM</span>
+                  <span class="project-card-skill">3D Printing</span>
+                  <span class="project-card-skill">Power Distribution</span>
+                  <span class="project-card-skill">Sensor Integration</span>
+                  <span class="project-card-skill">Prototyping</span>
+                </div>
+                <div class="project-card-description">
+                  <h2 class="projects_subheading">Project Overview</h2>
+                  <p class="projects_mainText">Designed and fabricated a compact, general-purpose autonomous mobile robot from the ground up, integrating chassis, drivetrain, power distribution, and sensor systems. The robot utilizes a Raspberry Pi, Arduino, and Lidar sensors for autonomous operation and navigation.</p>
+                  <div class="additional-text" style="display:none;">
+                    <h2 class="projects_subheading">Mechanical Design & Fabrication</h2>
+                    <p class="projects_mainText">Iterated chassis geometry and mounting features in SolidWorks, validating component fit, wiring routes, and assembly sequence through 3D printing and physical testing. The chassis was fabricated from PLA plastic using FDM 3D printing for cost-effectiveness and structural integrity.</p>
+                    <p class="projects_mainText">Assembled and soldered cable harnesses for motors, encoders, power delivery, and sensors, ensuring reliable operation during testing. GD&T and DFM principles guided the part geometry and material selection, making the system easy to fabricate and assemble.</p>
+                    <p class="projects_mainText">Enabled LiDAR-based localization and navigation using SLAM/ROS2, resulting in reliable autonomous motion that validated chassis stability and sensor integration. The project demonstrates a complete design, build, and test cycle for a robust mobile robotic platform.</p>
+                  </div>
+                  <button class="read-more-link life-bot-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read More</button>
+                </div>
+              </div>
+            </div>
+          </section>
+      var additionalContent = btn.previousElementSibling;
+      // Responsive handling for each section
+      function updateResponsive() {
+        var desktopImg = null;
+        // Find desktop image for this section if present
+        if (btn.classList.contains('life-bot-readmore')) {
+          desktopImg = document.querySelector('.lifebot-desktop-only');
+        } else if (btn.classList.contains('hmi-mount-readmore')) {
+          desktopImg = document.querySelector('.hmi-desktop-only');
+        } else if (btn.classList.contains('squirrelfeeder-readmore')) {
+          desktopImg = document.querySelector('.squirrelfeeder-desktop-only');
+        }
+        if (window.innerWidth > 900) {
+          // Desktop: show all text, hide button, show desktop image
+          if (additionalContent && additionalContent.classList.contains('additional-text')) {
+            additionalContent.style.display = 'block';
+          }
+          btn.style.display = 'none';
+          if (desktopImg) desktopImg.style.display = 'block';
+        } else {
+          // Mobile: hide extra text, show button, hide desktop image
+          if (additionalContent && additionalContent.classList.contains('additional-text')) {
+            additionalContent.style.display = 'none';
+          }
+          btn.style.display = '';
+          btn.textContent = 'Read More';
+          if (desktopImg) desktopImg.style.display = 'none';
+        }
+      }
+      btn.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
+          additionalContent.style.display = 'block';
+          btn.textContent = 'Read More';
+        } else {
+          additionalContent.style.display = 'none';
+          btn.textContent = 'Read Less';
+        }
+      });
+      window.addEventListener('resize', updateResponsive);
+      updateResponsive();
+    });
+  });
+  </script>
+  </section>
+  
+  <section id="HMIMount">
+      if (window.innerWidth > 900) {
+        // Desktop: show all text, hide button, show second image
+        if (additionalContent && additionalContent.classList.contains('additional-text')) {
+          additionalContent.style.display = 'block';
+        }
+        if (readMoreBtn) {
+          readMoreBtn.style.display = 'none';
+        }
+        if (desktopImg) {
+          desktopImg.style.display = 'block';
+        }
+      } else {
+        // Mobile: hide extra text, show button, hide second image
+        if (additionalContent && additionalContent.classList.contains('additional-text')) {
+          additionalContent.style.display = 'none';
+        }
+        if (readMoreBtn) {
+          readMoreBtn.style.display = '';
+          readMoreBtn.textContent = 'Read More';
+        }
+        if (desktopImg) {
+          desktopImg.style.display = 'none';
+        }
+      }
+    }
+
+    if (readMoreBtn) {
+      readMoreBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
+          additionalContent.style.display = 'block';
+          readMoreBtn.textContent = 'Read Less';
+        } else {
+          additionalContent.style.display = 'none';
+          readMoreBtn.textContent = 'Read More';
+        }
+      });
+    }
+
+    window.addEventListener('resize', updateHMIMountResponsive);
+    updateHMIMountResponsive();
+  });
+  </script>
+  </section>
+  
+   <section id="RobotArm">
+          <div class="project-card-redesign mobile" id="RobotArmCard">
+            <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+              <img src="MyPortfolio/RoboticArm/RobotArmV1/RobotArmV1.jpg" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+              <img src="MyPortfolio/RoboticArm/RobotArmV1/Base.jpg" class="project-card-main-image project-card-main-image-large robotarm-desktop-only" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: none; margin-left: auto; margin-right: auto;">
+              <div class="project-card-links" style="margin-top:1.5rem;">
+                <button class="btn project-btn-color" onclick="window.open('https://youtube.com/shorts/0Cv19AXklW4?feature=share')">Demo</button>
+                <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/RoboticArm/RobotArmV1/Documentation.pdf')">Documentation</button>
+              </div>
+            </div>
+            <div class="project-card-content-col">
+              <h1 class="project-card-title" style="text-align:center; width:100%; margin-top:0.2rem; margin-bottom:0.2rem;">3 Axis Robot Arm</h1>
+              <div class="project-card-summary" style="justify-content: center; text-align: center; width: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="project-card-skill">SolidWorks</span>
+                <span class="project-card-skill">Gearbox Mechanism</span>
+                <span class="project-card-skill">Stepper Motor</span>
+                <span class="project-card-skill">CAD</span>
+                <span class="project-card-skill">Simulation</span>
+                <span class="project-card-skill">Arduino Uno</span>
+              </div>
+              <div class="project-card-description">
+                <h2 class="projects_subheading">Project Overview</h2>
+                <p class="projects_mainText">Engineered a robotic arm attachment for wheelchairs, designed to empower individuals with limited grip strength in manipulating objects with ease and precision. The solution enhances autonomy and quality of life by enabling users to perform daily tasks independently.</p>
+                <div class="additional-text" style="display:none;">
+                  <h2 class="projects_subheading">Mechanical Design & Integration</h2>
+                  <p class="projects_mainText">The project required meticulous selection and integration of components: craft sticks for structural support, wire connectors for electrical connections, and an Arduino Uno as the central control unit. The gearbox mechanism, comprising gears, rods, and motors, transmits rotational motion and torque from DC motors to facilitate smooth and efficient movement of the arm's gripper mechanism. A stepper motor enables precise control and manipulation of objects, enhancing the arm's functionality and usability. CAD software was used to refine and optimize the arm's geometry, ensuring structural integrity and mechanical robustness. Simulation techniques, such as stress and displacement analysis, validated the arm's performance under operational loads.</p>
+                  <h2 class="projects_subheading">Results & Iteration</h2>
+                  <p class="projects_mainText">While individual subsystems showed success, the overall prototype failed to meet project requirements due to inconsistent gearbox performance, slow gripper motion, and structural limitations. Future iterations focus on strengthening connections, optimizing motor speed, and reducing friction in the gripper system for increased efficiency and functionality.</p>
+                </div>
+                <button class="read-more-link robotarm-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read More</button>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+      <section id="MiniBot">
+        <div class="project-card-redesign mobile" id="MiniBotCard">
+          <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <img src="MyPortfolio/MiniBot/Minibot2.png" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+            <img src="MyPortfolio/MiniBot/MiniBot.png" class="project-card-main-image project-card-main-image-large minibot-desktop-only" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: none; margin-left: auto; margin-right: auto;">
+            <div class="project-card-links" style="margin-top:1.5rem;">
+              <button class="btn project-btn-color" onclick="window.open('https://youtu.be/HvJMqOif9_E')">Demo</button>
+              <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/MiniBot/MiniBotDocumentation.pdf')">Documentation</button>
+            </div>
+          </div>
+          <div class="project-card-content-col">
+            <h1 class="project-card-title" style="text-align:center; width:100%; margin-top:0.2rem; margin-bottom:0.2rem;">Autonomous Mining Loader</h1>
+            <div class="project-card-summary" style="justify-content: center; text-align: center; width: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="project-card-skill">SolidWorks</span>
+              <span class="project-card-skill">PID Control</span>
+              <span class="project-card-skill">Line Following</span>
+              <span class="project-card-skill">ItsyBitsy Microcontroller</span>
+              <span class="project-card-skill">Infrared Sensor</span>
+              <span class="project-card-skill">Servo Motor</span>
+            </div>
+            <div class="project-card-description">
+              <h2 class="projects_subheading">Project Overview</h2>
+              <p class="projects_mainText">A fully autonomous mobile robot designed to replicate the functionalities of self-driving digging trucks used in modern mining operations. The primary goal was to demonstrate the viability of autonomous technology in enhancing efficiency and safety within mining environments.</p>
+              <div class="additional-text" style="display:none;">
+                <h2 class="projects_subheading">Mechanical & Control Design</h2>
+                <p class="projects_mainText">Implemented a line-following navigation algorithm utilizing a PID controller for precise line-following capabilities. The Ziegler-Nichols method was used for tuning the PID controller, enabling the robot to navigate predefined paths with high accuracy. An open-loop control handled intersections, ensuring seamless path continuation at complex junctures.</p>
+                <p class="projects_mainText">The hardware setup included an ItsyBitsy microcontroller, LED indicators, buttons, reflective object sensors, DC motors, an infrared distance sensor, and servo motors. This hardware facilitated autonomous navigation and task execution by providing real-time sensor data to the control algorithms. The integration of these components allowed MiniBot to perform its tasks efficiently, demonstrating the importance of a well-coordinated hardware-software system in achieving autonomous operation.</p>
+                <h2 class="projects_subheading">Results</h2>
+                <p class="projects_mainText">The final prototype achieved an 80% success rate in item collection and transportation, effectively simulating the functions of autonomous digging trucks in mining applications.</p>
+              </div>
+              <button class="read-more-link minibot-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        </section>
+            
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // Responsive image handling for desktop-only images
+            function updateDesktopImages() {
+              var desktopImgs = document.querySelectorAll('.lifebot-desktop-only, .hmi-desktop-only, .squirrelfeeder-desktop-only, .csrobot-desktop-only');
+              if (window.innerWidth > 900) {
+                desktopImgs.forEach(function(img) { img.style.display = 'block'; });
+              } else {
+                desktopImgs.forEach(function(img) { img.style.display = 'none'; });
+              }
+            }
+            window.addEventListener('resize', updateDesktopImages);
+            updateDesktopImages();
+
+            // Read More button functionality for all sections
+            var readMoreButtons = document.querySelectorAll('.read-more-link');
+            readMoreButtons.forEach(function(btn) {
+              // Find the .additional-text element within the same .project-card-description container
+              var descriptionContainer = btn.closest('.project-card-description');
+              var additionalContent = descriptionContainer ? descriptionContainer.querySelector('.additional-text') : null;
+              function updateResponsive() {
+                var desktopImg = null;
+                if (btn.classList.contains('life-bot-readmore')) {
+                  desktopImg = document.querySelector('.lifebot-desktop-only');
+                } else if (btn.classList.contains('hmi-mount-readmore')) {
+                  desktopImg = document.querySelector('.hmi-desktop-only');
+                } else if (btn.classList.contains('squirrelfeeder-readmore')) {
+                  desktopImg = document.querySelector('.squirrelfeeder-desktop-only');
+                } else if (btn.classList.contains('csrobot-readmore')) {
+                  desktopImg = document.querySelectorAll('.csrobot-desktop-only');
+                }
+                if (window.innerWidth > 900) {
+                  if (additionalContent && additionalContent.classList.contains('additional-text')) {
+                    additionalContent.style.display = 'block';
+                  }
+                  btn.style.display = 'none';
+                  if (desktopImg) {
+                    if (desktopImg instanceof NodeList || Array.isArray(desktopImg)) {
+                      desktopImg.forEach(function(img) { img.style.display = 'block'; });
+                    } else {
+                      desktopImg.style.display = 'block';
+                    }
+                  }
+                } else {
+                  if (additionalContent && additionalContent.classList.contains('additional-text')) {
+                    additionalContent.style.display = 'none';
+                  }
+                  btn.style.display = '';
+                  btn.textContent = 'Read More';
+                  if (desktopImg) {
+                    if (desktopImg instanceof NodeList || Array.isArray(desktopImg)) {
+                      desktopImg.forEach(function(img) { img.style.display = 'none'; });
+                    } else {
+                      desktopImg.style.display = 'none';
+                    }
+                  }
+                }
+              }
+              btn.addEventListener('click', function(event) {
+                event.preventDefault();
+                if (additionalContent && (additionalContent.style.display === 'none' || additionalContent.style.display === '')) {
+                  additionalContent.style.display = 'block';
+                  btn.textContent = 'Read Less';
+                } else if (additionalContent) {
+                  additionalContent.style.display = 'none';
+                  btn.textContent = 'Read More';
+                }
+              });
+              window.addEventListener('resize', updateResponsive);
+              updateResponsive();
+            });
+
+            // Modal popup for Gearbox Demo Video
+            var demoBtn = document.getElementById('gearbox-demo-btn');
+            var modal = document.getElementById('gearbox-demo-modal');
+            var closeBtn = document.getElementById('close-gearbox-demo');
+            if (demoBtn && modal && closeBtn) {
+              demoBtn.addEventListener('click', function() {
+                // ...existing code...
+              csCloseBtn.addEventListener('click', function() {
+
+                csModal.style.display = 'none';

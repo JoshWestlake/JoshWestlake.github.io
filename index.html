@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+          body {
+            background: #000;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+          }
+          .profile-cta {
+            margin: 1.5rem 0 0 0;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+          }
+          .profile-cta .btn {
+            background: #0074DA;
+            color: #fff;
+            border: none;
+            border-radius: 24px;
+            padding: 0.7rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+          }
+          .profile-cta .btn:hover {
+            background: #005fa3;
+            transform: translateY(-2px) scale(1.04);
+          }
+          .animated-intro {
+            font-size: 1.3rem;
+            color: #fff;
+            text-align: center;
+            margin: 1.5rem 0 0.5rem 0;
+            letter-spacing: 0.03em;
+            animation: fadeInUp 1.2s cubic-bezier(.4,1.4,.6,1);
+          }
+          @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Josh Westake Portfolio</title>
+    <link rel = "stylesheet" href = "/css/style.css"/>
+    <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1200px)"/> 
+ </head>
+  <!-----MENU SECTION------>
+  <body>
+    <nav id="desktop-nav">
+      <img src ="./MyPortfolio/Logo (1).png"
+        alt="Home"
+        class="static_icon"
+        onClick="location.href='#desktop-nav'"
+      />
+      <div>
+      <!-- This creates the links for each of the pages, orange #is actual link while the white text is visually shown -->
+        <ul class="nav-links">  
+              <li><a href="index.html">Profile</a></li>
+              <li><a href="project.html">Projects</a></li>
+              <li><a href="Experience.html">Experience</a></li>
+             
+        </ul> 
+        </div>
+    </nav> 
+    
+    <section id="profile">
+      
+      <div class="section__pic-containermobile">
+        <img src="./MyPortfolio/HeadShot.png" 
+        alt="Josh Westlake Profile picture" >
+      </div>
+      <div class="section__text">
+      
+          <h1 class = "title">Josh Westlake</h1>
+          <p class="Subheading">Mechatronics and Robotics Engineering Student</p>
+          <p class="SubText">Queen's University</p> 
+          <div class="profile-cta">
+            <button class="btn" onclick="window.open('./MyPortfolio/Josh Westlake Official CV.pdf')">Download CV</button>
+            <button class="btn" onclick="sendemail()">Contact Me</button>
+          </div>
+          <div id="socials-container" style="margin-top:1.2rem;">
+            <img src="./MyPortfolio/LinkedIn-Icon.png"
+              alt="My LinkedIn Profile"
+              class="icon"
+              onClick="location.href='https://www.linkedin.com/in/josh-westlake-063859279/'"
+              />
+            <img src="./MyPortfolio/GitHub-Icon.png"
+              alt="My github Profile"
+              class="icon"
+              onClick="location.href='https://github.com/JoshWestlake/Projects'"
+              />
+          </div>
+      </div>
+       <!-- This is the section for the name and position -->
+       <div class="section__pic-container">
+          <img src="./MyPortfolio/HeadShot.png" 
+          alt="Josh Westlake Profile picture" >
+      </div>
+  </section>
+  <section id="about">
+      <h1 class="title">About Me</h1>
+      <div class="about-clean-motion">
+        <div class="aboutme-carousel-container" style="margin-bottom:2.5rem;">
+          <div class="aboutme-carousel" id="aboutme-carousel">
+            <!-- Images will be injected by JS -->
+          </div>
+        </div>
+        <p class="about_text">
+          <span class="about_mainText">
+            I’m Josh Westlake, a third year Mechatronics and Robotics Engineering student at Queen’s University with a strong focus on mechanical design and building real robotic systems. I enjoy taking ideas from concept to working hardware through CAD, prototyping, testing, and iteration. Most of my experience sits at the intersection of mechanics, electronics, and controls, with a particular interest in robot mechanisms, electromechanical assemblies, and systems that need to perform reliably in the real world.
+          </span>
+        </p>
+        <p class="about_text">
+          <span class="about_mainText">
+            This portfolio highlights projects where I’ve designed and built autonomous robots, custom mechanisms, sensor suites, and electromechanical systems. I’m actively looking for opportunities in robotics and mechanical design engineering where I can contribute hands on, learn quickly, and help turn ambitious ideas into real products.
+          </span>
+        </p>
+      </div>
+  </section>
+  <!-- About Me Image Carousel -->
+  <div class="aboutme-carousel-container" style="margin-top:2.2rem;">
+    <div class="aboutme-carousel" id="aboutme-carousel">
+      <!-- Images will be injected by JS -->
+    </div>
+  </div>
+  
+  <script>
+    const aboutMeImages = [
+      {
+        src: './MyPortfolio/AboutMe/Magnetic Pipe Inspection Robot Piloting.JPG',
+        desc: 'Magnetic Pipe Inspection Robot Piloting'
+      },
+      {
+        src: './MyPortfolio/AboutMe/Queen\'s Autodrive.jpeg',
+        desc: "Queen's Autodrive"
+      },
+      {
+        src: './MyPortfolio/AboutMe/WPCP Incineration Plant.jpeg',
+        desc: 'WPCP Incineration Plant'
+      },
+      {
+        src: './MyPortfolio/AboutMe/Waste Pollution Control Plant.jpeg',
+        desc: 'Waste Pollution Control Plant'
+      },
+      {
+        src: './MyPortfolio/AboutMe/PLC Programming.jpeg',
+        desc: 'PLC Programming'
+      },
+      {
+        src: './MyPortfolio/AboutMe/Engineering Rivalry Hockey Game.JPG',
+        desc: 'Engineering Rivalry Hockey Game'
+      },
+      {
+        src: './MyPortfolio/AboutMe/DJI Drone Deployement.jpeg',
+        desc: 'DJI Drone Deployement'
+      },
+      {
+        src: './MyPortfolio/AboutMe/Crank Slider Robot.jpg',
+        desc: 'Crank Slider Robot'
+      },
+      {
+        src: './MyPortfolio/AboutMe/Boston Dynamics Visit.jpeg',
+        desc: 'Boston Dynamics Visit'
+      },
+      {
+        src: './MyPortfolio/AboutMe/AutoDrive Sensor Suite.JPG',
+        desc: 'AutoDrive Sensor Suite'
+      }
+    ];
+    let carouselIndex = 0;
+    function renderAboutMeCarousel() {
+      const carousel = document.getElementById('aboutme-carousel');
+      if (!carousel) return;
+      carousel.innerHTML = '';
+        const mainIdx = carouselIndex;
+        const mainContainer = document.createElement('div');
+        mainContainer.style.display = 'flex';
+        mainContainer.style.flexDirection = 'column';
+        mainContainer.style.alignItems = 'center';
+        // Description above main image
+        const descDiv = document.createElement('div');
+        descDiv.className = 'aboutme-carousel-desc';
+        descDiv.textContent = aboutMeImages[mainIdx].desc;
+        mainContainer.appendChild(descDiv);
+        // Main image
+        const mainImg = document.createElement('img');
+        mainImg.src = aboutMeImages[mainIdx].src;
+        mainImg.className = 'aboutme-carousel-img aboutme-carousel-img-main';
+        mainImg.alt = aboutMeImages[mainIdx].desc;
+        mainContainer.appendChild(mainImg);
+        carousel.appendChild(mainContainer);
+        // Only show left/right images on desktop
+        if (window.innerWidth > 900) {
+          const leftIdx = (carouselIndex - 1 + aboutMeImages.length) % aboutMeImages.length;
+          const rightIdx = (carouselIndex + 1) % aboutMeImages.length;
+          const leftImg = document.createElement('img');
+          leftImg.src = aboutMeImages[leftIdx].src;
+          leftImg.className = 'aboutme-carousel-img aboutme-carousel-img-side';
+          leftImg.alt = aboutMeImages[leftIdx].desc;
+          carousel.insertBefore(leftImg, mainContainer);
+          const rightImg = document.createElement('img');
+          rightImg.src = aboutMeImages[rightIdx].src;
+          rightImg.className = 'aboutme-carousel-img aboutme-carousel-img-side';
+          rightImg.alt = aboutMeImages[rightIdx].desc;
+          carousel.appendChild(rightImg);
+        }
+    }
+    function rotateAboutMeCarousel() {
+      carouselIndex = (carouselIndex + 1) % aboutMeImages.length;
+      renderAboutMeCarousel();
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      renderAboutMeCarousel();
+      setInterval(rotateAboutMeCarousel, 2500);
+    });
+  </script>
+  
+  </body>
+</html>

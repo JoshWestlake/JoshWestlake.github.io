@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      .skills-banner-container {
+        width: 100vw;
+        min-width: 100vw;
+        overflow: hidden;
+        background: #000 !important;
+        border-bottom: 2px solid #0074DA;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        height: 2.2rem;
+      }
+      .skills-banner {
+        display: flex;
+        align-items: center;
+        height: 2.2rem;
+        white-space: nowrap;
+        color: #fff;
+        font-size: 1.08rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        animation: scroll-skills 32s linear infinite;
+        background: #000 !important;
+        width: 200vw;
+      }
+      @keyframes scroll-skills {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      body { padding-top: 2.2rem; background: #000; }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Josh Westake Portfolio</title>
+     <link rel = "stylesheet" href = "/css/style.css"/>
+     <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1200px)"/> 
+     <style>
+      #experience { background: #000; color: #fff; padding: 3rem 0; }
+      .experience-box { background: transparent; padding: 1.5rem; margin-bottom: 0.2rem; border-left: none; border-radius: 4px; overflow: visible; color: #ddd; display: flex; gap: 1rem; align-items: flex-start; cursor: pointer; transition: opacity .3s ease; }
+      .experience-box:hover { opacity: 0.95; }
+      .exp-logo { width: 96px; height: auto; flex: 0 0 96px; transition: transform .22s ease, opacity .35s ease; margin: 0; padding: 0; align-self: flex-start; transform-origin: left center; }
+      .exp-content { flex: 1; margin: 0; padding: 0; }
+      .exp-details { max-height: 0; overflow: hidden; transition: max-height .4s ease, opacity .4s ease; opacity: 0; }
+      .experience-box:hover .exp-details { max-height: 500px; opacity: 1; }
+      .exp-details ul { margin: 1rem 0 0 0; }
+      .exp-hidden { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+      .exp-visible { opacity: 1; transform: translateY(0); }
+      .experience-box h3 { color: #0074DA; margin: 0 0 0.5rem 0; font-size: 1.25rem; }
+      .experience-box p, .experience-box li { color: #ddd; }
+      h2.heading { color: #0074DA; border-bottom: 2px solid #0074DA; padding-bottom: 1rem; }
+      @media (max-width:800px) { .experience-box { display: block; } .exp-logo { width:72px; margin-bottom: 1rem; } }
+     </style>
+   </head>
+  <!-----MENU SECTION------>
+  <body>
+    <!-- Animated Skills Banner -->
+    <div class="skills-banner-container">
+      <div class="skills-banner">
+        <span>SolidWorks &nbsp; • &nbsp; Fusion 360 &nbsp; • &nbsp; Inventor &nbsp; • &nbsp; GD&T &nbsp; • &nbsp; FEA &nbsp; • &nbsp; Rapid Prototyping &nbsp; • &nbsp; 3D Printing &nbsp; • &nbsp; Laser Cutting &nbsp; • &nbsp; Soldering &nbsp; • &nbsp; Machining &nbsp; • &nbsp; PCB Design &nbsp; • &nbsp; Microcontroller Programming &nbsp; • &nbsp; C/C++ &nbsp; • &nbsp; Python &nbsp; • &nbsp; ROS2 &nbsp; • &nbsp; SLAM &nbsp; • &nbsp; NAV2 &nbsp; • &nbsp; MATLAB &nbsp; • &nbsp; Linux/Bash &nbsp; • &nbsp; PID Control Systems</span>
+      </div>
+    </div>
+          @keyframes scroll-skills {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+          }
+          body { padding-top: 2.2rem; }
+    <nav id="desktop-nav">
+      <img src ="./MyPortfolio/Logo (1).png"
+        alt="Home"
+        class="static_icon"
+        onClick="location.href='#desktop-nav'"
+      />
+      <div>
+        <ul class="nav-links">  
+              <li><a href="index.html">Profile</a></li>
+              <li><a href="project.html">Projects</a></li>
+              <li><a href="Experience.html">Experience</a></li>
+        </ul>
+      </div>
+    </nav> 
+    
+
+    <section id="experience">
+        <!--<h1 class ="title">Experience & Education</h1> -->
+        
+        <!-- WORK EXPERIENCE SECTION -->
+        <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+          <h2 class="heading" style="margin-top: 0;">Professional Experience</h2>
+          
+          <!-- OPG Internship -->
+          <div class="experience-box">
+            <img src="./MyPortfolio/Experience/OPG_Logo.png" alt="OPG logo" class="exp-logo" onerror="this.style.display='none'">
+            <div class="exp-content">
+            <h3>Systems Engineering Internship</h3>
+            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Ontario Power Generation (OPG)</strong> | May 2025 – Present</p>
+            <div class="exp-details">
+            <ul style="color: #ddd; line-height: 1.8; margin: 1rem 0 0 1.5rem; padding: 0;">
+              <li>Monitoring and analyzing robotic fuel-handling systems, ensuring reliability, operability, and compliance with design-basis and nuclear safety requirements through field inspections and functional checks under System Performance Monitoring Plans (SPMP).</li>
+              <li>Designed and developed a DAQ (Data Acquisition) system for vibration monitoring on critical pumps, including sensor integration, wiring harness assembly, data acquisition hardware configuration, and Python-based automation for real-time analysis.</li>
+              <li>Supported integration and testing of robotic inspection platforms, including mobile robots and aerial drones, validating hardware performance under operational conditions.</li>
+              <li>Developed Python applications to digitize operator walkdowns, create real-time data dashboards, and build GUIs for distributed data acquisition units, improving efficiency and data traceability.</li>
+            </ul>
+            </div>
+          </div>
+          </div>
+
+          <!-- Hardware Team Lead -->
+          <div class="experience-box">
+            <img src="./MyPortfolio/Experience/QueensAutodrive.png" alt="Queen's Autodrive logo" class="exp-logo" onerror="this.style.display='none'">
+            <div class="exp-content">
+            <h3>Hardware Team Lead</h3>
+            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Queen's Autodrive</strong> | Sept 2024 – May 2025</p>
+            <div class="exp-details">
+            <ul style="color: #ddd; line-height: 1.8; margin: 1rem 0 0 1.5rem; padding: 0;">
+              <li>Directed a multidisciplinary team through end-to-end design, prototyping, and testing of autonomous vehicle hardware systems, serving as the technical lead for mechanical integration and validation.</li>
+              <li>Personally designed and fabricated the sensor suite and HMI (Human-Machine Interface) mounting systems using iterative SolidWorks modeling, FEA optimization, and GD&T (Geometric Dimensioning & Tolerancing) principles to ensure precision and reliability.</li>
+              <li>Oversaw assembly of multi-component systems, improving functionality through integration of 3D-printed components, aluminum extrusions, and sheet metal fabrication—all fabricated and assembled in-house.</li>
+              <li>Conducted functional testing and validation of hardware assemblies, troubleshooting failures and iterating designs to achieve reliable performance under dynamic test conditions.</li>
+              <li>Mentored team members in CAD modeling best practices, fabrication methods, and rapid prototyping workflows.</li>
+            </ul>
+            </div>
+          </div>
+          </div>
+
+          <!-- Queen's aQuatonomous -->
+          <div class="experience-box">
+            <img src="./MyPortfolio/Experience/Aquatonomous.png" alt="aQuatonomous logo" class="exp-logo" onerror="this.style.display='none'">
+            <div class="exp-content">
+            <h3>Autonomous Team Member</h3>
+            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Queen's aQuatonomous</strong> | Nov 2023 – Apr 2024</p>
+            <div class="exp-details">
+            <ul style="color: #ddd; line-height: 1.8; margin: 1rem 0 0 1.5rem; padding: 0;">
+              <li>Supported autonomy stack development for unmanned surface vessels (USVs) competing in the RoboBoat Challenge, a collegiate-level autonomous vehicle competition.</li>
+              <li>Leveraged ROS2 and Gazebo simulation environments to test autonomy behavior, debug navigation algorithms, and reduce risk before physical deployment on water.</li>
+              <li>Validated sensor integration and control system performance through simulation and real-world testing.</li>
+            </ul>
+            </div>
+          </div>
+          </div>
+
+          <!-- SCADA -->
+          <div class="experience-box">
+            <img src="./MyPortfolio/Experience/DurhamRegion.png" alt="Durham Region logo" class="exp-logo" onerror="this.style.display='none'">
+            <div class="exp-content">
+            <h3>Supervisory Control and Data Acquisition (SCADA) Summer Student</h3>
+            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Durham Region Water</strong> | Summer 2023, 2024</p>
+            <div class="exp-details">
+            <ul style="color: #ddd; line-height: 1.8; margin: 1rem 0 0 1.5rem; padding: 0;">
+              <li>Maintained, supported, and deployed SCADA systems across water and wastewater treatment facilities, ensuring seamless operational continuity.</li>
+              <li>Demonstrated expertise with industrial components including PLCs (Programmable Logic Controllers), RTUs (Remote Terminal Units), HMI (Human-Machine Interface) systems, OITs (Operator Interface Terminals), and UPS systems.</li>
+              <li>Troubleshot hardware and software issues, coordinating with operations teams to minimize downtime.</li>
+            </ul>
+            </div>
+          </div>
+          </div>
+
+          <!-- EDUCATION SECTION -->
+          <h2 class="heading">Education</h2>
+          <div class="experience-box">
+            <img src="./MyPortfolio/Experience/QueensLogo.png" alt="Queen's University logo" class="exp-logo" onerror="this.style.display='none'">
+            <div class="exp-content">
+              <h3>BASc, Mechatronics and Robotics Engineering</h3>
+              <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Queen's University</strong> | Anticipated Graduation: Spring 2027</p>
+              <p style="color: #ddd; margin: 0.5rem 0 0 0;"><strong>Dean's Scholar Distinction</strong> | GPA: 3.82</p>
+            </div>
+          </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var readMoreLinks = document.querySelectorAll('.read-more-link');
+        readMoreLinks.forEach(function(link) {
+          link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var additionalContent = link.closest('.mobile').querySelector('.additional-text');
+            additionalContent.style.display = (additionalContent.style.display === 'none' || additionalContent.style.display === '') ? 'block' : 'none';
+          });
+        });
+
+        // IntersectionObserver to reveal experience entries
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('exp-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.experience-box').forEach(function(box) {
+          box.classList.add('exp-hidden');
+          observer.observe(box);
+        });
+      });
+    </script>
+  </body>
+</html>
+          
+        </section>
