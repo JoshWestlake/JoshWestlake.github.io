@@ -59,6 +59,10 @@
     <hr style="border: none; border-top: 4px solid #2196f3; margin: 0 0 18px 0; width: 100%;" />
     <div class="project-carousel-container">
       <div class="project-carousel" id="projectCarousel">
+        <div class="project-carousel-card" style="background:#000;" data-target="FourDOFRobot" tabindex="0">
+          <img src="MyPortfolio/4DOF Robotics Arm/IMG_7454.jpeg" class="project-carousel-image" alt="4 DOF Robotic Arm" />
+          <div class="project-carousel-title">4 DOF Robotic Arm</div>
+        </div>
         <div class="project-carousel-card" style="background:#000;" data-target="AutonomousRobot" tabindex="0">
           <img src="MyPortfolio/Autonomous Robot/Robot.png" class="project-carousel-image" alt="Autonomous Mobile Robot" />
           <div class="project-carousel-title">Autonomous Mobile Robot</div>
@@ -181,6 +185,94 @@
       </div>
     </div>
    
+  </section>
+
+  <section id="FourDOFRobot">
+    <div class="project-card-redesign mobile" id="FourDOFRobotCard">
+      <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <img src="MyPortfolio/4DOF Robotics Arm/IMG_7454.jpeg" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+        <img src="MyPortfolio/4DOF Robotics Arm/IMG_7451.jpg" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+        <img src="MyPortfolio/4DOF Robotics Arm/IMG_6995.jpeg" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+        <video controls autoplay loop muted playsinline class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+          <source src="MyPortfolio/4DOF Robotics Arm/IMG_6993.MOV.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="project-card-links" style="margin-top:1.5rem;">
+          <button class="btn project-btn-color" id="fourdof-demo-btn">Demo</button>
+        </div>
+      </div>
+      <div class="project-card-content-col">
+        <h1 class="project-card-title" style="text-align:center; width:100%; margin-top:0.2rem; margin-bottom:0.2rem;">4 DOF Robotic Arm</h1>
+        <div class="project-card-summary" style="justify-content: center; text-align: center; width: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="project-card-skill">SolidWorks</span>
+          <span class="project-card-skill">Differential Drive</span>
+          <span class="project-card-skill">Cycloidal Gearbox</span>
+          <span class="project-card-skill">Planetary Gearbox</span>
+          <span class="project-card-skill">Stepper Motors</span>
+          <span class="project-card-skill">Arduino</span>
+          <span class="project-card-skill">Mechanism Design</span>
+          <span class="project-card-skill">Prototyping</span>
+        </div>
+        <div class="project-card-description">
+          <h2 class="projects_subheading">Project Overview</h2>
+          <p class="projects_mainText">Designed and fabricated a multi-axis robotic arm from the ground up, incorporating multiple custom mechanical transmission systems to achieve high torque, compact packaging, and independent control of each joint. The arm utilizes four distinct mechanical systems: a planetary gearbox for base rotation, a custom <a href="#Gearbox" style="color:#2196f3; text-decoration:underline;">20:1 cycloidal gearbox</a> for vertical arm actuation, a belt-driven differential mechanism for coordinated elbow motion, and a rack-and-pinion gripper for object manipulation.</p>
+          <div class="additional-text" style="display:none;">
+            <h2 class="projects_subheading">Mechanical Design & Mechanisms</h2>
+            <p class="projects_mainText">The robotic arm was fully modeled in SolidWorks with the mechanical architecture developed around commercially available stepper motors and custom-designed transmission components. Particular attention was given to torque transmission, bearing placement, belt routing, clearances, and manufacturability to create a compact assembly capable of supporting significant loads at the end effector.</p>
+            <p class="projects_mainText">The complete arm was engineered as an integrated mechanical system where transmission selection, motor placement, and structural packaging were developed together to balance torque output, speed control, and compactness across all joints. A concentric base reduction stage supports stable rotation, the vertical axis uses a custom-designed <a href="#Gearbox" style="color:#2196f3; text-decoration:underline;">20:1 cycloidal gearbox</a> refined through iterative prototyping, the elbow motion is coordinated through a belt-driven two-motor differential, and the end effector converts rotary input into controlled linear gripping motion. Throughout development, CAD modeling, fabrication, assembly, and tuning were tightly coupled with hands-on testing to resolve interference, backlash, torque distribution, and alignment issues, resulting in a robust multi-axis platform that demonstrates full-cycle mechanical design and electromechanical integration.</p>
+            <h2 class="projects_subheading">Controls, Integration & Testing</h2>
+            <p class="projects_mainText">An Arduino Uno and CNC shield serve as the central motion controller, with individual stepper drivers providing independent axis control. The arm was developed through an iterative design-build-test process, with mechanisms tested independently before system integration. Physical testing identified several mechanical interactions not apparent during CAD development, particularly within the differential transmission, driving refinements to pulley ratios, torque distribution, motor settings, and mechanical alignment. The completed project demonstrates a full workflow from concept development and CAD modeling through fabrication, electrical integration, and functional testing.</p>
+          </div>
+          <button class="read-more-link fourdof-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read More</button>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var readMoreBtn = document.querySelector('.fourdof-readmore');
+      var additionalContent = readMoreBtn ? readMoreBtn.previousElementSibling : null;
+      var desktopImgs = document.querySelectorAll('.fourdof-desktop-only');
+
+      function updateFourDOFResponsive() {
+        if (window.innerWidth > 900) {
+          if (additionalContent && additionalContent.classList.contains('additional-text')) {
+            additionalContent.style.display = 'block';
+          }
+          if (readMoreBtn) readMoreBtn.style.display = 'none';
+          if (desktopImgs && desktopImgs.length) {
+            desktopImgs.forEach(function(img) { img.style.display = 'block'; });
+          }
+        } else {
+          if (additionalContent && additionalContent.classList.contains('additional-text')) {
+            additionalContent.style.display = 'none';
+          }
+          if (readMoreBtn) {
+            readMoreBtn.style.display = '';
+            readMoreBtn.textContent = 'Read More';
+          }
+          if (desktopImgs && desktopImgs.length) {
+            desktopImgs.forEach(function(img) { img.style.display = 'none'; });
+          }
+        }
+      }
+
+      if (readMoreBtn) {
+        readMoreBtn.addEventListener('click', function(event) {
+          event.preventDefault();
+          if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
+            additionalContent.style.display = 'block';
+            readMoreBtn.textContent = 'Read Less';
+          } else {
+            additionalContent.style.display = 'none';
+            readMoreBtn.textContent = 'Read More';
+          }
+        });
+      }
+
+      window.addEventListener('resize', updateFourDOFResponsive);
+      updateFourDOFResponsive();
+    });
+    </script>
   </section>
   
   <section id="SensorSuite">
@@ -1093,6 +1185,10 @@
               </video>
               <video controls autoplay loop muted playsinline class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
                 <source src="MyPortfolio/Gearbox/Gearbox Explded.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video controls autoplay loop muted playsinline class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
+                <source src="MyPortfolio/4DOF Robotics Arm/IMG_6997.MOV.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <img src="MyPortfolio/Gearbox/Gearbox_photo.png" class="project-card-main-image project-card-main-image-large gearbox-desktop-only" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: none; margin-left: auto; margin-right: auto;">
