@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 /* Consistent sizing for project carousel cards and images on mobile */
 @media (max-width: 900px) {
   .project-carousel-card {
@@ -53,7 +55,6 @@
   }
 }
 /* General */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     margin: 0;
@@ -218,7 +219,7 @@ section {
     transition: all 300ms ease;
     padding: 1rem;
     width: 12 rem;
-    border-radius: 4rem;
+    border-radius: 6px;
   }
   
   .btn-color {
@@ -249,8 +250,8 @@ section {
   #about{
     position: relative;
     justify-content: center;
-    margin-top: 8rem;
-    height: 60rem;
+    margin-top: 4rem;
+    height: auto;
   }
   .about_subheading
   {
@@ -300,7 +301,7 @@ section {
   gap: 5rem;
   padding: 1rem;
   width: 30rem;
-  border-radius: 4rem;
+  border-radius: 6px;
   border:  rgb(0, 116, 218) 3px solid;
   background: black;
   color: white;
@@ -605,84 +606,292 @@ section {
 .aboutme-carousel-container {
   display: flex;
   justify-content: center;
-  margin: 4.5rem 0 0.5rem 0;
   width: 100%;
-  max-width: 100vw;
+  height: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
 .aboutme-carousel {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  gap: 3vw;
-  align-items: center;
   width: 100%;
-  max-width: 100vw;
+  height: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
 .aboutme-carousel-img-main {
-  width: 70vw;
-  max-width: 900px;
-  min-width: 320px;
-  height: auto;
-  aspect-ratio: 4/3;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
   object-fit: cover;
-  border-radius: 2vw;
-  box-shadow: 0 8px 32px rgba(42,113,234,0.18), 0 0 0 8px rgba(42,113,234,0.18);
-  border: 4px solid #0074DA;
+  border-radius: 8px;
   background: #111;
   z-index: 2;
-  transition: width 0.3s, height 0.3s, box-shadow 0.3s, border 0.3s;
-  position: relative;
-}
-.aboutme-carousel-img-main::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  border-radius: 2vw;
-  pointer-events: none;
+  transition: opacity 0.4s;
 }
 .aboutme-carousel-img-side {
-  width: 22vw;
-  max-width: 320px;
-  min-width: 100px;
-  height: auto;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: 1vw;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  border: 2px solid #222;
-  background: #111;
-  opacity: 0.7;
-  z-index: 1;
-  filter: blur(0.5px) grayscale(0.15);
-  transition: width 0.3s, height 0.3s;
+  display: none;
 }
 .aboutme-carousel-desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  text-align: center;
-  font-size: 2.1vw;
+  text-align: left;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #fff;
-  margin-top: 1.2vw;
-  letter-spacing: 0.03em;
+  padding: 1rem 1.2rem;
+  letter-spacing: 0.02em;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
   animation: fadeDesc 1.2s cubic-bezier(.4,1.4,.6,1);
 }
 @keyframes fadeDesc {
   0% { opacity: 0; transform: translateY(18px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
+/* ABOUT ME REDESIGN */
+.about-redesign {
+  display: flex;
+  align-items: stretch;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.about-media {
+  flex: 1 1 45%;
+  display: flex;
+  min-height: 480px;
+  background: #0d0d0d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.about-content {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-eyebrow {
+  color: rgb(42, 113, 234);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+.about-headline {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+.about-headline .accent {
+  color: rgb(42, 113, 234);
+}
+.about-content .about_mainText {
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.about-checklist {
+  list-style: none;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.about-checklist li {
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.about-checklist .check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 3px;
+  background: rgb(42, 113, 234);
+  color: black;
+  font-weight: 900;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.about-socials {
+  display: flex;
+  gap: 1rem;
+}
+.about-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 6px;
+  border: none;
+  transition: all 300ms ease;
+}
+.about-social-btn:hover {
+  background: rgb(42, 113, 234);
+}
+.about-social-btn .icon {
+  height: 2.1rem;
+  width: 2.1rem;
+  cursor: pointer;
+}
 @media (max-width: 900px) {
-  .aboutme-carousel-img-main {
-    width: 80vw;
-    min-width: 80px;
-    max-width: 85vw;
+  .about-redesign {
+    flex-direction: column;
   }
-  .aboutme-carousel-img-side {
-    width: 18vw;
-    min-width: 24px;
-    max-width: 30vw;
+  .about-media {
+    min-height: 320px;
   }
+  .about-headline {
+    font-size: 1.8rem;
+  }
+}
+
+/* SKILLS PAGE */
+#skills {
+  padding-bottom: 6rem;
+}
+.skills-eyebrow {
+  color: rgb(42, 113, 234);
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+.skills-title {
+  color: white;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.skills-category {
+  color: rgb(42, 113, 234);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 2.5rem 0 1.2rem 0;
+  border-bottom: 0.1rem solid #222;
+  padding-bottom: 0.6rem;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.2rem;
+}
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: #242424;
+  border: 0.1rem solid #333;
+  border-radius: 10px;
+  padding: 1.6rem 1rem;
+  transition: all 300ms ease;
+}
+.skill-card:hover {
+  border-color: rgb(42, 113, 234);
+  transform: translateY(-4px);
+}
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: none;
+  color: rgb(42, 113, 234);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.skill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.skill-name {
+  background: #242424;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* SITE NAV - shared 5-tab layout (About Me / Projects / Skills / Resume / Contact) */
+#site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12vh;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  width: 100%;
+  background: black;
+}
+.site-logo {
+  height: 9rem;
+  cursor: pointer;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+}
+.site-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+.site-nav-links li a {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.9rem 1.6rem;
+  transition: all 300ms ease;
+}
+.site-nav-links li a:hover {
+  color: rgb(42, 113, 234);
+}
+.site-nav-links li a.nav-contact {
+  color: rgb(42, 113, 234);
+}
+.site-nav-links li a.nav-contact:hover {
+  color: #005fa3;
 }

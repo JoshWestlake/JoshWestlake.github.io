@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Josh Westake Portfolio</title>
+    <link rel = "stylesheet" href = "/css/style.css"/>
+    <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1200px)"/>
+    <script src="/script.js" defer></script>
+ </head>
+  <!-----MENU SECTION------>
+  <body>
+    <nav id="site-nav">
+      <button class="nav-toggle" id="navToggle" onclick="toggleSiteNav()" aria-label="Toggle menu">&#9776;</button>
+      <img src ="./MyPortfolio/Logo (1).png"
+        alt="Home"
+        class="site-logo"
+        onClick="location.href='index.html'"
+      />
+      <ul class="site-nav-links" id="siteNavLinks">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="Experience.html">Resume</a></li>
+        <li><a href="mailto:jl_westlake@outlook.com" class="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="skills">
+      <p class="skills-eyebrow">Technical Skills</p>
+
+      <h2 class="skills-category">CAD &amp; Design</h2>
+      <div class="skills-grid">
+        <!-- Replace each remaining .skill-icon div's content with an <img src="..."> logo when available -->
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/1788636363439_Solidworks_logo_bg242424.png" alt="SolidWorks logo"></div><div class="skill-name">SolidWorks</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/1788636363439_Fusion_Logo_bg242424.png" alt="Fusion 360 logo"></div><div class="skill-name">Fusion 360</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/1788636363439_Inventor_logo_bg242424.png" alt="Autodesk Inventor logo"></div><div class="skill-name">Autodesk Inventor</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/1788636363439_GD_T_Logo_bg242424.png" alt="GD&amp;T logo"></div><div class="skill-name">GD&amp;T</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/1788636363438_DFM_Logo_bg242424.png" alt="DFM logo"></div><div class="skill-name">DFM</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/1788636363437_FEA_Logo_bg242424.png" alt="FEA logo"></div><div class="skill-name">FEA</div></div>
+      </div>
+
+      <h2 class="skills-category">Robotics &amp; Software</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/ROS_logo_bg242424.png" alt="ROS2 logo"></div><div class="skill-name">ROS2</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/Nav2_logo_bg242424.png" alt="NAV2 logo"></div><div class="skill-name">NAV2</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/python_logo_bg242424.png" alt="Python logo"></div><div class="skill-name">Python</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/C___logo_bg242424.png" alt="C/C++ logo"></div><div class="skill-name">C / C++</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/MATLAB_Logo_bg242424.png" alt="MATLAB logo"></div><div class="skill-name">MATLAB</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/linux_logo_bg242424.png" alt="Linux logo"></div><div class="skill-name">Linux / Bash</div></div>
+      </div>
+
+      <h2 class="skills-category">Electronics &amp; Controls</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/Arduino_logo_bg242424.png" alt="Arduino logo"></div><div class="skill-name">Arduino</div></div>
+        <div class="skill-card"><div class="skill-icon"><img src="MyPortfolio/Skills Folder/PCB_Design_Logo_bg242424.png" alt="PCB Design logo"></div><div class="skill-name">PCB Design</div></div>
+      </div>
+    </section>
+  </body>
+</html>

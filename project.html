@@ -1,6 +1,5 @@
 <!-- Gearbox Demo Modal moved to end of body for proper pop-up behavior -->
 
-<!-- Add this just before </body> at the end of the file -->
     <!-- Gearbox demo modal removed -->
 <!-- Removed duplicate/empty AutonomousRobot section -->
 </section>
@@ -34,24 +33,25 @@
     <link rel = "stylesheet" href = "/css/style.css"/>
     <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1200px)"/> 
     <link rel="stylesheet" href="/css/carousel.css"/>
+    <script src="/script.js" defer></script>
  </head>
   <!-----MENU SECTION------>
   <body>
-    <nav id="desktop-nav">
+    <nav id="site-nav">
+      <button class="nav-toggle" id="navToggle" onclick="toggleSiteNav()" aria-label="Toggle menu">&#9776;</button>
       <img src ="./MyPortfolio/Logo (1).png"
         alt="Home"
-        class="static_icon"
-        onClick="location.href='#desktop-nav'"
+        class="site-logo"
+        onClick="location.href='index.html'"
       />
-      <div>
-      <!-- This creates the links for each of the pages, orange #is actual link while the white text is visually shown -->
-        <ul class="nav-links">  
-              <li><a href="index.html">Profile</a></li>
-              <li><a href="project.html">Projects</a></li>
-              <li><a href="Experience.html">Experience</a></li>
-        </ul>
-        </div>
-    </nav> 
+      <ul class="site-nav-links" id="siteNavLinks">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="Experience.html">Resume</a></li>
+        <li><a href="mailto:jl_westlake@outlook.com" class="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
 </section>
 <section id="projects">
     <h1 class="title">Projects</h1>
@@ -446,7 +446,7 @@
             <h2 class="projects_subheading">Integration & Results</h2>
             <p class="projects_mainText">Integrated encoder-based odometry and PID motor control enabled coordinated motion between drive and manipulation systems. Functional testing under load conditions drove iterative refinements to both mechanical design and control parameters. The final system achieved top 10 competition placement in a class of 80+ students, validating the design approach of rigorous mechanical engineering combined with disciplined control system development.</p>
             <h2 class="projects_subheading">Competition Results</h2>
-            <p class="projects_mainText">The robot successfully demonstrated autonomous navigation and reliable object manipulation during final competition, resulting in a top 10 finish in a class of 80+ students. The robust mechanical design and consistent autonomous performance exemplifies how solid mechanical fundamentals—precise fabrication, iterative validation, and thoughtful integration—form the foundation for successful autonomous systems.</p>
+            <p class="projects_mainText">The robot successfully demonstrated autonomous navigation and reliable object manipulation during final competition, resulting in a top 10 finish in a class of 80+ students. The robust mechanical design and consistent autonomous performance exemplifies how solid mechanical fundamentals, including precise fabrication, iterative validation, and thoughtful integration, form the foundation for successful autonomous systems.</p>
           </div>
           <button class="read-more-link csrobot-readmore" style="margin-top:1rem; background: none; color: #2196f3; border: none; border-radius: 0; padding: 0; font-size: 1.05rem; font-weight: 600; box-shadow: none; text-decoration: underline; cursor: pointer;">Read Less</button>
         </div>
@@ -618,59 +618,12 @@
         </script>
         <!-- Removed duplicate Gearbox section -->
           <!-- Removed duplicate AutonomousRobot section -->
-      var additionalContent = btn.previousElementSibling;
-      // Responsive handling for each section
-      function updateResponsive() {
-        var desktopImg = null;
-        // Find desktop image for this section if present
-        if (btn.classList.contains('life-bot-readmore')) {
-          desktopImg = document.querySelector('.lifebot-desktop-only');
-        } else if (btn.classList.contains('hmi-mount-readmore')) {
-          desktopImg = document.querySelector('.hmi-desktop-only');
-        } else if (btn.classList.contains('squirrelfeeder-readmore')) {
-          desktopImg = document.querySelector('.squirrelfeeder-desktop-only');
-        }
-        if (window.innerWidth > 900) {
-          // Desktop: show all text, hide button, show desktop image
-          if (additionalContent && additionalContent.classList.contains('additional-text')) {
-            additionalContent.style.display = 'block';
-          }
-          btn.style.display = 'none';
-          if (desktopImg) desktopImg.style.display = 'block';
-        } else {
-          // Mobile: hide extra text, show button, hide desktop image
-          if (additionalContent && additionalContent.classList.contains('additional-text')) {
-            additionalContent.style.display = 'none';
-          }
-          btn.style.display = '';
-          btn.textContent = 'Read More';
-          if (desktopImg) desktopImg.style.display = 'none';
-        }
-      }
-      btn.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
-          additionalContent.style.display = 'block';
-          btn.textContent = 'Read Less';
-        } else {
-          additionalContent.style.display = 'none';
-          btn.textContent = 'Read More';
-        }
-      });
-      window.addEventListener('resize', updateResponsive);
-      updateResponsive();
-    });
-  });
+      
   </script>
   </section>
   
           <!-- Removed duplicate AutonomousRobot section -->
-      });
-    }
-
-    window.addEventListener('resize', updateHMIMountResponsive);
-    updateHMIMountResponsive();
-  });
+      
   </script>
   </section>
   
@@ -786,98 +739,12 @@
         });
         </script>
           <!-- Removed duplicate AutonomousRobot section -->
-      var additionalContent = btn.previousElementSibling;
-      // Responsive handling for each section
-      function updateResponsive() {
-        var desktopImg = null;
-        // Find desktop image for this section if present
-        if (btn.classList.contains('life-bot-readmore')) {
-          desktopImg = document.querySelector('.lifebot-desktop-only');
-        } else if (btn.classList.contains('hmi-mount-readmore')) {
-          desktopImg = document.querySelector('.hmi-desktop-only');
-        } else if (btn.classList.contains('squirrelfeeder-readmore')) {
-          desktopImg = document.querySelector('.squirrelfeeder-desktop-only');
-        }
-        if (window.innerWidth > 900) {
-          // Desktop: show all text, hide button, show desktop image
-          if (additionalContent && additionalContent.classList.contains('additional-text')) {
-            additionalContent.style.display = 'block';
-          }
-          btn.style.display = 'none';
-          if (desktopImg) desktopImg.style.display = 'block';
-        } else {
-          // Mobile: hide extra text, show button, hide desktop image
-          if (additionalContent && additionalContent.classList.contains('additional-text')) {
-            additionalContent.style.display = 'none';
-          }
-          btn.style.display = '';
-          btn.textContent = 'Read More';
-          if (desktopImg) desktopImg.style.display = 'none';
-        }
-      }
-      btn.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
-          additionalContent.style.display = 'block';
-          btn.textContent = 'Read Less';
-        } else {
-          additionalContent.style.display = 'none';
-          btn.textContent = 'Read More';
-        }
-      });
-      window.addEventListener('resize', updateResponsive);
-      updateResponsive();
-    });
-  });
+      
   </script>
   </section>
   
-  <section id="HMIMount">
-      if (window.innerWidth > 900) {
-        // Desktop: show all text, hide button, show second image
-        if (additionalContent && additionalContent.classList.contains('additional-text')) {
-          additionalContent.style.display = 'block';
-        }
-        if (readMoreBtn) {
-          readMoreBtn.style.display = 'none';
-        }
-        if (desktopImg) {
-          desktopImg.style.display = 'block';
-        }
-      } else {
-        // Mobile: hide extra text, show button, hide second image
-        if (additionalContent && additionalContent.classList.contains('additional-text')) {
-          additionalContent.style.display = 'none';
-        }
-        if (readMoreBtn) {
-          readMoreBtn.style.display = '';
-          readMoreBtn.textContent = 'Read More';
-        }
-        if (desktopImg) {
-          desktopImg.style.display = 'none';
-        }
-      }
-    }
+  <!-- Removed duplicate HMIMount section -->
 
-    if (readMoreBtn) {
-      readMoreBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
-          additionalContent.style.display = 'block';
-          readMoreBtn.textContent = 'Read Less';
-        } else {
-          additionalContent.style.display = 'none';
-          readMoreBtn.textContent = 'Read More';
-        }
-      });
-    }
-
-    window.addEventListener('resize', updateHMIMountResponsive);
-    updateHMIMountResponsive();
-  });
-  </script>
-  </section>
-  
    <section id="HMIMount">
           <div class="project-card-redesign mobile" id="HMIMountCard">
             <div class="project-card-image-col" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
@@ -892,6 +759,7 @@
                 <span class="project-card-skill">Precision Fabrication</span>
                 <span class="project-card-skill">Ergonomics</span>
                 <span class="project-card-skill">Operator Interface</span>
+                <span class="project-card-skill">DFM</span>
               </div>
               <div class="project-card-description">
                 <h2 class="projects_subheading">Project Overview</h2>
@@ -1021,49 +889,7 @@
         </script>
         <!-- Removed duplicate Gearbox section -->
           <!-- Removed duplicate AutonomousRobot section -->
-      var additionalContent = btn.previousElementSibling;
-      // Responsive handling for each section
-      function updateResponsive() {
-        var desktopImg = null;
-        // Find desktop image for this section if present
-        if (btn.classList.contains('life-bot-readmore')) {
-          desktopImg = document.querySelector('.lifebot-desktop-only');
-        } else if (btn.classList.contains('hmi-mount-readmore')) {
-          desktopImg = document.querySelector('.hmi-desktop-only');
-        } else if (btn.classList.contains('squirrelfeeder-readmore')) {
-          desktopImg = document.querySelector('.squirrelfeeder-desktop-only');
-        }
-        if (window.innerWidth > 900) {
-          // Desktop: show all text, hide button, show desktop image
-          if (additionalContent && additionalContent.classList.contains('additional-text')) {
-            additionalContent.style.display = 'block';
-          }
-          btn.style.display = 'none';
-          if (desktopImg) desktopImg.style.display = 'block';
-        } else {
-          // Mobile: hide extra text, show button, hide desktop image
-          if (additionalContent && additionalContent.classList.contains('additional-text')) {
-            additionalContent.style.display = 'none';
-          }
-          btn.style.display = '';
-          btn.textContent = 'Read More';
-          if (desktopImg) desktopImg.style.display = 'none';
-        }
-      }
-      btn.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
-          additionalContent.style.display = 'block';
-          btn.textContent = 'Read Less';
-        } else {
-          additionalContent.style.display = 'none';
-          btn.textContent = 'Read More';
-        }
-      });
-      window.addEventListener('resize', updateResponsive);
-      updateResponsive();
-    });
-  });
+      
   </script>
   </section>
   
@@ -1231,7 +1057,7 @@
                 </video>
                 <img src="MyPortfolio/Autonomous Robot/Robot.png" class="project-card-main-image project-card-main-image-large" style="object-fit: contain; width: 100%; max-width: 400px; height: 340px; margin-bottom:0.5rem; border-radius:16px; display: block; margin-left: auto; margin-right: auto;">
                 <div class="project-card-links" style="margin-top:1.5rem;">
-                  <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/Autonomous Robot/Assembly_Video.mp4')">Demo</button>
+                  <button class="btn project-btn-color" onclick="window.open('https://www.youtube.com/watch?v=1wbDD_aVC8c', '_blank')">Demo</button>
                   <button class="btn project-btn-color" onclick="window.open('./MyPortfolio/LifeBot/Documentation.pdf')">Documentation</button>
                 </div>
               </div>
@@ -1260,49 +1086,7 @@
               </div>
             </div>
           </section>
-      var additionalContent = btn.previousElementSibling;
-      // Responsive handling for each section
-      function updateResponsive() {
-        var desktopImg = null;
-        // Find desktop image for this section if present
-        if (btn.classList.contains('life-bot-readmore')) {
-          desktopImg = document.querySelector('.lifebot-desktop-only');
-        } else if (btn.classList.contains('hmi-mount-readmore')) {
-          desktopImg = document.querySelector('.hmi-desktop-only');
-        } else if (btn.classList.contains('squirrelfeeder-readmore')) {
-          desktopImg = document.querySelector('.squirrelfeeder-desktop-only');
-        }
-        if (window.innerWidth > 900) {
-          // Desktop: show all text, hide button, show desktop image
-          if (additionalContent && additionalContent.classList.contains('additional-text')) {
-            additionalContent.style.display = 'block';
-          }
-          btn.style.display = 'none';
-          if (desktopImg) desktopImg.style.display = 'block';
-        } else {
-          // Mobile: hide extra text, show button, hide desktop image
-          if (additionalContent && additionalContent.classList.contains('additional-text')) {
-            additionalContent.style.display = 'none';
-          }
-          btn.style.display = '';
-          btn.textContent = 'Read More';
-          if (desktopImg) desktopImg.style.display = 'none';
-        }
-      }
-      btn.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (additionalContent.style.display === 'none' || additionalContent.style.display === '') {
-          additionalContent.style.display = 'block';
-          btn.textContent = 'Read Less';
-        } else {
-          additionalContent.style.display = 'none';
-          btn.textContent = 'Read More';
-        }
-      });
-      window.addEventListener('resize', updateResponsive);
-      updateResponsive();
-    });
-  });
+      
   </script>
   </section>
   <!-- Removed duplicate HMIMount section -->

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
@@ -38,6 +38,7 @@
     <title> Josh Westake Portfolio</title>
      <link rel = "stylesheet" href = "/css/style.css"/>
      <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1200px)"/> 
+     <script src="/script.js" defer></script>
      <style>
       #experience { background: #000; color: #fff; padding: 3rem 0; }
       .experience-box { background: transparent; padding: 1.5rem; margin-bottom: 0.2rem; border-left: none; border-radius: 4px; overflow: visible; color: #ddd; display: flex; gap: 1rem; align-items: flex-start; cursor: pointer; transition: opacity .3s ease; }
@@ -60,29 +61,24 @@
     <!-- Animated Skills Banner -->
     <div class="skills-banner-container">
       <div class="skills-banner">
-        <span>SolidWorks &nbsp; • &nbsp; Fusion 360 &nbsp; • &nbsp; Inventor &nbsp; • &nbsp; GD&T &nbsp; • &nbsp; FEA &nbsp; • &nbsp; Rapid Prototyping &nbsp; • &nbsp; 3D Printing &nbsp; • &nbsp; Laser Cutting &nbsp; • &nbsp; Soldering &nbsp; • &nbsp; Machining &nbsp; • &nbsp; PCB Design &nbsp; • &nbsp; Microcontroller Programming &nbsp; • &nbsp; C/C++ &nbsp; • &nbsp; Python &nbsp; • &nbsp; ROS2 &nbsp; • &nbsp; SLAM &nbsp; • &nbsp; NAV2 &nbsp; • &nbsp; MATLAB &nbsp; • &nbsp; Linux/Bash &nbsp; • &nbsp; PID Control Systems</span>
+        <span>SolidWorks &nbsp; &bull; &nbsp; Fusion 360 &nbsp; &bull; &nbsp; Inventor &nbsp; &bull; &nbsp; GD&T &nbsp; &bull; &nbsp; FEA &nbsp; &bull; &nbsp; Rapid Prototyping &nbsp; &bull; &nbsp; 3D Printing &nbsp; &bull; &nbsp; Laser Cutting &nbsp; &bull; &nbsp; Soldering &nbsp; &bull; &nbsp; Machining &nbsp; &bull; &nbsp; PCB Design &nbsp; &bull; &nbsp; Microcontroller Programming &nbsp; &bull; &nbsp; C/C++ &nbsp; &bull; &nbsp; Python &nbsp; &bull; &nbsp; ROS2 &nbsp; &bull; &nbsp; SLAM &nbsp; &bull; &nbsp; NAV2 &nbsp; &bull; &nbsp; MATLAB &nbsp; &bull; &nbsp; Linux/Bash &nbsp; &bull; &nbsp; PID Control Systems</span>
       </div>
     </div>
-          @keyframes scroll-skills {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-          }
-          body { padding-top: 2.2rem; }
-    <nav id="desktop-nav">
+    <nav id="site-nav">
+      <button class="nav-toggle" id="navToggle" onclick="toggleSiteNav()" aria-label="Toggle menu">&#9776;</button>
       <img src ="./MyPortfolio/Logo (1).png"
         alt="Home"
-        class="static_icon"
-        onClick="location.href='#desktop-nav'"
+        class="site-logo"
+        onClick="location.href='index.html'"
       />
-      <div>
-        <ul class="nav-links">  
-              <li><a href="index.html">Profile</a></li>
-              <li><a href="project.html">Projects</a></li>
-              <li><a href="Experience.html">Experience</a></li>
-        </ul>
-      </div>
-    </nav> 
-    
+      <ul class="site-nav-links" id="siteNavLinks">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="Experience.html">Resume</a></li>
+        <li><a href="mailto:jl_westlake@outlook.com" class="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
 
     <section id="experience">
         <!--<h1 class ="title">Experience & Education</h1> -->
@@ -95,14 +91,16 @@
           <div class="experience-box">
             <img src="./MyPortfolio/Experience/OPG_Logo.png" alt="OPG logo" class="exp-logo" onerror="this.style.display='none'">
             <div class="exp-content">
-            <h3>Systems Engineering Internship</h3>
-            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Ontario Power Generation (OPG)</strong> | May 2025 – Present</p>
+            <h3>Systems Engineering Intern</h3>
+            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Ontario Power Generation (OPG) - Fuel Handling</strong> | Pickering, ON | May 2025 - Aug 2026</p>
             <div class="exp-details">
             <ul style="color: #ddd; line-height: 1.8; margin: 1rem 0 0 1.5rem; padding: 0;">
-              <li>Monitoring and analyzing robotic fuel-handling systems, ensuring reliability, operability, and compliance with design-basis and nuclear safety requirements through field inspections and functional checks under System Performance Monitoring Plans (SPMP).</li>
-              <li>Designed and developed a DAQ (Data Acquisition) system for vibration monitoring on critical pumps, including sensor integration, wiring harness assembly, data acquisition hardware configuration, and Python-based automation for real-time analysis.</li>
-              <li>Supported integration and testing of robotic inspection platforms, including mobile robots and aerial drones, validating hardware performance under operational conditions.</li>
-              <li>Developed Python applications to digitize operator walkdowns, create real-time data dashboards, and build GUIs for distributed data acquisition units, improving efficiency and data traceability.</li>
+              <li>Supported the integration, testing, and monitoring of robotic fuel-handling systems inside an active nuclear facility, where reliability and safety compliance are non-negotiable.</li>
+              <li>Supported deployment of mobile NDT robots and aerial drone inspection platforms used for non-destructive testing and visual inspection of critical equipment.</li>
+              <li>Monitored, trended, and analyzed robotic system performance against System Performance Monitoring Plans (SPMP) for nuclear-safety compliance, escalating identified risks directly to directors and upper management.</li>
+              <li>Designed and built a Python-based data-acquisition system for pump vibration monitoring, including sensor selection, wiring harness assembly, and real-time dashboards/GUIs for distributed DAQ units.</li>
+              <li>Developed a Python tool to digitize a manual operator walkdown process, cutting task time by roughly 70% for that workflow.</li>
+              <li>Worked hands-on across pneumatic, hydraulic, mechanical, and instrumentation subsystems to diagnose and support equipment reliability.</li>
             </ul>
             </div>
           </div>
@@ -112,15 +110,17 @@
           <div class="experience-box">
             <img src="./MyPortfolio/Experience/QueensAutodrive.png" alt="Queen's Autodrive logo" class="exp-logo" onerror="this.style.display='none'">
             <div class="exp-content">
-            <h3>Hardware Team Lead</h3>
-            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Queen's Autodrive</strong> | Sept 2024 – May 2025</p>
+            <h3>Hardware R&amp;D Team Lead</h3>
+            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Queen's SAE AutoDrive</strong> | Kingston, ON | Sep 2024 - May 2025</p>
             <div class="exp-details">
             <ul style="color: #ddd; line-height: 1.8; margin: 1rem 0 0 1.5rem; padding: 0;">
-              <li>Directed a multidisciplinary team through end-to-end design, prototyping, and testing of autonomous vehicle hardware systems, serving as the technical lead for mechanical integration and validation.</li>
-              <li>Personally designed and fabricated the sensor suite and HMI (Human-Machine Interface) mounting systems using iterative SolidWorks modeling, FEA optimization, and GD&T (Geometric Dimensioning & Tolerancing) principles to ensure precision and reliability.</li>
-              <li>Oversaw assembly of multi-component systems, improving functionality through integration of 3D-printed components, aluminum extrusions, and sheet metal fabrication—all fabricated and assembled in-house.</li>
-              <li>Conducted functional testing and validation of hardware assemblies, troubleshooting failures and iterating designs to achieve reliable performance under dynamic test conditions.</li>
-              <li>Mentored team members in CAD modeling best practices, fabrication methods, and rapid prototyping workflows.</li>
+              <li>Led hardware R&amp;D for a student autonomous-vehicle team, directing mechanical design, prototyping, testing, and integration of vehicle systems across a multidisciplinary team.</li>
+              <li>Designed and fabricated the Autonomous Vehicle Sensor Suite V3 in SolidWorks (FEA-verified, GD&T-toleranced), including modular waterproof enclosures and vibration-dampened LiDAR mounts to protect the vehicle's perception hardware in outdoor testing conditions.</li>
+              <li>Redesigned the vehicle's power delivery layout, cutting cable length by over 50% and eliminating a recurring source of intermittent electrical faults.</li>
+              <li>Reduced overall sensor/HMI assembly complexity by roughly 60% through design-for-manufacturing and design-for-assembly improvements.</li>
+              <li>Designed a sheet-metal HMI mount using laser cutting and precision bending for durability and ergonomics on the mobile platform.</li>
+              <li>Directed in-house fabrication and assembly using 3D-printed components, aluminum extrusion, and sheet metal; mentored teammates in CAD and rapid-prototyping workflows.</li>
+              <li>Communicated design decisions, timelines, and technical risk directly to faculty advisors and SAE competition representatives.</li>
             </ul>
             </div>
           </div>
@@ -130,13 +130,13 @@
           <div class="experience-box">
             <img src="./MyPortfolio/Experience/Aquatonomous.png" alt="aQuatonomous logo" class="exp-logo" onerror="this.style.display='none'">
             <div class="exp-content">
-            <h3>Autonomous Team Member</h3>
-            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Queen's aQuatonomous</strong> | Nov 2023 – Apr 2024</p>
+            <h3>Autonomous Systems Team Member</h3>
+            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Queen's aQuatonomous - RoboBoat Challenge</strong> | Nov 2023 - Apr 2024</p>
             <div class="exp-details">
             <ul style="color: #ddd; line-height: 1.8; margin: 1rem 0 0 1.5rem; padding: 0;">
-              <li>Supported autonomy stack development for unmanned surface vessels (USVs) competing in the RoboBoat Challenge, a collegiate-level autonomous vehicle competition.</li>
-              <li>Leveraged ROS2 and Gazebo simulation environments to test autonomy behavior, debug navigation algorithms, and reduce risk before physical deployment on water.</li>
-              <li>Validated sensor integration and control system performance through simulation and real-world testing.</li>
+              <li>Developed and debugged autonomy and navigation behaviors for unmanned surface vessels (USVs) using ROS2.</li>
+              <li>Built and tested navigation logic in Gazebo simulation prior to physical, real-world deployment, reducing the risk of costly on-water iteration.</li>
+              <li>Validated sensor integration and control-system performance through a combination of simulation and real-world on-water testing.</li>
             </ul>
             </div>
           </div>
@@ -146,13 +146,14 @@
           <div class="experience-box">
             <img src="./MyPortfolio/Experience/DurhamRegion.png" alt="Durham Region logo" class="exp-logo" onerror="this.style.display='none'">
             <div class="exp-content">
-            <h3>Supervisory Control and Data Acquisition (SCADA) Summer Student</h3>
-            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Durham Region Water</strong> | Summer 2023, 2024</p>
+            <h3>Automation &amp; Control Systems Intern</h3>
+            <p style="font-size: 0.95rem; margin: 0.5rem 0 0 0;"><strong>Durham Region</strong> | Whitby, ON | May-Aug 2023, May-Aug 2024</p>
             <div class="exp-details">
             <ul style="color: #ddd; line-height: 1.8; margin: 1rem 0 0 1.5rem; padding: 0;">
-              <li>Maintained, supported, and deployed SCADA systems across water and wastewater treatment facilities, ensuring seamless operational continuity.</li>
-              <li>Demonstrated expertise with industrial components including PLCs (Programmable Logic Controllers), RTUs (Remote Terminal Units), HMI (Human-Machine Interface) systems, OITs (Operator Interface Terminals), and UPS systems.</li>
-              <li>Troubleshot hardware and software issues, coordinating with operations teams to minimize downtime.</li>
+              <li>Gained two summers of hands-on experience with industrial automation and control systems supporting municipal infrastructure.</li>
+              <li>Worked with PLC ladder logic programming for automated control sequences.</li>
+              <li>Supported SCADA and HMI systems used for monitoring and controlling distributed infrastructure.</li>
+              <li>Worked with RTUs (remote terminal units) as part of the broader control and telemetry network.</li>
             </ul>
             </div>
           </div>

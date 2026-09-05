@@ -18,7 +18,7 @@
             background: #0074DA;
             color: #fff;
             border: none;
-            border-radius: 24px;
+            border-radius: 6px;
             padding: 0.7rem 2rem;
             font-size: 1.1rem;
             font-weight: 600;
@@ -48,25 +48,25 @@
     <title> Josh Westake Portfolio</title>
     <link rel = "stylesheet" href = "/css/style.css"/>
     <link rel = "stylesheet" href = "/css/styletest.css" media="(max-width:1200px)"/> 
+    <script src="/script.js" defer></script>
  </head>
   <!-----MENU SECTION------>
   <body>
-    <nav id="desktop-nav">
+    <nav id="site-nav">
+      <button class="nav-toggle" id="navToggle" onclick="toggleSiteNav()" aria-label="Toggle menu">&#9776;</button>
       <img src ="./MyPortfolio/Logo (1).png"
         alt="Home"
-        class="static_icon"
-        onClick="location.href='#desktop-nav'"
+        class="site-logo"
+        onClick="location.href='index.html'"
       />
-      <div>
-      <!-- This creates the links for each of the pages, orange #is actual link while the white text is visually shown -->
-        <ul class="nav-links">  
-              <li><a href="index.html">Profile</a></li>
-              <li><a href="project.html">Projects</a></li>
-              <li><a href="Experience.html">Experience</a></li>
-             
-        </ul> 
-        </div>
-    </nav> 
+      <ul class="site-nav-links" id="siteNavLinks">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="Experience.html">Resume</a></li>
+        <li><a href="mailto:jl_westlake@outlook.com" class="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
     
     <section id="profile">
       
@@ -103,32 +103,34 @@
       </div>
   </section>
   <section id="about">
-      <h1 class="title">About Me</h1>
-      <div class="about-clean-motion">
-        <div class="aboutme-carousel-container" style="margin-bottom:2.5rem;">
+    <div class="about-redesign">
+      <div class="about-media">
+        <div class="aboutme-carousel-container">
           <div class="aboutme-carousel" id="aboutme-carousel">
-            <!-- Images will be injected by JS -->
+            <!-- Image will be injected by JS -->
           </div>
         </div>
-        <p class="about_text">
-          <span class="about_mainText">
-            I’m Josh Westlake, a third year Mechatronics and Robotics Engineering student at Queen’s University with a strong focus on mechanical design and building real robotic systems. I enjoy taking ideas from concept to working hardware through CAD, prototyping, testing, and iteration. Most of my experience sits at the intersection of mechanics, electronics, and controls, with a particular interest in robot mechanisms, electromechanical assemblies, and systems that need to perform reliably in the real world.
-          </span>
-        </p>
-        <p class="about_text">
-          <span class="about_mainText">
-            This portfolio highlights projects where I’ve designed and built autonomous robots, custom mechanisms, sensor suites, and electromechanical systems. I’m actively looking for opportunities in robotics and mechanical design engineering where I can contribute hands on, learn quickly, and help turn ambitious ideas into real products.
-          </span>
-        </p>
       </div>
-  </section>
-  <!-- About Me Image Carousel -->
-  <div class="aboutme-carousel-container" style="margin-top:2.2rem;">
-    <div class="aboutme-carousel" id="aboutme-carousel">
-      <!-- Images will be injected by JS -->
+      <div class="about-content">
+        <p class="about-eyebrow">About Me</p>
+        <h1 class="about-headline">Josh Westlake</h1>
+        <p class="about_mainText">
+          I’m Josh Westlake, a third year Mechatronics and Robotics Engineering student at Queen’s University with a strong focus on mechanical design and building real robotic systems. I enjoy taking ideas from concept to working hardware through CAD, prototyping, testing, and iteration. Most of my experience sits at the intersection of mechanics, electronics, and controls, with a particular interest in robot mechanisms, electromechanical assemblies, and systems that need to perform reliably in the real world.
+        </p>
+        <p class="about_mainText">
+          This portfolio highlights projects where I’ve designed and built autonomous robots, custom mechanisms, sensor suites, and electromechanical systems. I’m actively looking for opportunities in robotics and mechanical design engineering where I can contribute hands on, learn quickly, and help turn ambitious ideas into real products.
+        </p>
+        <div class="about-socials">
+          <a href="https://github.com/JoshWestlake/Projects" target="_blank" class="about-social-btn">
+            <img src="./MyPortfolio/GitHub-Icon.png" alt="My GitHub Profile" class="icon">
+          </a>
+          <a href="https://www.linkedin.com/in/josh-westlake-063859279/" target="_blank" class="about-social-btn">
+            <img src="./MyPortfolio/LinkedIn-Icon.png" alt="My LinkedIn Profile" class="icon">
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-  
+  </section>
   <script>
     const aboutMeImages = [
       {
@@ -177,38 +179,16 @@
       const carousel = document.getElementById('aboutme-carousel');
       if (!carousel) return;
       carousel.innerHTML = '';
-        const mainIdx = carouselIndex;
-        const mainContainer = document.createElement('div');
-        mainContainer.style.display = 'flex';
-        mainContainer.style.flexDirection = 'column';
-        mainContainer.style.alignItems = 'center';
-        // Description above main image
-        const descDiv = document.createElement('div');
-        descDiv.className = 'aboutme-carousel-desc';
-        descDiv.textContent = aboutMeImages[mainIdx].desc;
-        mainContainer.appendChild(descDiv);
-        // Main image
-        const mainImg = document.createElement('img');
-        mainImg.src = aboutMeImages[mainIdx].src;
-        mainImg.className = 'aboutme-carousel-img aboutme-carousel-img-main';
-        mainImg.alt = aboutMeImages[mainIdx].desc;
-        mainContainer.appendChild(mainImg);
-        carousel.appendChild(mainContainer);
-        // Only show left/right images on desktop
-        if (window.innerWidth > 900) {
-          const leftIdx = (carouselIndex - 1 + aboutMeImages.length) % aboutMeImages.length;
-          const rightIdx = (carouselIndex + 1) % aboutMeImages.length;
-          const leftImg = document.createElement('img');
-          leftImg.src = aboutMeImages[leftIdx].src;
-          leftImg.className = 'aboutme-carousel-img aboutme-carousel-img-side';
-          leftImg.alt = aboutMeImages[leftIdx].desc;
-          carousel.insertBefore(leftImg, mainContainer);
-          const rightImg = document.createElement('img');
-          rightImg.src = aboutMeImages[rightIdx].src;
-          rightImg.className = 'aboutme-carousel-img aboutme-carousel-img-side';
-          rightImg.alt = aboutMeImages[rightIdx].desc;
-          carousel.appendChild(rightImg);
-        }
+      const mainIdx = carouselIndex;
+      const mainImg = document.createElement('img');
+      mainImg.src = aboutMeImages[mainIdx].src;
+      mainImg.className = 'aboutme-carousel-img aboutme-carousel-img-main';
+      mainImg.alt = aboutMeImages[mainIdx].desc;
+      carousel.appendChild(mainImg);
+      const descDiv = document.createElement('div');
+      descDiv.className = 'aboutme-carousel-desc';
+      descDiv.textContent = aboutMeImages[mainIdx].desc;
+      carousel.appendChild(descDiv);
     }
     function rotateAboutMeCarousel() {
       carouselIndex = (carouselIndex + 1) % aboutMeImages.length;
@@ -219,6 +199,5 @@
       setInterval(rotateAboutMeCarousel, 2500);
     });
   </script>
-  
   </body>
 </html>
