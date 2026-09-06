@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 /* Consistent sizing for project carousel cards and images on mobile */
 @media (max-width: 900px) {
   .project-carousel-card {
@@ -62,7 +61,7 @@
     background-color: black;
 }
 body{
-    font-family: "Roboto", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
 }
   
 
@@ -193,7 +192,10 @@ section {
   }
   
   .title {
-    font-size: 4rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 3.45rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
     text-align: center;
     color:  rgb(42,113,234);
   }
@@ -436,9 +438,11 @@ section {
   
 }
 .heading{
-  
+  font-family: "IBM Plex Sans", sans-serif;
   align-items: center;
-  font-size: 4rem;
+  font-size: 3.45rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-align: center;
   color:  rgb(42,113,234);
   
@@ -677,10 +681,12 @@ section {
 }
 .about-eyebrow {
   color: rgb(42, 113, 234);
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  font-size: 0.9rem;
-  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+  font-size: 3.45rem;
+  text-align: center;
+  margin-bottom: 0.6rem;
 }
 .about-headline {
   font-size: 2.6rem;
@@ -768,10 +774,10 @@ section {
 }
 .skills-eyebrow {
   color: rgb(42, 113, 234);
-  font-family: 'Pacifico', cursive;
-  font-weight: 400;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
   letter-spacing: 0.05em;
-  font-size: 2.3rem;
+  font-size: 3.45rem;
   text-align: center;
   margin-bottom: 0.6rem;
 }
